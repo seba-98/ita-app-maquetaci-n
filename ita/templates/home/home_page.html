@@ -1,0 +1,757 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/style.css">
+
+        <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../static/css/aos.css">
+        <link rel="stylesheet" href="../../static/css/animate.min.css">
+        <link rel="stylesheet" href="../../static/css/remixicon.css">
+        <link rel="stylesheet" href="../../static/css/odometer.min..css">
+        <link rel="stylesheet" href="../../static/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../../static/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../../static/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="../../static/css/fancybox.min.css">
+        <link rel="stylesheet" href="../../static/css/nice-select.min.css">
+        <link rel="stylesheet" href="../../static/css/navbar.css">
+        <link rel="stylesheet" href="../../static/css/footer.css">
+        <link rel="stylesheet" href="../../static/css/dark.css">
+		<link rel="stylesheet" href="../../static/css/responsive.css">
+        <link rel="icon" type="image/png" href="../../static/images/favicon.png">
+
+
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+    <!--==========================NAVBAR==========================-->
+
+
+
+    <div class="navbar-area">
+        <div class="main-responsive-nav">
+            <div class="container">
+                <div class="main-responsive-menu">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="../../static/images/logo.png" alt="image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-navbar navbar-with-navy-color">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="#">
+                        <img src="../../static/images/logo.png" alt="image">
+                    </a>
+
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link active " >Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/nosotros/" class="nav-link ">Nosotros</a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a href="/proyectos/" class="nav-link {% if page == 'proyectos' %} active {% endif %}">Proyectos</a>
+                            </li>
+                            -->
+                            <li class="nav-item">
+                                <a href="/servicios/" class="nav-link ">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/noticias/" class="nav-link ">News</a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a href="/contacto/" class="nav-link {% if page == 'contacto' %} active {% endif %}">Contacto</a>
+                            </li>
+                            -->
+                        </ul>
+
+                        <div class="others-options d-flex align-items-center">
+                            <div class="option-item">
+                                <i class="search-btn ri-search-line"></i>
+                                <i class="close-btn ri-close-line"></i>
+                                <div class="search-overlay search-popup">
+                                    <div class='search-box'>
+                                        <form class="search-form">
+                                            <input class="search-input" placeholder="Buscar..." type="text">
+
+                                            <button class="search-button" type="submit">
+                                                <i class="ri-search-line"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="option-item">
+                                <div class="side-menu-btn">
+                                    <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="others-option-for-responsive">
+            <div class="container">
+                <div class="dot-menu">
+                    <div class="inner">
+                        <div class="circle circle-one"></div>
+                        <div class="circle circle-two"></div>
+                        <div class="circle circle-three"></div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="option-inner">
+                        <div class="others-options d-flex align-items-center">
+                            <div class="option-item">
+                                <i class="search-btn ri-search-line"></i>
+                                <i class="close-btn ri-close-line"></i>
+                                <div class="search-overlay search-popup">
+                                    <div class='search-box'>
+                                        <form class="search-form">
+                                            <input class="search-input" placeholder="Search..." type="text">
+
+                                            <button class="search-button" type="submit">
+                                                <i class="ri-search-line"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="option-item">
+                                <div class="side-menu-btn">
+                                    <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
+
+     <!-- Sidebar Modal -->
+     <div class="sidebarModal modal right fade" id="sidebarModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
+
+                <div class="modal-body">
+                    <a href="index.html">
+                        <img src="../../static/images/logo_black.png" class="black-logo" alt="image">
+                        <img src="../../static/imagesimages/logo.png" class="white-logo" alt="image">
+                    </a>
+                    <div class="sidebar-content">
+                        <h3>Acerca de</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                        <div class="sidebar-btn">
+                            <a href="contact.html" class="default-btn">Contactanos</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-contact-info">
+                        <h3>Información de contacto</h3>
+
+                        <ul class="info-list">
+                            <li><i class="ri-phone-fill"></i> <a href="tel:5548457290"><FONT FACE="Uber Move Medium">(55)48457290</FONT></a></li></a></li>
+                            
+                            <li><i class="ri-mail-line"></i> <a href="mailto:contacto.consult.ita@gmail.com"><FONT FACE="Uber Move Medium">contacto.consult.ita@gmail.com</FONT></a></li>
+
+                            <li><i class="ri-map-pin-line"></i> boulevard de las Rosas, Coacalco de Berriozabal</li>
+                        </ul>
+                    </div>
+                    <ul class="sidebar-social-list">
+                        <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                    </ul>
+                    <div class="contact-form">
+                        <h3>Deja tu mensaje</h3>
+
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" required data-error="Por favor escribe tu nombre" placeholder="Nombre">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" required data-error="Por favor escribe tu correo electrónico" placeholder="Correo Electrónico">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="phone_number" class="form-control" required data-error="Por favor escribe tu teléfono" placeholder="Teléfono">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" cols="30" rows="6" required data-error="Por favor escribe tu mensaje" placeholder="Escribe un mensaje..."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="default-btn">Enviar mensaje<span></span></button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==========================FIN NAVBAR==========================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Start Main Hero Area -->
+    <div class="main-hero-area">
+        <div class="page-banner-areaGeneral">
+            <div class="main-hero-item ">
+                <div class="container-fluid1">
+                    <div class="robot" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true"></div>
+                    <div class="main-hero-content">                           
+                       
+                        <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true"></span>
+                        <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Inteligencia<span class="overlay"></span></h1>
+                        <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Tecnológica Aplicada <span class="overlay"></span></h1>
+                        <h4 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Imagínalo, nosotros lo hacemos realidad</h4>
+                        
+                        <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                            <a href="/contacto/" class="default-btn">Contáctanos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            
+        </div>
+        
+     
+    </div>
+    <!-- End Main Hero Area -->
+    
+    
+    <!-- Start About Area -->
+    <div class="about-area  ptb-50">
+        <div class="content-about-area">
+            <img src="/static/images/fondos/fondo_redondo.png" class="fondo_cisrular " alt="image"/>
+            <div class="row align-items-center maxrow">
+
+                <div class="col-lg-6 col-md-12 col-sm-12 about-content-container">
+                    <div class="about-content " data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <br>
+                        <br>
+                        <span>Desarrollos innovadores</span>
+                        <h3>¡Cada <span class="especial">proyecto</span> es único!<span class="overlay"></span></h3>
+                        <br>
+                        <p>Seleccionamos y trabajamos con un <b>cupo límitado de propuestas</b> para ser parte de proyectos tecnológicos innovadores que logren <b style="color: var(--main-color);">cambiar el mundo.</b></p>
+                        <p>Desarrollamos software que logre materializar ideas con tecnología disruptiva.</p>
+                        <!--
+                        <div class="about-btn">
+                            <a href="#" class="default-btn">Conocer más</a>
+                        </div>
+                        -->
+                       
+                        <br>
+                        <br>
+                        <div class="inova-items-container mtb-50" >
+
+                            <div class="inova-items">
+                                <div class="inova-img_content">
+                                    <img src="/static/images/fomras-03.png"  alt="image"/>  
+                                </div>
+                                <h7>Co-ideamos</h7>
+                            </div>
+
+                            <div class="inova-items">
+                                <div class="inova-img_content">
+                                    <img src="/static/images/fomras-03.png"  alt="image">
+                                </div>
+                                <h7>Conceptualizamos</h7>
+                            </div>
+
+                            <div class="inova-items">
+                                <div class="inova-img_content">
+                                    <img src="/static/images/fomras-03.png"  alt="image">
+                                </div>
+                                <h7>Materializamos</h7>
+                            </div>
+                        </div>                            
+                       
+                        <br>
+                    </div>
+                   
+                </div>
+                <div class="col-lg-6 col-md-12 col-12 about-content-image">
+                    <img src="../../static/images/about/about.png" class="tamImage " alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="about-shape-1">
+            <img src="../../static/images/about/about-shape.png" alt="image">
+        </div>
+    </div>
+    <!-- End About Area -->
+    
+    <!-- Start Mundo Area -->
+    <div class="about-area">
+    
+            <div class="row align-items-center maxrow about-area-mundo">
+                <div class="col-lg-5 col-md-5 mundo-content_animation">
+                    <div id="app" class="pos_mundo"></div>
+                </div>
+    
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                    <div class="about-content_Mundo ">
+                        <p>
+                            Ser parte de proyectos tecnológicos innovadores que busquen cambiar al mundo.</br>
+                            Desarrollamos software que logre materializar ideas con tecnología disruptiva. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+    </div>
+    
+    <!-- Start Choose Area -->
+    <div class="about-area ptb-50 pb-150">
+        <img src="/static/images/fondos/fondo_cerebro.png" class="fondo_cerebro" alt="image"/>
+        <div style="width: 100%;">
+            
+            <div class="row align-items-center maxrow">
+               
+                <div class="section-title2 " data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                    <span>Qué hacemos y</span>
+                    <h2>Cómo lo hacemos <span class="overlay"></span></h2>                    
+                </div>
+            </div>
+            
+            <br>
+            <br>
+            <div class="choose-content" style="z-index:3;">
+
+                <div class="boxRedondo" style="z-index:3;" onmouseover="apareceComerci()" onmouseout="desapareceComerci()">
+                    
+                    <div class="imagenComo" >  
+                        <div class="" id="tamImagComo">
+                            <div class="image_tama_itaII ">        
+                                <img src="/static/images/about/Recurso 223.png" class="tamImageII" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            </div>   
+                            <br>
+                            
+                            <div class="section-title">                                            
+                                <h3>Software para<span class="overlay "></span></h3>                    
+                                <h3>comercializar<span class="overlay"></span></h3>                    
+                            </div>  
+                        </div>
+    
+                        <div  class="seccionAzul_position" id="seccionAzul">
+                                <div class="iconoComo">
+                                    <img src="/static/images/como_hacemos.png" class="tamImageSoftEmpresa">
+                                </div>
+                                
+    
+                                
+                                <div  class="seccionAzul_title_content">
+                                    <h3>Materializamos tu idea<span class="overlay "></span></h3>
+                                    <br>
+                                    <p>Dividimos el proceso en 4 estapas fundamentales</p>      
+                                </div>
+    
+                                <div class="row maxrowII ">
+                                    <table>
+                                        <tr>
+                                            <td style="height:20px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <img src="/static/images/lupa.png" class="tamImageIII" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                            </td>
+                                            <td>
+                                                <h4>Investigación y propuesta</h4>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <img src="/static/images/diseñoPreto.png" class="tamImageIII" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                            </td>
+                                            <td>
+                                                <h4>Diseño, prototipado y testeo</h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:20px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <img src="/static/images/desarrollo.png" class="tamImageIII" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                            </td>
+                                            <td>
+                                                <h4>Desarrollo tecnológico</h4>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <img src="/static/images/estrategia.png" class="tamImageIII" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                            </td>
+                                            <td>
+                                                <h4>Estrategia comercial y soporte</h4>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>     
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class=" boxRedondo"  style="z-index:3;" onmouseover="apareceEmpresa()" onmouseout="desapareceEmpresa()">
+                    <div class="imagenComo2" >
+                        <div class="" id="tamImagComo2">  
+                        
+                            <div class="image_tama_ita">     
+                                <img src="/static/images/about/Recurso 233.png" class="tamImageSofEmpre" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            </div>
+                            
+                            <div class="section-title">                                            
+                                <h3>Software para<span class="overlay"></span></h3> 
+                                <h3>tu empresa<span class="overlay"></span></h3>                                                    
+                            </div>
+                        </div>
+                            
+                        <div  class="seccionAzul_position" id="seccionAzul2">
+                                
+                                <div class="iconoComo">
+                                    <img src="/static/images/como_hacemos.png" class="tamImageSoftEmpresa">
+                                </div>
+                                
+                                <div  class="seccionAzul_title_content">
+                                    <h3>Materializamos tu idea<span class="overlay "></span></h3>
+                                    <br>
+                                    <p>Dividimos el proceso en 4 estapas fundamentales</p>      
+                                </div>
+                                
+                                <div  class="row maxrowII">
+                                    <table>
+                                        <tr>
+                                            <td style="height:20px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <img src="/static/images/lupa.png" class="tamImageIII" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                            </td>
+                                            <td>
+                                                <h4>Anáñisis 360 del negocio</h4>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <img src="/static/images/diseñoPreto.png" class="tamImageIII" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                            </td>
+                                            <td>
+                                                <h4>Diseño, prototipado y testeo</h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:20px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <img src="/static/images/desarrollo.png" class="tamImageIII" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                            </td>
+                                            <td>
+                                                <h4>Desarrollo tecnológico</h4>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <img src="/static/images/estrategia.png" class="tamImageIII" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                            </td>
+                                            <td>
+                                                <h4>Estrategia comercial,<br>entrega final y soporte</h4>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>                                                           
+                            </div>
+                    </div>
+                </div>  
+            </div>                                                          
+            <br>
+            <br>
+            <!--
+            <div class="row align-items-center maxrow">
+        
+                <div class="section-title2" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true" style="z-index:3;">
+                    <a href="#" class="seccionA">Ver más -></a>                 
+                </div>
+            
+            </div>                       
+            -->
+        </div>
+    
+        <!--
+        <div class="choose-shape-1">
+            <img src="{% static 'images/choose/choose-shape.png' %}" alt="image">
+        </div>
+        <div class="choose-shape-2">
+            <img src="{% static 'images/choose/choose-shape-2.png' %}" alt="image">
+        </div>
+        -->
+    </div>
+    <!-- End Choose Area -->
+    
+    
+    <!-- Inicia Servicios -->
+    <div class="services-area-style-two">
+        <div class="container-fluid1">
+            <div class="section-title-service" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">                    
+                <h2>Servicios<span class="overlay"></span></h2>                    
+            </div>
+    
+            
+            <div class="row align-items-center maxrow">               
+                <div class="row">
+                    <div class="espacioIII"></div>
+    
+                    <div class="section-title-serviceII ">
+                        <div class="boxRedondo_services ">
+                            <div class="image_services_ita" data-tilt>        
+                                <img src="/static/images/about/Recurso 303.png" class="tamImageServicios" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            </div>
+                        </div>
+                        <h3>Productos</h3>     
+                    </div>
+                     
+                    <div class="espacioII"></div>
+                    
+                    <div class="section-title-serviceII ">
+                        <div class="boxRedondo_services">
+                            <div class="image_services_ita" data-tilt>        
+                                <img src="/static/images/about/Recurso 313.png" class="tamImageServicios" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            </div>   
+                        </div>
+                        <h3>Desarrollo</h3>    
+                    </div>
+    
+                    <div class="espacioIIAux"></div>
+    
+                    <div class="section-title-serviceIII  ">
+                        <div class="boxRedondo_services_man">
+                            <div class="image_services_ita" data-tilt>        
+                                <img src="/static/images/about/Recurso 323.png" class="tamImageServicios" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            </div>
+                        </div>                                                                
+                        <h3>Mantenimiento</h3>                    
+                    </div>
+                    
+                    <div class="espacioII"></div>
+    
+                    <div class="section-title-serviceII ">
+                        <div class="boxRedondo_services">
+                            <div class="image_services_ita" data-tilt>        
+                                <img src="/static/images/about/Recurso 333.png" class="tamImageServicios" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            </div>                              
+                        </div>
+                        <h3>Consultoría</h3>
+                    </div>
+                </div>
+    
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+               
+    
+                <div class="section-title2" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+    
+                    <div class="about-btn centerBoton">
+                        <a href="#" class="default-btn">Ver más -></a>
+                    </div>
+                </div>
+    
+    
+            </div>
+        </div>    
+    </div>
+    <!-- End servicios Area -->
+    
+    
+    
+    
+    
+    <!-- Start About Area -->
+    <div class="about-area ptb-50 pb-150">
+        <img src="/static/images/fondos/fopndo_lineas.png" class="fondo_lineas" alt="image"/>
+        <div class="container-fluid1">
+            <div class="row align-items-center maxrow">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-content" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <h3>4 Razones por la <span class="overlay"></span></h3>
+                        <h4><b>cuál elegirnos</b> <span class="overlay"></span></h4>
+                        <p><b>Somos tus Alidados Tecnológicos</b> <br/> </p>
+                        <p>Pensamos como aliados no como empleados.</p>
+                        <p>Logramos ver 360° la totalidad del negocio gracias a nuestro equipo multidisciplinario.</p>
+    
+                        <br/>
+                        <p><b>(CCT) Consultoría Comercial Tecnológica</b> <br/> </p>
+                        <p>Gracias a nuestro PARTNER te acompañamos para desarrollar tu estrategia COMERCIAL digital.</p>
+                        <p>Llevar tu propuesta de valor al mercado y lograr generar el interés de tu público meta.</p>
+                        <br/>
+                        <p><b>(CEDI) Consultoría estratégica de Implementación</b><br/></p>
+                        <p>Desarrollamos tecnología que haga eficiente a tu empresa. Reducimos costes y AUMENTAMOS MARGEN de tu negocio.</p>
+                        <br/>
+                        <p><b>"IN LIVE"</b> <br> </p>
+                        <p>Nuestros equipos se encuentran en DISTINTAS partes del mundo, sin importar donde estés vas a tener un feedback de acuerdo a tu zona horaria.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5 col-md-12 col-11">
+                    <div class="about-image" >
+                        <img src="../../static/images/about/ita_tablet.png" alt="image" class="tamImageRazones" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div class="about-shape-1">
+            <img src="../../static/images/about/about-shape.png" alt="image">
+        </div>
+    </div>
+    <!-- End About Area -->
+
+    
+</body>
+</html>
+        
+
+
+<script type="text/javascript" src="../../static/js/ita.js"></script>
+        <!-- Links of JS files -->
+        <script src="../../static/js/jquery.min.js"></script>
+        <script src="../../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../../static/js/jquery.meanmenu.js"></script> 
+        <script src="../../static/js/owl.carousel.min.js"></script>
+        <script src="../../static/js/jquery.appear.js"></script>
+        <script src="../../static/js/odometer.min.js"></script>
+        <script src="../../static/js/jquery.magnific-popup.min.js"></script>
+        <script src="../../static/js/fancybox.min.js"></script>
+        <script src="../../static/js/tweenmax.min.js"></script>
+        <script src="../../static/js/ScrollMagic.min.js"></script>
+        <script src="../../static/js/animation.gsap.min.js"></script>
+        <script src="../../static/js/debug.addIndicators.min.js"></script>
+        <script src="../../static/js/mixitup.min.js"></script>
+        <script src="../../static/js/nice-select.min.js"></script>
+        <script src="../../static/js/tilt.jquery.min.js"></script>
+        <script src="../../static/js/parallax.min.js"></script>
+		<script src="../../static/js/jquery.ajaxchimp.min.js"></script>
+		<script src="../../static/js/form-validator.min.js"></script>
+        <script src="../../static/js/contact-form-script.js"></script>
+        <script src="../../static/js/aos.js"></script>
+        <script src="../../static/js/wow.min.js"></script>
+        <script src="../../static/js/main.js"></script>
+        <script type="text/javascript" src="../../static/js/three.js"></script>
+        <script type="module" src="../../static/js/index.mjs"></script>
+
+<script type="text/javascript">
+
+    function cargar(){
+        var seccionAzul = document.getElementById("seccionAzul");        
+        //productos.style.display = "none";
+        seccionAzul.style.cssText = 'opacity: 0;   transition: opacity 1s linear; ';
+
+        var seccionAzul2 = document.getElementById("seccionAzul2");        
+        //productos.style.display = "none";
+        seccionAzul2.style.cssText = 'opacity: 0;   transition: opacity 1s linear; ';
+
+    }
+    
+    cargar();
+    
+    function apareceComerci(){
+        let tamImagComo = document.getElementById("tamImagComo"); 
+        let seccionAzul = document.getElementById("seccionAzul"); 
+        
+        tamImagComo.style.cssText = 'opacity: 0;   transition: opacity 1s linear; ';
+        seccionAzul.style.cssText = 'opacity: 1;   transition: opacity 1s linear; ';
+    }
+    function desapareceComerci(){
+        let tamImagComo = document.getElementById("tamImagComo"); 
+        let seccionAzul = document.getElementById("seccionAzul"); 
+        
+        tamImagComo.style.cssText = 'opacity: 1;   transition: opacity 1s linear; ';
+        seccionAzul.style.cssText = 'opacity: 0;   transition: opacity 1s linear; ';
+    }
+    
+    
+    function apareceEmpresa(){
+        let tamImagComo = document.getElementById("tamImagComo2"); 
+        let seccionAzul2 = document.getElementById("seccionAzul2"); 
+        
+        tamImagComo.style.cssText = 'opacity: 0;   transition: opacity 1s linear; ';
+        seccionAzul2.style.cssText = 'opacity: 1;   transition: opacity 1s linear; ';
+    }
+    function desapareceEmpresa(){
+        let tamImagComo = document.getElementById("tamImagComo2"); 
+        let seccionAzul2 = document.getElementById("seccionAzul2"); 
+        
+        tamImagComo.style.cssText = 'opacity: 1;   transition: opacity 1s linear; ';
+        seccionAzul2.style.cssText = 'opacity: 0;   transition: opacity 1s linear; ';
+    }
+    
+</script>
+
+
+<!-- {% include 'includes/footer.html' %}    
+
+{% endblock content %} -->

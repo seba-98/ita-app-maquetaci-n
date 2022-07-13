@@ -1,0 +1,292 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+<!-- EXTRA CSS -->
+{% endblock extra_css %}
+
+{% block content %}
+
+{% include 'includes/navbar.html' with page='nosotros' %}
+
+ 
+
+
+ <!-- Start Main Hero Area -->
+ <div class="main-hero-area">
+    <div class="page-banner-areaGeneral">
+        <div class="main-hero-item ">
+            <div class="container-fluid1">
+                <div class="entrada" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true"></div>
+                <div class="main-hero-content">                           
+                   
+                    <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true"></span>
+                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Nosotros<span class="overlay"></span></h1>
+                    <h4 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Te presentamos a ITA TEAM</h4>
+                    
+                    <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                        <a href="/contacto/" class="default-btn">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Main Hero Area -->
+
+
+
+
+<!-- Start About Area -->
+<div class="about-area ptb-50">
+    <img src="{% static 'images/about/Recurso 283.png' %}" class="fondo_team" alt="image"><span class="overlay"></span>
+    <img src="/static/images/fondos/fondo_redondo.png" class="fondo_cisrular_team" alt="image"/>
+    <div class="container-fluid1">        
+        <div class="row align-items-center">            
+            <div class="col-lg-5 col-md-12">
+                <div class="about-content" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                    <!--<span>WHO WE ARE</span>-->
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h5><b>Nuestro Equipo Multidisciplinario que busca <FONT color="#df0176">innovación e impacto mundial </FONT>con tu proyecto. </FONT></b></h5>
+                    <br>
+                    <br>
+                    <div class="parrafo">Tecnología-UX/UI Motion Graphics-Comercial</div>
+                    <br>
+                    <br>
+                    <br>
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12">
+                <div class="about-image">
+                    <img src="{% static 'images/about/team.png' %}" alt="image" class="tamImageNos" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-- End About Area -->
+<!-- Start Choose Area -->
+<div class="choose-area ptb-200">
+    <div class="container-fluid1">
+
+        <div class="row">
+            
+            <!--
+                <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Unzaga-Augusto _ CCO.png' %}" alt="image" class="tamImagenos1">
+                        <div class="imagen1">
+                            "Si quieres ir rapido, ve solo. Si quieres llegar lejos, ve acompañado"
+                        </div>
+                        
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Augusto Unzaga</div>
+                <div class="cargoTeam">CCO</div>                
+            </div>
+            -->
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Unzaga-Augusto _ CCO.png' %}" alt="image" class="tamImagenos1">
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam ">Augusto Unzaga</div>
+                <div class="cargoTeam ">CCO</div>                
+            </div>
+            <div class="espacioNosotros"></div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Carreño-Alejandro _ CTO.png' %}" alt="image" class="tamImagenos1">
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Alejandro Carreño</div>
+                <div class="cargoTeam">CTO</div>                
+            </div>
+            
+            <div class="espacioNosotros"></div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Ortega-Liss-J.png' %}" alt="image" class="tamImagenos1">
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Liss Ortega</div>
+                <div class="cargoTeam">Redacción</div>                
+            </div>
+           
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/David.png' %}" alt="image" class="tamImagenos1">
+                        
+                        
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">David Luna</div>
+                <div class="cargoTeam">Software architect</div>                
+            </div>
+            <div class="espacioNosotros"></div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Busatto-Sofía.png' %}" alt="image" class="tamImagenos1">
+                        
+                        
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Sofía Busatto</div>
+                <div class="cargoTeam">Diseñadora UI UX</div>                
+            </div>
+            
+            <div class="espacioNosotros"></div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Francisco.png' %}" alt="image" class="tamImagenos1">
+                       
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Francisco Hernández</div>
+                <div class="cargoTeam">Software architect</div>                
+            </div>
+           
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Simon-Azocar.png' %}" alt="image" class="tamImagenos1">
+                      
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Simon Azocar</div>
+                <div class="cargoTeam">Frontend developer</div>                
+            </div>
+            <div class="espacioNosotros"></div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Reinaldo-Romero.png' %}" alt="image" class="tamImagenos1">
+                       
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Reinaldo Romero</div>
+                <div class="cargoTeam">Fullstack developer</div>                
+            </div>
+            
+            <div class="espacioNosotros"></div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Sebastian-Belettieri.png' %}" alt="image" class="tamImagenos1">
+                       
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Sebastian Belettieri</div>
+                <div class="cargoTeam">Frontend developer</div>                
+            </div>
+           
+        </div>
+
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Castelli-Facundo.png' %}" alt="image" class="tamImagenos1">
+                       
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Facundo Castelli</div>
+                <div class="cargoTeam">Fullstack developer</div>                
+            </div>
+            <div class="espacioNosotros"></div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Stramucci-José.png' %}" alt="image" class="tamImagenos1">
+                        
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">José Stramucci</div>
+                <div class="cargoTeam">UI UX</div>                
+            </div>
+            
+            <div class="espacioNosotros"></div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Mauricio-Caci.png' %}" alt="image" class="tamImagenos1">
+                       
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Caci Mauricio</div>
+                <div class="cargoTeam">Fullstack developer</div>                
+            </div>
+           
+        </div>
+
+        <br>
+        <br>
+        <div class="row">
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="boxRedondoNosotros1">
+                    <div class="imagen">        
+                        <img src="{% static 'images/team/Witzel-Federico.png' %}" alt="image" class="tamImageNosotros">
+                        
+                    </div>                                      
+                </div>
+                <br>
+                <div class="nombreTeam">Federico Witzel</div>
+                <div class="cargoTeam">Fullstack developer</div>                
+            </div>
+           
+        </div>
+       
+        <div class="section-titleNosotros" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+
+            <div class="about-btn centerBoton">
+                <a href="/contacto/" class="default-btn">Contáctanos</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Choose Area -->
+
+
+
+{% include 'includes/footer.html' %}    
+
+{% endblock content %}

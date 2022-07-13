@@ -1,0 +1,375 @@
+{% extends 'base.html' %}
+
+{% load wagtailcore_tags wagtailimages_tags static wagtailmetadata_tags %}
+{% block meta %}
+{% meta_tags %}
+{% endblock %}
+{% block extra_css %}
+<style>
+    .modal-header {
+        border-bottom: 0 none;
+    }
+
+    .restaurant-banner {
+        height: 500px;
+    }
+
+    .restaurant-carousel {
+        height: 450px;
+    }
+</style>
+{% endblock  %}
+{% block content %}
+
+<!-- Post Header -->
+{% include 'base/includes/header_page.html' %}
+<!-- End Post Header -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:10px !important">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="myFunction()" data-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body py-4" style="margin-bottom: 50px;margin-top:10px;">
+                <div class="row">
+                    <div class="col">
+                        <p class="text-center">
+                            {{ _('No puede dejar una reseña o comentario si no ha comprado un producto o experiencia ')}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 25px;">
+                    <div class="col">
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary" onclick="myFunction()" data-dismiss="modal"
+                                style="height:40px; width:200px; border-radius: 35px;">Continuar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% comment %} <div class="modal fade" id="myModal-noauth" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:10px !important">
+
+            <div class="modal-body py-4" style="margin-bottom: 50px; margin-top:50px; border-radius:20px; ">
+                <div class="row">
+                    <div class="col">
+                        <p class="text-center">
+                            {{ _('Parece que no estas registrado aún o no has iniciado sesión')}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 25px;">
+                    <div class="col">
+                        <div class=" row d-flex justify-content-center">
+                            <a href="{% url 'account_signup' %}"><button type="button" class="btn btn-primary"
+                                    style="height:40px; width:200px; border-radius: 35px;">Registrarse</button></a>
+                        </div>
+                        <div class="row mt-2 d-flex justify-content-center">
+                            <a href="{% url 'account_login' %}"><button type="button" class="btn btn-primary"
+                                    style="height:40px; width:200px; border-radius: 35px;">Iniciar sesión</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}
+<!-- Post self.banner_post.all -->
+{% if self.banner_post.all %}
+{% if self.banner_post.all.count == 1 %}
+{% image self.banner_post.all.first.photo original as img %}
+<div class="container">
+    <div class="row">
+        {% include 'base/includes/card_carousel.html' with class="restaurant-carousel" url_image=img.url%}
+    </div>
+</div>
+{% else %}
+<div class="swiper-container restaurant-banner" id="swiper-slider-one">
+    <div class="swiper-wrapper">
+        {% for banner in self.banner_post.all %}
+        {% image banner.photo original as img %}
+        <div class="swiper-slide">
+            {% include 'base/includes/card_carousel.html' with class="restaurant-carousel" url_image=img.url%}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center mt-3 mb-5">
+            <div class="divider-image"></div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<!-- End Post self.banner_post.all -->
+
+<!-- Post Main Content -->
+<div class="container-fluid">
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-lg-8 pr-lg-7">
+                <div class="row">
+                    <div class="richtext col-12">
+                        {{ page.content|richtext }}
+                    </div>
+                </div>
+                {% if page.gallery_post.all|length > 0 %}
+                <div class="row">
+                    <div class="col-12 title-section">
+                        <h2>{{ _('Galería')}}</h2>
+                        <div class="gallery">
+                            {% include 'base/includes/swiper_slider_small.html' with extra="gallery" images=page.gallery_post.all id="swiper-slider-two" class="" %}
+
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% include 'base/includes/tags.html' %}
+                {% include 'base/includes/autor_info.html' %}
+                <!-- Comments -->
+                {% include 'comment/comment.html' %}
+
+                {% if post.type.name|lower == "en casa" %}
+                <div class="row">
+                    <div class="col">
+                        <div class="card new-comment-section my-2">
+                            <div class="card-body">
+                                <form action="{% url 'post.comment' %}" id="myForm" method="POST">
+                                    {% csrf_token %}
+                                    <input type="text" name="post_id" value="{{ post.id }}" hidden>
+
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="comment-area"
+                                            placeholder="{{ _('Escribe un comentario...') }}" name="comment" rows="2"
+                                            required></textarea>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ _('Enviar') }}
+                                    </button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% for comment in post.get_comments %}
+                <div class="row">
+                    <div class="col">
+                        <div class="card new-comment-section my-2">
+                            {%if request.user.is_authenticated and request.user.is_superuser or request.user.id == post.created_by.id %}
+                            <form action="{%url 'delete-reply-comment' id_comment=comment.id%}" class="text-align mt-3"
+                                method="POST">
+                                {% csrf_token %}
+                                <button type="submit" class="close" aria-label="Close">
+                                    <span aria-hidden="true"></span>&times;</span>
+                                </button>
+                            </form>
+                            {%endif%}
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <div class="col d-flex pb-2">
+                                        {% if comment.written_by.profile_picture != '' %}
+                                        <a href="{%url 'userinfo' user_id=comment.written_by.id%}">
+                                            <img src="/media/{{ comment.written_by.profile_picture }}"
+                                                class="image-profile-comment mr-2" alt="user-profile">
+                                        </a>
+                                        {% endif %}
+                                        <div class="comment-written-info">
+                                            <span>{{ comment.created_at }}</span>
+                                            <span>{{ _('por') }} <a
+                                                    href="{%url 'userinfo' user_id=comment.written_by.id%}">{{ comment.written_by.full_name }}</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        {{ comment.comment }}
+                                        <br>
+                                        {%for child_comment in comment.children%}
+                                        <div class="row my-3">
+                                            <div class="col">
+                                                <div class="card new-comment-section my-2">
+                                                    <div class="card-body">
+                                                        <div class="row mx-3">
+                                                            <div class="col d-flex pb-2">
+                                                                {% if child_comment.written_by.profile_picture != '' %}
+                                                                <a
+                                                                    href="{%url 'userinfo' user_id=comment.written_by.id%}">
+                                                                    <img src="/media/{{ comment.written_by.profile_picture }}"
+                                                                        class="image-profile-comment mr-2"
+                                                                        alt="user-profile">
+                                                                </a>
+                                                                {% endif %}
+                                                                <div class="comment-written-info">
+                                                                    <span>{{ child_comment.created_at }}</span>
+                                                                    <span>{{ _('por') }} <a
+                                                                            href="{%url 'userinfo' user_id=comment.written_by.id%}">{{ child_comment.written_by.full_name }}</a></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mx-3">
+                                                            <div class="col">
+                                                                {{ child_comment.comment }}
+                                                                <br>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor%}
+                                        {% if request.user.is_authenticated and request.user.is_superuser or request.user.id == post.created_by.id %}
+                                        <form class="my-4" action="{% url 'reply.comment' %}" id="myForm" method="POST">
+                                            {% csrf_token %}
+                                            <input type="text" name="comment_id" value="{{ comment.id }}" hidden>
+
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="comment-area"
+                                                    placeholder="{{ _('Escribe una respuesta...') }}" name="comment"
+                                                    rows="1" required></textarea>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary">
+                                                {{ _('Enviar') }}
+                                            </button>
+
+                                        </form>
+                                        {%endif%}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+                <div class="row d-none">
+                    <div class="col">
+                        <h3>{{ _('Seccion de Q&A') }}</h3>
+                        <br>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col" style="margin-top:7px; text-align: justify;text-justify: inter-word;">
+                        <h5 style="font-weight: bold;">Qué es Lorem Ipsum?</h5>
+                        <p>
+                            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem
+                            Ipsum
+                            ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor
+                            (N.
+                            del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los
+                            mezcló
+                            de tal manera que logró hacer un libro de textos especimen.
+                        </p>
+                    </div>
+
+                    <div class="w-100"></div>
+                    <div class="col" style="margin-top:7px; text-align: justify;text-justify: inter-word;">
+                        <h5 style="font-weight: bold;">¿Qué es Lorem Ipsum?</h5>
+                        <p>
+                            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem
+                            Ipsum
+                            ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor
+                            (N.
+                            del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los
+                            mezcló
+                            de tal manera que logró hacer un libro de textos especimen.
+                        </p>
+                    </div>
+
+                    <div class="w-100"></div>
+                    <div class="col" style="margin-top:7px; text-align: justify;text-justify: inter-word;">
+                        <h5 style="font-weight: bold;">¿Qué es Lorem Ipsum?</h5>
+                        <p>
+                            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem
+                            Ipsum
+                            ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor
+                            (N.
+                            del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los
+                            mezcló
+                            de tal manera que logró hacer un libro de textos especimen.
+                        </p>
+                    </div>
+
+                    <div class="w-100"></div>
+                    <div class="col" style="margin-top:7px; text-align: justify;text-justify: inter-word;">
+                        <h5 style="font-weight: bold; ">¿Qué es Lorem Ipsum?</h5>
+                        <p>
+                            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem
+                            Ipsum
+                            ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor
+                            (N.
+                            del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los
+                            mezcló
+                            de tal manera que logró hacer un libro de textos especimen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <section class="col-lg-4 right-section pl-lg-7">
+                {% if post.is_paid %}
+                {% if post.type.name|lower == "en casa" %}
+                {% include 'frontend/posts/components/widget_card_pay_experiences.html' %}
+                {% endif %}
+                {% endif %}
+
+                <!-- Experiences -->
+                {% if experiences %}
+                {% include 'frontend/posts/components/widget_experiences.html' %}
+                {% endif %}
+
+                <!-- Events -->
+                {% comment %} {% include 'frontend/posts/components/widget_events.html' %} {% endcomment %}
+
+                <!-- More Posts -->
+                {% include 'frontend/posts/components/widget_more_posts.html' %}
+
+                <div align="center">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+                <!-- Homepage Leaderboard -->
+                <ins class="adsbygoogle"
+                style="display:inline-block;width:300px;height:600px"
+                data-ad-client="ca-pub-1234567890123456"
+                data-ad-slot="1234567890"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- End Post Main Content -->
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+<script>
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'albumLabel': "Imagen %1 de %2",
+        'disableScrolling': true,
+
+    });
+
+    function myFunction() {
+        document.getElementById("myForm").reset();
+    }
+</script>
+{% include "base/includes/save_content.html" with type=2%}
+{% endblock  %}

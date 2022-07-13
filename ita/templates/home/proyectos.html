@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+<!-- EXTRA CSS -->
+{% endblock extra_css %}
+
+{% block content %}
+
+{% include 'includes/navbar.html' with page='proyectos' %}
+
+
+
+
+<!-- Start Main Hero Area -->
+<div class="main-hero-area">
+    <div class="page-banner-areaGeneral">
+        <div class="main-hero-item ">
+            <div class="container-fluid1">
+                <div class="proyectos" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true"></div>
+                <div class="main-hero-content">                           
+                   
+                    <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true"></span>
+                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Proyectos<span class="overlay"></span></h1>
+                    <h4 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Te presentamos nuestros proyectos</h4>
+                    
+                    <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                        <a href="#" class="default-btn">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Main Hero Area -->
+
+ 
+
+<!-- Start Projects Area -->
+<div class="projects-area pt-100 pb-75">
+    <div class="container">
+        <div class="section-title">
+            <span><FONT FACE="Uber Move Medium">PROYECTOS</FONT></span>
+            <h2><FONT FACE="Uber Move Medium">Los últimos proyectos de nuestros</FONT><b><FONT FACE="Uber Move Medium"> Increíbles</FONT></b> Clientes <span class="overlay"></span></h2>
+        </div>
+
+        <ul class="projects-filter-menu"> 
+            <li class="filter active" data-filter="all"><FONT FACE="Uber Move Medium">Todo</FONT></li>
+            <li class="filter" data-filter=".mobile">Apps Moviles</li>
+            <li class="filter" data-filter=".development">Desarrollo</li>
+            <li class="filter" data-filter=".web-design">Diseño Web</li>
+            <li class="filter" data-filter=".product-design">Soporte Tecnico</li>
+        </ul>  
+
+        <div id="Container" class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mix mobile development web-design">
+               
+
+                <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                    <div class="projects-image">
+                        <a href="#"><img src="{% static 'images/projects/ki_1.png' %}" alt="image"></a>
+                    </div>
+                    <div class="projects-content">
+                        <h3>
+                            <a href="#">Ki</a>
+                        </h3>
+                        <h4><a href="#" class="projects-btn1">Ver más</a></h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mix development product-design">
+                <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                    <div class="projects-image">
+                        <a href="#"><img src="{% static 'images/projects/ki_1.png' %}" alt="image"></a>
+                    </div>
+                    <div class="projects-content">
+                        <h3>
+                            <a href="#">Ki</a>
+                        </h3>
+                        <h4><a href="#" class="projects-btn1">Ver más</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mix web-design mobile product-design">
+                <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                    <div class="projects-image">
+                        <a href="#"><img src="{% static 'images/projects/ICA_1.png' %}" alt="image"></a>
+                    </div>
+                    <div class="projects-content">
+                        <h3>
+                            <a href="projects-details.html">ICA</a>
+                        </h3>
+                        <h4><a href="#" class="projects-btn1">Ver más</a></h4>
+                    </div>
+                </div>
+
+                <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                    <div class="projects-image">
+                        <a href="#"><img src="{% static 'images/projects/ICA_1.png' %}" alt="image"></a>
+                    </div>
+                    <div class="projects-content">
+                        <h3>
+                            <a href="#">Analytics Software</a>
+                        </h3>
+                        <h4><a href="#" class="projects-btn1">Ver más</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+<!-- End Projects Area -->
+
+ 
+
+{% include 'includes/footer.html' %}    
+
+{% endblock content %}

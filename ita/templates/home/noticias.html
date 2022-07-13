@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+<!-- EXTRA CSS -->
+{% endblock extra_css %}
+
+{% block content %}
+
+{% include 'includes/navbar.html' with page='noticias' %}
+
+<img src="{% static 'images/ita_cons.jpg' %}" />
+
+{% include 'includes/footer.html' %}    
+
+{% endblock content %}

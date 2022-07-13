@@ -1,0 +1,31 @@
+{% load i18n %}
+{% if experiences %}
+<section class="container" id="experiencias">
+    <div class="row">
+        <div class="col">
+            <div class="row header-content">
+                <!-- Izquierda -->
+                <div class="col title-section-content">
+                    <i class="icon icon-experiencias"></i>
+                    <h2>{% trans "Experiencias" %}</h2>
+                </div>
+                <!-- Fin izquierda -->
+
+                <!-- Derecha -->
+                <div class="col links-section-content">
+                    <a href="{{url_experience}}">{% trans "Ver sección" %}
+                        <i class="icon icon-arrow-right-red mr-0"></i>
+                    </a>
+                </div>
+                <!-- Fin Derecha -->
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="line-divider"></div>
+                </div>
+            </div>
+            {% include 'post/components/widget_horizontal_2.html' with posts=experiences %}
+        </div>
+    </div>
+</section>
+{% endif %}
