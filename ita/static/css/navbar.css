@@ -163,12 +163,10 @@ Navbar Area CSS
   padding: 10px 0;
 }
 
-.main-navbar.navbar-with-black-color {
-  background-color: var(--black-color);
-}
+
 
 .main-navbar.navbar-with-navy-color {
-  background-color: var(--navy-color);
+  background-color: var(--blue-color_ita);
 }
 
 .main-navbar .container-fluid {
@@ -1252,7 +1250,7 @@ Sidebar Modal CSS
     max-width: 100px;
   }
   .navbar-area {
-    background-color: var(--navy-color);
+    background-color: var(--blue-color_ita);;
     padding-top: 15px;
     padding-bottom: 15px;
   }

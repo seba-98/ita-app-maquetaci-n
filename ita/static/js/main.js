@@ -493,7 +493,7 @@ jQuery(function ($) {
 
 	// Buy Now Btn
 	//$('body').append("<a href='/contacto/' target='_blank' class='buy-now-btn'><i class='ri-whatsapp-fill'></i></a>");
-	$('body').append("<a href='/contacto/'  class='mail-now-btn'><i class='ri-mail-fill'></i></a>");
+	$('body').append("<a href='contacto.html'  class='mail-now-btn'><i class='ri-mail-fill'></i></a>");
 	$('body').append("<a href='#'  class='buy-now-btn'><i class='ri-whatsapp-fill'></i></a>");
 
 	// Switch Btn 

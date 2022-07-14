@@ -308,6 +308,7 @@ Default Btn CSS
   overflow: hidden;
   white-space: nowrap;
   font-family: var(--heading-font-family);
+  text-decoration: none;
 }
 
 .default-btn:before {
@@ -10381,7 +10382,7 @@ Buy Now Btn
   color: var(--white-color) !important;
   background-color: #df0176;
   padding: 11px 12px 8px;
-  
+  text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   /*
@@ -10415,21 +10416,23 @@ Buy Now Btn
   padding: 9px 12px 8px;
   font-size: 14px;
   font-weight: 500;
+  text-decoration: none;
   /*
   -webkit-animation-name: tada;
-          animation-name: tada;
+  animation-name: tada;
   -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  animation-duration: 5s;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-          */
+  animation-iteration-count: infinite;
+  */
 }
 
 .buy-now-btn i{
   font-size: 30px;
 }
+
 
 .buy-now-btn:hover {
   /*background-color: var(--main-color);*/
@@ -11243,7 +11246,6 @@ Buy Now Btn
     color: var(--white-color) !important;
     background-color: #df0176;
     padding: 8px 9px 5px;
-    
     font-size: 14px;
     font-weight: 500;
   }
