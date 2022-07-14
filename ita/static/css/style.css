@@ -462,7 +462,7 @@ Section Title CSS
 }
 
 .section-title2 {
-  max-width: 90%;
+  max-width: 100%;
   z-index: 10;
   position: relative;
 }
@@ -515,9 +515,30 @@ Section Title CSS
   font-size: 18px;  
 }
 
+.services-contain_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100% !important;
+  z-index: 100;
+}
+
+.services-contain{
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 
 .section-title-serviceII {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+  margin: 20px 30px 20px 30px;
 }
 .section-title-serviceII h3{
   width: 100%;
@@ -526,7 +547,6 @@ Section Title CSS
   line-height: 1.4;
   position: relative;
   color: var(--white-color);
-  margin-top: 40px;
   text-align: center;
 }
 
@@ -551,9 +571,6 @@ Section Title CSS
 }
 
 .section-title-service {
-  max-width:78%;
-  /*margin: 0 auto 45px;
-  text-align: center;*/
   position: relative;
 }
 
@@ -1168,11 +1185,11 @@ Main Hero Area CSS
   width: 60%;
 }
 
-.tamImageServicios{
+/* .tamImageServicios{
   height: 80%;
   width: 80%;
   padding-top: 10%;
-}
+} */
 
 
 .tamImageHome{
@@ -2014,7 +2031,6 @@ Services Area CSS
   background-color: var(--black-color);
   position: relative;
   z-index: 1;
-  /*overflow: hidden;*/
 }
 
 .services-area-style-two .section-title h2 {
@@ -10405,6 +10421,8 @@ Buy Now Btn
 }
 
 .boxRedondo{  
+  margin-top:50px ;
+  margin-bottom: 50px;
   width: 400px;
   height: 500px;
   display: flex;
@@ -10446,7 +10464,7 @@ Buy Now Btn
 }
  
 .seccionAzul_title_content{
-  width: 300px;
+  width: 200px;
 }
 
 .borderPrueba{
@@ -10803,17 +10821,18 @@ Buy Now Btn
 
 
 .boxRedondo_services{  
-  padding: 30px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   box-shadow: 2px 2px 18px 25px rgba(138, 169, 236, 0.2);
   border-radius: 30px;
-  max-width: 140px;
-  height: 140px;
-  /*margin-left: auto;*/
-  /*margin-right: auto;*/
-  margin-left:-10px;
-  width: 140px;
+  width:150px;
 }
-
+.boxRedondo_services img{
+  width: 90px;
+  height: 90px;
+  margin:30px -20px 30px -20px;
+}
 .boxRedondo_services_man{  
   padding: 30px;
   box-shadow: 2px 2px 18px 25px rgba(138, 169, 236, 0.2);
@@ -10848,31 +10867,21 @@ Buy Now Btn
   margin-top: 0px;  
 }
 
-.image_services_ita{ 
-  
-  text-align: center;       
-  display:block;
-  margin:auto;
-  margin-top: 0px;
-}
 
 
 .services-area-style-two {
   background-color: #080755;
-  position: relative;
   z-index: 1;
+  /* position: relative;
   overflow: hidden;
-  margin-bottom: 1px;
+  margin-bottom: 1px; */
 }
 .centerBoton{
-  width:100%;
+  width:100% ;
   text-align: center;       
   display:block;
-  margin:auto;
   padding-top: 60px;
   padding-bottom: 60px;  
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -11082,10 +11091,7 @@ Buy Now Btn
   }
 
 
-  .section-title-serviceII {
-    max-width:110px;  
-    
-  }
+  
   .section-title-serviceIII {
     max-width:110px;    
   }
@@ -11098,15 +11104,6 @@ Buy Now Btn
   .espacioIIAux{
     width: 5%;    
   }
-  .boxRedondo_services{  
-    padding: 10px;
-    box-shadow: 2px 2px 18px 25px rgba(138, 169, 236, 0.2);
-    border-radius: 30px;
-    max-width: 100px;
-    height: 100px;    
-    margin-left:-10px;
-    width: 140px;
-  }
   .section-title-serviceII h3{
     width: 100%;
     font-size: 20px;
@@ -11115,8 +11112,6 @@ Buy Now Btn
     position: relative;
     color: var(--white-color);
     margin-top: 20px;
-    text-align: left;
-    left:-5px;
   }
 
   .section-title-serviceIII h3{

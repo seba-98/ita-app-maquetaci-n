@@ -1870,11 +1870,19 @@
 
 
 @media(max-width:460px){
-  .boxRedondo{
+  .boxRedondo,.imageComo, .seccionAzul_title_content {
     width: 300px !important;
-    padding-right: 10px;
   }
 
-
+}
+@media(max-width:350px){
+  .boxRedondo,.imageComo, .seccionAzul_title_content {
+    width: 270px !important;
+  }
 }
 
+@media(max-width:785px){
+  .services-contain{
+    justify-content: center !important;
+  }
+}
