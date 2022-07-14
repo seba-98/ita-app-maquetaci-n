@@ -1,17 +1,46 @@
-{% extends "base.html" %}
+<!-- {% extends "base.html" %}
 {% load static %}
 
 {% block body_class %}template-homepage{% endblock %}
 
 {% block extra_css %}
-<!-- EXTRA CSS -->
+
 {% endblock extra_css %}
 
 {% block content %}
 
-{% include 'includes/navbar.html' with page='nosotros' %}
+{% include 'includes/navbar.html' with page='nosotros' %} -->
 
  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/style.css">
+
+        <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../static/css/aos.css">
+        <link rel="stylesheet" href="../../static/css/animate.min.css">
+        <link rel="stylesheet" href="../../static/css/remixicon.css">
+        <link rel="stylesheet" href="../../static/css/odometer.min..css">
+        <link rel="stylesheet" href="../../static/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../../static/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../../static/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="../../static/css/fancybox.min.css">
+        <link rel="stylesheet" href="../../static/css/nice-select.min.css">
+        <link rel="stylesheet" href="../../static/css/navbar.css">
+        <link rel="stylesheet" href="../../static/css/footer.css">
+        <link rel="stylesheet" href="../../static/css/dark.css">
+		<link rel="stylesheet" href="../../static/css/responsive.css">
+        <link rel="icon" type="image/png" href="../../static/images/favicon.png">
+
+
+    <title>Document</title>
+</head>
+<body>
 
 
  <!-- Start Main Hero Area -->
@@ -40,13 +69,15 @@
 
 
 <!-- Start About Area -->
-<div class="about-area ptb-50">
-    <img src="{% static 'images/about/Recurso 283.png' %}" class="fondo_team" alt="image"><span class="overlay"></span>
+<div class="about-area ">
+    
     <img src="/static/images/fondos/fondo_redondo.png" class="fondo_cisrular_team" alt="image"/>
-    <div class="container-fluid1">        
-        <div class="row align-items-center">            
-            <div class="col-lg-5 col-md-12">
-                <div class="about-content" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+    <div class="about-area-nosotros">        
+        <div class="ita-team-img_container">
+            <img src="../../static/images/about/Recurso 283.png" class="fondo_team" alt="image"><span class="overlay"></span>
+        </div>
+        <div class="content-ita-team-data">   
+                <div class="about-content-nos" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <!--<span>WHO WE ARE</span>-->
                     <br>
                     <br>
@@ -62,11 +93,9 @@
                     <br>
                     
                 </div>
-            </div>
-
-            <div class="col-lg-5 col-md-12">
-                <div class="about-image">
-                    <img src="{% static 'images/about/team.png' %}" alt="image" class="tamImageNos" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+            <div>
+                <div class="about-image-nos">
+                    <img src="../../static/images/about/team.png" alt="image" class="tamImageNos" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 </div>
             </div>
         </div>
@@ -83,7 +112,7 @@
                 <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Unzaga-Augusto _ CCO.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Unzaga-Augusto _ CCO.png" alt="image" class="tamImagenos1">
                         <div class="imagen1">
                             "Si quieres ir rapido, ve solo. Si quieres llegar lejos, ve acompañado"
                         </div>
@@ -98,7 +127,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Unzaga-Augusto _ CCO.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Unzaga-Augusto _ CCO.png" alt="image" class="tamImagenos1">
                     </div>                                      
                 </div>
                 <br>
@@ -109,7 +138,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Carreño-Alejandro _ CTO.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Carreño-Alejandro _ CTO.png" alt="image" class="tamImagenos1">
                     </div>                                      
                 </div>
                 <br>
@@ -121,7 +150,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Ortega-Liss-J.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Ortega-Liss-J.png" alt="image" class="tamImagenos1">
                     </div>                                      
                 </div>
                 <br>
@@ -136,7 +165,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/David.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/David.png" alt="image" class="tamImagenos1">
                         
                         
                     </div>                                      
@@ -149,7 +178,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Busatto-Sofía.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Busatto-Sofía.png" alt="image" class="tamImagenos1">
                         
                         
                     </div>                                      
@@ -163,7 +192,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Francisco.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Francisco.png" alt="image" class="tamImagenos1">
                        
                     </div>                                      
                 </div>
@@ -179,7 +208,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Simon-Azocar.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Simon-Azocar.png" alt="image" class="tamImagenos1">
                       
                     </div>                                      
                 </div>
@@ -191,7 +220,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Reinaldo-Romero.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Reinaldo-Romero.png" alt="image" class="tamImagenos1">
                        
                     </div>                                      
                 </div>
@@ -204,7 +233,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Sebastian-Belettieri.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Sebastian-Belettieri.png" alt="image" class="tamImagenos1">
                        
                     </div>                                      
                 </div>
@@ -221,7 +250,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Castelli-Facundo.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Castelli-Facundo.png" alt="image" class="tamImagenos1">
                        
                     </div>                                      
                 </div>
@@ -233,7 +262,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Stramucci-José.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Stramucci-José.png" alt="image" class="tamImagenos1">
                         
                     </div>                                      
                 </div>
@@ -246,7 +275,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Mauricio-Caci.png' %}" alt="image" class="tamImagenos1">
+                        <img src="../../static/images/team/Mauricio-Caci.png" alt="image" class="tamImagenos1">
                        
                     </div>                                      
                 </div>
@@ -264,7 +293,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="boxRedondoNosotros1">
                     <div class="imagen">        
-                        <img src="{% static 'images/team/Witzel-Federico.png' %}" alt="image" class="tamImageNosotros">
+                        <img src="../../static/images/team/Witzel-Federico.png" alt="image" class="tamImageNosotros">
                         
                     </div>                                      
                 </div>
@@ -283,10 +312,41 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="../../static/js/ita.js"></script>
+        <!-- Links of JS files -->
+        <script src="../../static/js/jquery.min.js"></script>
+        <script src="../../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../../static/js/jquery.meanmenu.js"></script> 
+        <script src="../../static/js/owl.carousel.min.js"></script>
+        <script src="../../static/js/jquery.appear.js"></script>
+        <script src="../../static/js/odometer.min.js"></script>
+        <script src="../../static/js/jquery.magnific-popup.min.js"></script>
+        <script src="../../static/js/fancybox.min.js"></script>
+        <script src="../../static/js/tweenmax.min.js"></script>
+        <script src="../../static/js/ScrollMagic.min.js"></script>
+        <script src="../../static/js/animation.gsap.min.js"></script>
+        <script src="../../static/js/debug.addIndicators.min.js"></script>
+        <script src="../../static/js/mixitup.min.js"></script>
+        <script src="../../static/js/nice-select.min.js"></script>
+        <script src="../../static/js/tilt.jquery.min.js"></script>
+        <script src="../../static/js/parallax.min.js"></script>
+		<script src="../../static/js/jquery.ajaxchimp.min.js"></script>
+		<script src="../../static/js/form-validator.min.js"></script>
+        <script src="../../static/js/contact-form-script.js"></script>
+        <script src="../../static/js/aos.js"></script>
+        <script src="../../static/js/wow.min.js"></script>
+        <script src="../../static/js/main.js"></script>
+        <script type="text/javascript" src="../../static/js/three.js"></script>
+        <script type="module" src="../../static/js/index.mjs"></script>
+
+
+</body>
+</html>
 <!-- End Choose Area -->
 
 
 
-{% include 'includes/footer.html' %}    
+<!-- 'includes/footer.html    
 
-{% endblock content %}
+{% endblock content %} -->
