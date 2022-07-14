@@ -1921,7 +1921,14 @@
   
   /*================NOSOTROSPAGE====================*/
   
-  @media(max-width:920px){
+  @media(max-width:1600px){
+
+    .about-content-nos, .fondo_team{
+      margin-left: 0px;
+    }
+  }
+  @media(max-width:1000px){
+
     .about-area .fondo_cisrular_team {
       display: none;
     }

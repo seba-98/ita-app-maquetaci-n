@@ -1586,17 +1586,6 @@ About Area CSS
   left: 0;
 }
 
-.about-area .fondo_cisrular_team {
-  position: absolute;
-  height: 120%;
-  width:85%;
-  top: 5%;
-  left: 0px;
-}
-
-
-
-
 
 .about-area .fondo_lineas {
   position: absolute;
@@ -1645,6 +1634,17 @@ About Area CSS
 }
 
 
+/*===================NOSOTROS==========================*/
+
+.about-area .fondo_cisrular_team {
+  position: absolute;
+  height: 140%;
+  width:90%;
+  top: 5%;
+  left: 0px;
+}
+
+
 .ita-team-img_container{
   margin: 10px 0 10px 0;
   width: 100%;
@@ -1656,8 +1656,8 @@ About Area CSS
 
 .fondo_team {
   position: relative;
-  height: 80px;
-  width:300px;
+  height: 110px;
+  width:440px;
 }
 
 .content-ita-team-data{
@@ -1665,15 +1665,16 @@ About Area CSS
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
 }
 
 .about-content-nos{
-  width: 350px;
+  width: 500px;
 }
 
 .about-content-nos, .fondo_team{
-  margin-left: 100px;
+  margin-left: 200px;
+  margin-top: 50px;
 }
 .about-area-nosotros{
   width: 100%;
@@ -1682,16 +1683,16 @@ About Area CSS
 }
 .about-area-nosotros h5{
   color: var(--blue-color_ita);
+  font-size: 30px;
 }
-.tamImage{
-  height: 70%;
-  width: 70%;
+.about-image-nos{
+
 }
 
 
 .tamImageNos{
-  height: 270px !important;
-  width: 440px !important;
+  height: 400px !important;
+  width: 540px !important;
 }
 
 .tamImageSofEmpre{
@@ -1699,10 +1700,35 @@ About Area CSS
   width: 45%;
 }
 
-.tamImageSofEmpre{
-  height: 45%;
-  width: 45%;
+
+.nos-team_profiles{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  display: flex;
+  width: 100%;
+  padding: 0 15% 0 15%;
+  
 }
+
+.profile-container{
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  width: 300px;
+  margin: 40px 0 40px 0;
+}
+
+
+@media(max-width:878px){
+  .profile-container{
+    width: 100%;
+    align-items: center;
+  }
+}
+
+
+/*===================fin NOSOTROS==========================*/
 
 
 .inova-items-container{
@@ -1747,6 +1773,8 @@ About Area CSS
   justify-content: center;
   align-items: center;
 }
+
+
 
 .about-content-image img{
 
