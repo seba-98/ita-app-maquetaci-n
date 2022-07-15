@@ -38,23 +38,20 @@ $("#contactForm, #contactFormTwo").validator().on('submit', function(event) {
     if(event.isDefaultPrevented()) {
 
       if(validate()){
-
         emailjs.sendForm(serviceID, templateID, this)
-    
-            .then(() => {
+          .then(() => {
               btn.value = 'Enviar email';
               formSuccess();
-    
+          
             }, (err) => {
-              btn.value = 'Enviar email';
-              formError();
-              submitMSG(false, err);
-            });
+                btn.value = 'Enviar email';
+                formError();
+                submitMSG(false, err);
+              });
             
           }else{
-            
             submitMSG(false, 'Complete el formulario');
-      }
+          }
     }
     }); 
 
@@ -101,11 +98,18 @@ $("#contactForm, #contactFormTwo").validator().on('submit', function(event) {
 
     function formSuccess(){
       // $("#contactForm, #contactFormTwo")[0].reset();
-
       const formTwo = document.getElementById('contactFormTwo');
       const contactForm = document.getElementById('contactForm');
-      formTwo.reset();
-      contactForm.reset();
+
+      if(formTwo){
+        formTwo.reset();
+      }
+      
+      if(contactForm){
+        contactForm.reset();
+      }
+
+
 
       submitMSG(true, "Mensaje enviado");
   }

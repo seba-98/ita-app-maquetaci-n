@@ -1045,6 +1045,7 @@ Sidebar Modal CSS
 }
 
 .sidebarModal.modal .modal-body .sidebar-contact-info .info-list li a {
+  text-decoration: none !important;
   color: var(--paragraph-color);
 }
 

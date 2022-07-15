@@ -1202,15 +1202,7 @@ Main Hero Area CSS
   
 }
 
-.tamImagenos1{
-  height: 280px;
-  width: 550px; 
-  margin-left:90px;
-  top: -50px;
-  z-index:100;
-  position:absolute;
-  
-}
+
 
 .tamImagenos2{
   height: 280px;
@@ -1701,6 +1693,26 @@ About Area CSS
   width: 45%;
 }
 
+.boxRedondoNosotros .imagen {
+  display:block;
+  margin:auto;
+  margin-top: 0px;
+  /*position: absolute;*/
+  top:  -70px; 
+  margin-left: -90px; 
+  opacity: 1;
+  transition: opacity 1s linear; 
+}
+
+.tamImageNosotros:hover{
+ opacity: 0;
+ transition: opacity 1s linear; 
+}
+
+
+
+
+/*=====================Image profiles==========================*/
 
 .nos-team_profiles{
   flex-direction: row;
@@ -1708,25 +1720,68 @@ About Area CSS
   justify-content:center;
   display: flex;
   width: 100%;
-  padding: 0 15% 0 15%;
+  padding: 0 10% 0 10%;
   
+}
+.boxRedondoNosotros1{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  transition: background-color 1s linear;
 }
 
 .profile-container{
   flex-direction: column;
   justify-content: space-between;
   display: flex;
-  width: 300px;
-  margin: 40px 0 40px 0;
+  width: auto;
+  margin: 50px 20px 50px 20px;
 }
 
 
-@media(max-width:878px){
-  .profile-container{
-    width: 100%;
-    align-items: center;
-  }
+.tamImagenos1{
+  height:auto;
+  width: auto; 
+  max-width: 310px;
+  z-index:100;
 }
+.tamImagenos1:hover{
+  opacity: 0.6 !important;
+  transition: opacity 1s linear !important; 
+}
+.tamImagenos2:hover{
+  opacity: 0;
+  transition: opacity 1s linear; 
+}
+
+.profile-data-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nombreTeam{
+  width: 250px;
+  font-size: 25px;
+  font-weight: 800;
+  font-family: var(--monoton-font-family);
+  color: var( --main-color);
+  text-align: center;  
+}
+
+.cargoTeam{
+  width: 250px;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: var(--monoton-font-family);
+  color: var( --paragraph-color);
+  text-align: center;  
+}
+
+
+
+
 
 
 /*===================fin NOSOTROS==========================*/
@@ -2515,25 +2570,6 @@ Choose Area CSS
   overflow: hidden;
 }
 
-.nombreTeam{
-  /*width:55%;*/
-  width: 250px;
-  font-size: 25px;
-  font-weight: 800;
-  font-family: var(--monoton-font-family);
-  color: var( --main-color);
-  text-align: center;  
-}
-
-.cargoTeam{
-  /*width:55%;*/
-  width: 250px;
-  font-size: 18px;
-  font-weight: 800;
-  font-family: var(--monoton-font-family);
-  color: var( --paragraph-color);
-  text-align: center;  
-}
 
 .choose-area.bg-with-F5F5F5-color {
   background-color: #F5F5F5;
@@ -10593,26 +10629,6 @@ Buy Now Btn
 
 
 
-.boxRedondoNosotros1{
-  /*padding: 20px;*/
-  position: relative;
-  /*background-color: var(--blue2-color);*/
-  height: 200px;
-  width: 250px;
-  /*box-shadow: 2px 2px 8px 5px rgba(138, 169, 236, 0.2);*/
-  /*border-radius: 15px;*/
-  transition: background-color 1s linear;
-}
-.boxRedondoNosotros1 .imagen {
-  display:block;
-  margin:auto;
-  margin-top: 0px;
-  /*position: absolute;*/
-  top:  0px; 
-  margin-left: -90px; 
-  /*opacity: 1;
-  transition: opacity 1s linear; */
-}
 
 
 
@@ -10660,32 +10676,6 @@ Buy Now Btn
   /*background-image: url(../images/team/team1.png); */
 }
 
-.boxRedondoNosotros .imagen {
-  display:block;
-  margin:auto;
-  margin-top: 0px;
-  /*position: absolute;*/
-  top:  -70px; 
-  margin-left: -90px; 
-  opacity: 1;
-  transition: opacity 1s linear; 
-}
-
- .tamImageNosotros:hover{
-  opacity: 0;
-  transition: opacity 1s linear; 
- 
-}
-.tamImagenos1:hover{
-  opacity: 1;
-  transition: opacity 1s linear; 
- 
-}
-.tamImagenos2:hover{
-  opacity: 0;
-  transition: opacity 1s linear; 
- 
-}
 
 .boxRedondoNosotros .imagen1{
   max-width: 170px;

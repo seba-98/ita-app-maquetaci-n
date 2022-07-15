@@ -1926,6 +1926,11 @@
     .about-content-nos, .fondo_team{
       margin-left: 0px;
     }
+
+    .content-ita-team-data{
+      width: 100%;
+      justify-content: space-around;
+    }
   }
   @media(max-width:1000px){
 
@@ -1948,6 +1953,15 @@
     .content-ita-team-data{
       width: 100%;
       flex-direction: column;
+      justify-content: center;
+    }
+
+
+    @media(max-width:878px){
+      .profile-container{
+        width: 100%;
+        align-items: center;
+      }
     }
   }
 

@@ -48,6 +48,7 @@
 
 
 
+     
      <!--==========================NAVBAR==========================-->
 
 
@@ -75,10 +76,10 @@
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a href="home_page.html" class="nav-link" >Home</a>
+                                <a href="home_page.html" class="nav-link active" >Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="nosotros.html" class="nav-link active">Nosotros</a>
+                                <a href="nosotros.html" class="nav-link ">Nosotros</a>
                             </li>
                             <!--
                             <li class="nav-item">
@@ -187,60 +188,89 @@
                         </p>
 
                         <div class="sidebar-btn">
-                            <a href="contact.html" class="default-btn">Contactanos</a>
+                            <a href="contacto.html" class="default-btn">Contactanos</a>
                         </div>
                     </div>
                     <div class="sidebar-contact-info">
                         <h3>Información de contacto</h3>
 
                         <ul class="info-list">
-                            <!-- <li><i class="ri-phone-fill"></i> <a href="tel:5548457290"><FONT FACE="Uber Move Medium">(55)48457290</FONT></a></li></a></li>
+                            <!-- <li><i class="ri-phone-fill"></i> <a href="tel:5548457290"><FONT FACE="Uber Move Medium">(55)48457290</FONT></a></li></a></li>-->
                             
-                            <li><i class="ri-mail-line"></i> <a href="mailto:contacto.consult.ita@gmail.com"><FONT FACE="Uber Move Medium">contacto.consult.ita@gmail.com</FONT></a></li> -->
+                            <li ><i class="ri-mail-line "></i> <a href="mailto:contacto.consult.ita@gmail.com">contacto.consult.ita@gmail.com</a></li> 
 
-                            <li><i class="ri-map-pin-line"></i> boulevard de las Rosas, Coacalco de Berriozabal</li>
+                            <!-- <li><i class="ri-map-pin-line"></i> boulevard de las Rosas, Coacalco de Berriozabal</li> -->
                         </ul>
                     </div>
                     <ul class="sidebar-social-list">
                         <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
                         <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="ri-behance-fill"></i></a></li>
                     </ul>
                     <div class="contact-form">
                         <h3>Deja tu mensaje</h3>
 
-                        <form id="contactForm">
+                        <form id="contactForm" autocomplete="off">
                             <div class="row">
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="name" class="form-control" required data-error="Por favor escribe tu nombre" placeholder="Nombre">
-                                        <div class="help-block with-errors"></div>
+                                        <input id="form-name" type="text" name="name" class="form-control" required data-error="Por favor escribe tu nombre" placeholder="Nombre">
+                                        <div class="help-block with-errors " id="name-err" style="display:none ;">
+                                            <ul class="list-unstyled">
+                                                <li >El nombre debe ser mayor a 2 caracteres</li>
+                                            </ul>
+                                        </div>
                                     </div>
+                                </div>
+                                
+
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="form-group">
+                                        <input id="form-email" type="email" name="email" class="form-control" required data-error="Por favor escribe tu correo electrónico" placeholder="Correo Electrónico">
+                                        <div class="help-block with-errors " id="email-err" style="display:none ;">
+                                            <ul class="list-unstyled">
+                                                <li >El email debe tener un formato válido</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
-                                        <input type="email" name="email" class="form-control" required data-error="Por favor escribe tu correo electrónico" placeholder="Correo Electrónico">
+                                        <input id="form-affair" type="text" name="affair" class="form-control" required data-error="El asunto debe tener al menos 5 caracteres" placeholder="Asunto">
+                                        <div class="help-block with-errors " id="affair-err" style="display:none ;">
+                                            <ul class="list-unstyled">
+                                                <li >El asunto debe tener al menos 5 caracteres</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <input type="text" name="phone_number" class="form-control" required data-error="Por favor escribe tu teléfono" placeholder="Teléfono">
-                                        <div class="help-block with-errors"></div>
+                                        <input id="form-phone" type="text" name="phone_number" class="form-control" required data-error="El teléfono debe tener un formato válido" placeholder="Teléfono">
+                                        <div class="help-block with-errors " id="phone-err" style="display:none ;">
+                                            <ul class="list-unstyled">
+                                                <li >El teléfono debe tener un formato válido</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <textarea name="message" class="form-control" cols="30" rows="6" required data-error="Por favor escribe tu mensaje" placeholder="Escribe un mensaje..."></textarea>
-                                        <div class="help-block with-errors"></div>
+                                        <textarea name="message" id="form-message" class="form-control" cols="30" rows="6" required data-error="El mensaje debe tener al menos 10 caracteres" placeholder="Escribe un mensaje..."></textarea>
+                                        <div class="help-block with-errors " id="message-err" style="display:none ;">
+                                            <ul class="list-unstyled">
+                                                <li >El mensaje debe tener al menos 10 caracteres</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
-                                    <button type="submit" class="default-btn">Enviar mensaje<span></span></button>
+                                    <button type="submit" id="contact-page_button" class="default-btn">Enviar mensaje<span></span></button>
                                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -292,7 +322,6 @@
 </div>
 <!-- End Main Hero Area -->
 
-git commit -m "Modificación del color del navbar, eliminación underline de botones flotantes, modificación textto 'Acerca de', se añadio footer, navegación entre paginas(home, contacto y nosotros),
 
 
 <!-- Start About Area -->
@@ -349,167 +378,160 @@ git commit -m "Modificación del color del navbar, eliminación underline de bot
                 <div class="cargoTeam">CCO</div>                
             </div>
             -->
-            <div class=" profile-container">
+            <div class="profile-container">
                 <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Unzaga-Augusto _ CCO.png" alt="image" class="tamImagenos1">
-                    </div>                                      
-                </div>
+                    <img src="../../static/images/team/Unzaga-Augusto _ CCO.png" alt="image" class="tamImagenos1">
+                </div>                                      
                 <br>
-                <div class="nombreTeam ">Augusto Unzaga</div>
-                <div class="cargoTeam ">CCO</div>                
+                <div class="profile-data-text">
+                    <div class="nombreTeam ">Augusto Unzaga</div>
+                    <div class="cargoTeam ">CCO</div>                
+                </div>
             </div>
             
             <div class=" profile-container">
                 <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Carreño-Alejandro _ CTO.png" alt="image" class="tamImagenos1">
-                    </div>                                      
-                </div>
+                    <img src="../../static/images/team/Carreño-Alejandro _ CTO.png" alt="image" class="tamImagenos1">
+                </div>                                      
                 <br>
-                <div class="nombreTeam">Alejandro Carreño</div>
-                <div class="cargoTeam">CTO</div>                
+                <div class="profile-data-text">
+                    <div class="nombreTeam">Alejandro Carreño</div>
+                    <div class="cargoTeam">CTO</div>                
+                </div>
             </div>
             
             
             <div class=" profile-container">
                 <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Ortega-Liss-J.png" alt="image" class="tamImagenos1">
-                    </div>                                      
-                </div>
+                    <img src="../../static/images/team/Ortega-Liss-J.png" alt="image" class="tamImagenos1">
+                </div>  
                 <br>
-                <div class="nombreTeam">Liss Ortega</div>
-                <div class="cargoTeam">Redacción</div>                
+                <div class="profile-data-text">
+                    <div class="nombreTeam">Liss Ortega</div>
+                    <div class="cargoTeam">Redacción</div>                
+                </div>
             </div>
            
             <div class=" profile-container">
-                <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/David.png" alt="image" class="tamImagenos1">
-                    </div>                                      
+                <div class="boxRedondoNosotros1"> 
+                    <img src="../../static/images/team/David.png" alt="image" class="tamImagenos1">                        
                 </div>
                 <br>
-                <div class="nombreTeam">David Luna</div>
-                <div class="cargoTeam">Software architect</div>                
+                <div class="profile-data-text">
+                    <div class="nombreTeam">David Luna</div>
+                    <div class="cargoTeam">Software architect</div>                
+                </div>
             </div>
             
             <div class=" profile-container">
                 <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Busatto-Sofía.png" alt="image" class="tamImagenos1">
-                    </div>                                      
-                </div>
+                    <img src="../../static/images/team/Busatto-Sofía.png" alt="image" class="tamImagenos1">
+                </div>                                      
                 <br>
-                <div class="nombreTeam">Sofía Busatto</div>
-                <div class="cargoTeam">Diseñadora UI UX</div>                
-            </div>
-            
-            
-            <div class=" profile-container">
-                <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Francisco.png" alt="image" class="tamImagenos1">
-                    </div>                                      
+                <div class="profile-data-text">
+                    <div class="nombreTeam">Sofía Busatto</div>
+                    <div class="cargoTeam">Diseñadora UI UX</div>                
                 </div>
-                <br>
-                <div class="nombreTeam">Francisco Hernández</div>
-                <div class="cargoTeam">Software architect</div>                
-            </div>
-
-            <div class=" profile-container">
-                <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Simon-Azocar.png" alt="image" class="tamImagenos1">
-                      
-                    </div>                                      
-                </div>
-                <br>
-                <div class="nombreTeam">Simon Azocar</div>
-                <div class="cargoTeam">Frontend developer</div>                
-            </div>
-            
-            <div class=" profile-container">
-                <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Reinaldo-Romero.png" alt="image" class="tamImagenos1">
-                       
-                    </div>                                      
-                </div>
-                <br>
-                <div class="nombreTeam">Reinaldo Romero</div>
-                <div class="cargoTeam">Fullstack developer</div>                
             </div>
             
             
             <div class=" profile-container">
                 <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Sebastian-Belettieri.png" alt="image" class="tamImagenos1">
-                       
-                    </div>                                      
+                    <img src="../../static/images/team/Francisco.png" alt="image" class="tamImagenos1">
                 </div>
                 <br>
-                <div class="nombreTeam">Sebastian Belettieri</div>
-                <div class="cargoTeam">Frontend developer</div>                
+                <div class="profile-data-text">
+                    <div class="nombreTeam">Francisco Hernández</div>
+                    <div class="cargoTeam">Software architect</div>                
+                </div>
             </div>
 
             <div class=" profile-container">
                 <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Castelli-Facundo.png" alt="image" class="tamImagenos1">
-                       
-                    </div>                                      
+                    <img src="../../static/images/team/Simon-Azocar.png" alt="image" class="tamImagenos1">
                 </div>
                 <br>
-                <div class="nombreTeam">Facundo Castelli</div>
-                <div class="cargoTeam">Fullstack developer</div>                
+                <div class="profile-data-text">
+                    <div class="nombreTeam">Simon Azocar</div>
+                    <div class="cargoTeam">Frontend developer</div>                
+                </div>
             </div>
             
             <div class=" profile-container">
                 <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Stramucci-José.png" alt="image" class="tamImagenos1">
-                        
-                    </div>                                      
+                    <img src="../../static/images/team/Reinaldo-Romero.png" alt="image" class="tamImagenos1">
                 </div>
                 <br>
-                <div class="nombreTeam">José Stramucci</div>
-                <div class="cargoTeam">UI UX</div>                
+                <div class="profile-data-text">
+                    <div class="nombreTeam">Reinaldo Romero</div>
+                    <div class="cargoTeam">Fullstack developer</div>                
+                </div>
             </div>
             
             
             <div class=" profile-container">
                 <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Mauricio-Caci.png" alt="image" class="tamImagenos1">
-                       
-                    </div>                                      
+                    <img src="../../static/images/team/Sebastian-Belettieri.png" alt="image" class="tamImagenos1">              
                 </div>
                 <br>
-                <div class="nombreTeam">Caci Mauricio</div>
-                <div class="cargoTeam">Fullstack developer</div>                
+                <div class="profile-data-text">
+                    <div class="nombreTeam">Sebastian Belettieri</div>
+                    <div class="cargoTeam">Frontend developer</div>                
+                </div>
+            </div>
+
+            <div class=" profile-container">
+                <div class="boxRedondoNosotros1">
+                    <img src="../../static/images/team/Castelli-Facundo.png" alt="image" class="tamImagenos1">                    
+                </div>
+                <br>
+                <div class="profile-data-text">
+                    <div class="nombreTeam">Facundo Castelli</div>
+                    <div class="cargoTeam">Fullstack developer</div>                
+                </div>
+            </div>
+            
+            <div class=" profile-container">
+                <div class="boxRedondoNosotros1">
+                    <img src="../../static/images/team/Stramucci-José.png" alt="image" class="tamImagenos1">                           
+                </div>
+                <br>
+                <div class="profile-data-text">
+                    <div class="nombreTeam">José Stramucci</div>
+                    <div class="cargoTeam">UI UX</div>                
+                </div>
+            </div>
+            
+            
+            <div class=" profile-container">
+                <div class="boxRedondoNosotros1">
+                    <img src="../../static/images/team/Mauricio-Caci.png" alt="image" class="tamImagenos1">              
+                </div>
+                <br>
+                <div class="profile-data-text">
+                    <div class="nombreTeam">Caci Mauricio</div>
+                    <div class="cargoTeam">Fullstack developer</div>                
+                </div>
             </div>
            
 
             <div class=" profile-container">
                 <div class="boxRedondoNosotros1">
-                    <div class="imagen">        
-                        <img src="../../static/images/team/Witzel-Federico.png" alt="image" class="tamImageNosotros">
-                        
-                    </div>                                      
+                    <img src="../../static/images/team/Witzel-Federico.png" alt="image" class="tamImagenos1">                      
                 </div>
                 <br>
-                <div class="nombreTeam">Federico Witzel</div>
-                <div class="cargoTeam">Fullstack developer</div>                
+                <div class="profile-data-text">
+                    <div class="nombreTeam">Federico Witzel</div>
+                    <div class="cargoTeam">Fullstack developer</div>                
+                </div>
             </div>
            
         </div>
        
-        <div class="section-titleNosotros" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+        <div  data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
 
             <div class="about-btn centerBoton">
-                <a href="/contacto/" class="default-btn">Contáctanos</a>
+                <a href="contacto.html" class="default-btn">Contáctanos</a>
             </div>
         </div>
 </div>
