@@ -1967,5 +1967,61 @@
 
 
   /*================FINNOSOTROSPAGE====================*/
+  
+  
+  /*================servicios && talk-area responsive====================*/
+  
+  @media(max-width:1000px){
+    .fondo_cisrular_servicios{
+      width:100% !important;
+    }
+    .talk-content{
+      width: 100% !important;
+    }
+  }
+  
+  @media(max-width:803px){
+    .fondo_cisrular_servicios{
+      display: none;
+    }
+  }
+  @media(max-width:700px){
+    .about-services-area {
+      margin-top: -70px !important;
+    }
+    
+    .talk-content{
+      height: 800px !important;
+      padding-bottom: 0px !important;
+    }
+    .talk-text{
+      position: relative;
+      bottom: 0px !important;
+      margin-top: 200px;
+    } 
+  }
+  
+  @media(max-width:460px){
+   
 
+    .talk-info{
+      text-align: center;
 
+    }
+    .talk-title{
+      text-align: center;
+      margin-bottom: 60px !important;
+      width: 100%;
+    }
+    
+    .talk-text{
+      justify-content: center;
+    }
+    .talk-text h4{
+      font-size: 25px !important;
+    }
+    .talk-text h5{
+      font-size: 30px !important;
+    }
+  }
+    /*================fin servicios && talk-area responsive====================*/

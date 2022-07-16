@@ -2108,8 +2108,200 @@ About Area CSS
 /*================================================
 Services Area CSS
 =================================================*/
+
+
+
+.software-area{
+  display: flex;
+  flex-direction: column;
+}
+
+.software-product_container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* border: 2px solid yellow; */
+  
+}
+.soft-product-data_container{
+  margin: 50px 0 50px 0;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.soft-product-img_container{
+  width: auto ;
+}
+.soft-product-img_container img{
+  min-width: 200px;
+  width: 300px ;
+}
+.soft-product-items_container{
+  display: flex;
+  flex-direction: column;
+}
+.software-product-title{
+  /* border: 2px solid black; */
+  text-align: center;
+  
+}
+
+@media(max-width:760px){
+  
+  .soft-product-img_container img{
+    max-width: 250px;
+    min-width: 200px;
+    width: auto ;
+  }
+  
+  .soft-product-items{
+    width: auto !important;
+  }
+}
+
+.soft-product-items{
+  width: 700px;
+  max-width: 700px;
+  min-width: 200px;
+  display: flex;
+  /* border: 2px solid red; */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.soft-product-item{
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  width: 100px;
+}
+
+/*=================================*/
+.software-implement_container{
+  display: flex;
+  
+}
+
+.soft-implement-data_container{
+  margin: 50px 0 50px 0;
+  align-items: center;
+  flex-direction: row-reverse !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+
+
+/*=================================services cards=================================*/
+
+.services-cards_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.boxRedondoServicios{
+  position: relative;
+  height: 150px;
+  width: 200px;
+  border-radius: 15px;
+  transition: background-color 1s linear;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--blue2-color);
+  margin: 20px 10px 20px 10px;
+
+}
+
+.boxRedondoServicios:hover{
+  background-color:  var(--blue2-color);
+  box-shadow: 2px 2px 8px 5px rgba(138, 169, 236, 0.4);  
+  transition: background-color 1s linear;  
+   
+}
+.boxRedondoServicios:hover:before {
+  border: 25px solid var(--blue2-color);
+  content: '';
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  position: absolute;
+  bottom: -48px;
+  left: calc(50% - 25px); 
+  transition: background-color 1s linear; 
+  
+  /*background-image: url(../images/team/team1.png);*/
+}
+
+.boxRedondoServicios .imagen {
+  display:block;
+  /*margin:auto;*/
+  margin-top: 10%;
+  /*position: absolute;*/
+  /*top:  300px;*/
+  margin-left: 36%; 
+  opacity: 1;
+  transition: opacity 1s linear; 
+  height: 30%;
+  width: 30%;
+  
+}
+
+.boxRedondoServicios .titulo {
+  text-align: center;
+  color:var(--white-color);
+  margin-top: 15%;
+  font-size:25px;
+}
+
+.centrarServiciosfondo{
+  margin-top: 30px; 
+  width: 96%; 
+  justify-content:center; 
+}
+
+
+.centrarServiciosfondo .contenidoDivServicios{
+  width: 70%;   
+  margin-left:30px;
+  justify-content:center;
+  background-color:  var(--blue2-color);
+  border-radius: 15px;   
+ 
+}
+
+.centrarServiciosfondo .contenidoServicios{
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+
+.centrarServiciosfondo .contenidoServicios p{
+  color:var(--white-color);
+  font-size:15px;
+  font-family: var(--heading-font-family);
+}
+
+.centrarServiciosfondo .contenidoServicios h3{
+  color:var(--white-color);  
+  font-size:20px;
+  font-family: var(--heading-font-family);
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+
+
 .services-area {
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   z-index: 1;
 }
@@ -2123,7 +2315,6 @@ Services Area CSS
 }
 
 .services-area .container-fluid {
-  overflow: hidden;
   left: calc((100% - 1320px)/2);
   position: relative;
 }
@@ -2145,8 +2336,9 @@ Services Area CSS
   background-color: var(--black-color);
 }
 
+
+
 .services-area-style-two {
-  
   background-color: var(--black-color);
   position: relative;
   z-index: 1;
@@ -5247,29 +5439,99 @@ Features Area CSS
 /*================================================
 Talk Area CSS
 =================================================*/
-.talk-area {
-  background-color: #F5F5F5;
+
+
+
+
+.about-services-area {
+  /* border: 2px solid red; */
+  display: block;
+  margin-top: 100px;
 }
 
-.talk-imageConta {
+.talk-area{
+  padding-top: 200px;
   position: relative;
-  z-index: 1;  
+  top:250%;
+  bottom:0;
+  right:0;
+  left:0;
+  /* border: 2px solid orange; */
+}
+.fondo_cisrular_servicios{
+  width:90%;
+  height: 80%;
+  position: absolute;
+
+}
+.talk-content{
+  position: relative;
+  bottom: 70px;
+  /* border: 2px solid green; */
+  height: 340px;
+  padding-bottom: 150px;
+  flex-wrap: wrap;
+  width: 90%;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around;
+}
+
+.talk-info{
+  margin-top: 50px;
+}
+.talk-title{
+  /* border: 2px solid red;  */
+  position: absolute;
+  bottom: 350px;
+}
+
+.talk-text{
+  /* border: 2px solid blue; */
+  margin-top: 80px;
+  justify-content: center;
+  flex-direction: column;
+}
+.talk-text, .talk-image{
+  display: flex;
+}
+.talk-image{
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid yellow; */
+  flex-direction: row;
+  margin-right: 0px;
+}
+.talk-image img{
+  /* border: 2px solid black; */
+  width: 340px;
+  height: 340px;
+}
+
+.talk-meet{
+  margin-top: 50px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+.talk-meet a{
+  text-decoration: none;
 }
 
 
-.talk-image {
+/* .talk-image {
   position: absolute;
   margin-top:-13%;
   z-index: 1;  
-}
+} */
 
-.talk-image .talk-circle {
+/* .talk-image .talk-circle {
   position: absolute;
   bottom: -12px;
   left: -50px;
-}
+} */
 
-.talk-image .talk-circle img {
+/* .talk-image .talk-circle img {
   -webkit-animation-name: rotateme;
           animation-name: rotateme;
   -webkit-animation-duration: 5s;
@@ -5278,12 +5540,11 @@ Talk Area CSS
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-}
+} */
 
 .talk-content {
   position: relative;
   z-index: 1;
-  margin-top: 45px;
 }
 
 .talk-content .talk-bg-text {
@@ -5297,7 +5558,7 @@ Talk Area CSS
   line-height: 0;
 }
 
-.talk-content span {
+.talk-area span {
   font-size: 28px;
   color: var(--main-color);
   font-weight: 600;
@@ -5306,7 +5567,7 @@ Talk Area CSS
   font-family: var(--heading-font-family);
 }
 
-.talk-content h3 {
+.talk-area h3 {
   font-family: var(--heading-font-family);
   font-size: 42px;
   margin-bottom: 15px;
@@ -5314,38 +5575,41 @@ Talk Area CSS
   position: relative;
 }
 
-.talk-content h4 {
+.talk-area h4 {
   font-family: var(--heading-font-family);
   color:var(--blue-color_ita);  
   font-size: 32px;  
   line-height: 1;
   position: relative;
   letter-spacing: 1pt;
+  font-weight: 900;
 }
-.talk-content h5 {
+.talk-area h5 {
   font-family: var(--heading-font-family);
   color:var(--main-color);  
   font-size: 42px;  
   position: relative;
   letter-spacing: 1pt;
+  font-weight: 900;
 }
 
-.talk-content h6 {
+.talk-area h6 {
   font-family: var(--heading-font-family);
   color:var(--blue-color_ita);  
   font-size: 30px;  
   position: relative;
   letter-spacing: 1pt;
+  font-weight: 900;
 }
 
 
-.talk-content h3 b {
+.talk-area h3 b {
   background: radial-gradient(circle, #a66bff, #c666ef, #dd62df, #ee61cf, #fb64bf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.talk-content h3 .overlay {
+.talk-area h3 .overlay {
   position: absolute;
   left: 0;
   top: 0;
@@ -5356,7 +5620,7 @@ Talk Area CSS
   z-index: 1;
 }
 
-.talk-content p {
+.talk-area p {
   font-family: var(--heading-font-family);
   color:var(--blue-color_ita);  
   font-size: 20px;  
@@ -5364,15 +5628,15 @@ Talk Area CSS
   line-height: 1.2;
 }
 
-.talk-content #contactFormTwo {
+ #contactFormTwo {
   margin-top: 25px;
 }
 
-.talk-content #contactFormTwo .form-group {
+ #contactFormTwo .form-group {
   margin-bottom: 20px;
 }
 
-.talk-content #contactFormTwo .form-group .form-control {
+ #contactFormTwo .form-group .form-control {
   height: 55px;
   color: #9B8DAC;
   -webkit-box-shadow: unset !important;
@@ -5386,80 +5650,77 @@ Talk Area CSS
   font-size: 15px;
 }
 
-.talk-content #contactFormTwo .form-group .form-control::-webkit-input-placeholder {
+ #contactFormTwo .form-group .form-control::-webkit-input-placeholder {
   color: #9B8DAC;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.talk-content #contactFormTwo .form-group .form-control:-ms-input-placeholder {
+ #contactFormTwo .form-group .form-control:-ms-input-placeholder {
   color: #9B8DAC;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.talk-content #contactFormTwo .form-group .form-control::-ms-input-placeholder {
+ #contactFormTwo .form-group .form-control::-ms-input-placeholder {
   color: #9B8DAC;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.talk-content #contactFormTwo .form-group .form-control::placeholder {
+ #contactFormTwo .form-group .form-control::placeholder {
   color: #9B8DAC;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.talk-content #contactFormTwo .form-group .form-control:focus {
+ #contactFormTwo .form-group .form-control:focus {
   border-color: var(--main-color);
   background-color: transparent;
 }
 
-.talk-content #contactFormTwo .form-group .form-control:focus::-webkit-input-placeholder {
+ #contactFormTwo .form-group .form-control:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.talk-content #contactFormTwo .form-group .form-control:focus:-ms-input-placeholder {
+ #contactFormTwo .form-group .form-control:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.talk-content #contactFormTwo .form-group .form-control:focus::-ms-input-placeholder {
+ #contactFormTwo .form-group .form-control:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-.talk-content #contactFormTwo .form-group .form-control:focus::placeholder {
+ #contactFormTwo .form-group .form-control:focus::placeholder {
   color: transparent;
 }
 
-.talk-content #contactFormTwo .form-group textarea.form-control {
+ #contactFormTwo .form-group textarea.form-control {
   height: auto;
   padding-top: 15px;
 }
 
-.talk-content #contactFormTwo .default-btn {
+ #contactFormTwo .default-btn {
   border: none;
 }
 
-.talk-content #contactFormTwo .list-unstyled {
+ #contactFormTwo .list-unstyled {
   padding: 0;
   margin-bottom: 0;
 }
 
-.talk-content #contactFormTwo .list-unstyled li {
+ #contactFormTwo .list-unstyled li {
   font-size: 14px;
   margin-top: 10px;
   color: red;
 }
 
-.talk-content #contactFormTwo .text-danger {
+ #contactFormTwo .text-danger {
   font-size: 18px;
   margin-top: 20px;
   margin-bottom: 0;
 }
 
-.talk-content.margin-zero {
-  margin-top: 0;
-}
 
 /*================================================
 Team Area CSS
@@ -5790,6 +6051,25 @@ Gallery Area CSS
   -webkit-filter: blur(2px);
           filter: blur(2px);
 }
+
+/*================================================
+CONTACT AREA
+=================================================*/
+
+
+.talk-area-contact{
+  background-color: #F5F5F5;
+}
+
+.talk-imageConta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;  
+}
+
+
+
 
 /*================================================
 FAQ Area CSS
@@ -10688,60 +10968,6 @@ Buy Now Btn
 }
 
 
-.boxRedondoServicios{
-  /*padding: 20px;*/
-  position: relative;
-  /*background-color: var(--blue2-color);*/
-  height: 150px;
-  width: 200px;
-  /*box-shadow: 2px 2px 8px 5px rgba(138, 169, 236, 0.2);*/
-  border-radius: 15px;
-  transition: background-color 1s linear;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--blue2-color);
-}
-
-.boxRedondoServicios:hover{
-  background-color:  var(--blue2-color);
-  box-shadow: 2px 2px 8px 5px rgba(138, 169, 236, 0.4);  
-  transition: background-color 1s linear;  
-   
-}
-.boxRedondoServicios:hover:before {
-  border: 25px solid var(--blue2-color);
-  content: '';
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  border-right-color: transparent;
-  position: absolute;
-  bottom: -48px;
-  left: calc(50% - 25px); 
-  transition: background-color 1s linear; 
-  
-  /*background-image: url(../images/team/team1.png);*/
-}
-
-.boxRedondoServicios .imagen {
-  display:block;
-  /*margin:auto;*/
-  margin-top: 10%;
-  /*position: absolute;*/
-  /*top:  300px;*/
-  margin-left: 36%; 
-  opacity: 1;
-  transition: opacity 1s linear; 
-  height: 30%;
-  width: 30%;
-  
-}
-
-.boxRedondoServicios .titulo {
-  text-align: center;
-  color:var(--white-color);
-  margin-top: 15%;
-  font-size:25px;
-}
 
 .boxRedondoNews{
   /*padding: 20px;*/
@@ -10828,54 +11054,6 @@ Buy Now Btn
 
 
 
-
-.centrarServicios{
-  /*border-width:1px;
-  border-style:solid;*/  
-  width: 78%; 
-  justify-content:center;
-  
-}
-
-.centrarServiciosfondo{
-  /*border-width:1px;
-  border-style:solid;*/
-  margin-top: 30px; 
-  width: 78%; 
-  justify-content:center; 
-  /*display: none;*/
-  /*padding-bottom: 100px;*/
-}
-
-.centrarServiciosfondo .contenidoDivServicios{
-  width: 70%;   
-  margin-left:30px;
-  justify-content:center;
-  background-color:  var(--blue2-color);
-  border-radius: 15px;   
- 
-}
-
-.centrarServiciosfondo .contenidoServicios{
-  margin-top:50px;
-  margin-bottom: 50px;
-}
-
-.centrarServiciosfondo .contenidoServicios p{
-  color:var(--white-color);
-  font-size:15px;
-  font-family: var(--heading-font-family);
-}
-
-.centrarServiciosfondo .contenidoServicios h3{
-  color:var(--white-color);  
-  font-size:20px;
-  font-family: var(--heading-font-family);
-  line-height: 1.1;
-  letter-spacing: 2px;
-}
-
-
 .boxRedondo_services{  
   display: flex !important;
   justify-content: center !important;
@@ -10928,9 +11106,6 @@ Buy Now Btn
 .services-area-style-two {
   background-color: #080755;
   z-index: 1;
-  /* position: relative;
-  overflow: hidden;
-  margin-bottom: 1px; */
 }
 .centerBoton{
   width:100% ;
