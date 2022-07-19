@@ -163,7 +163,7 @@
     font-size: 12px;
   }
   .about-content h3 {
-    font-size: 20px;
+    font-size: 40px;
   }
   .about-wrap-content {
     padding-left: 0;
@@ -1182,7 +1182,7 @@
     font-size: 14px;
   }
   .about-content h3 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .about-wrap-content {
     padding-left: 0;
@@ -1634,7 +1634,7 @@
     font-size: 50px;
   }
   .about-content h3 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .about-wrap-content h3 {
     font-size: 30px;
@@ -1871,17 +1871,60 @@
 
 
  /*================HOMEPAGE====================*/
- @media(max-width:460px){
-   .boxRedondo,.imageComo, .seccionAzul_title_content {
+
+
+
+ @media(max-width:500px){
+    .boxRedondo,.imageComo {
      width: 300px !important;
+     height: 390px;
     }
-    
-  }
-  @media(max-width:350px){
-    .boxRedondo,.imageComo, .seccionAzul_title_content {
-      width: 270px !important;
+    .iconoComo{
+      max-width: 100%;
+      max-height: 40px;
+    }
+    .azul-item{
+      flex-wrap: wrap;
+    }
+    .azul_content p{
+      font-size: 10px !important;
+    }
+    .seccionAzul_content{
+      margin-top: 80px;
+    }
+    .tamImageSoftEmpresa{
+      max-width: 50px;
+      max-height: 40px;
+    }
+    .azul_title{
+      font-size: 16px !important;
+    } 
+    .azul_title_info{
+      font-size: 10px;
     }
   }
+
+    @media(max-width:390px){
+      .azul_title, .azul_title_info{
+        width: 100%;
+      }
+      .seccionAzul_content{
+        margin-top: 100px;
+      }
+      .boxRedondo,.imageComo {
+        width: 260px !important;
+        height: 320px !important;
+      }
+    }
+    @media(max-width:350px){
+
+      .boxRedondo,.imageComo {
+        width: 240px !important;
+       }
+
+      
+    }
+
   
   @media(max-width:785px){
     .services-contain{
@@ -1909,9 +1952,129 @@
   }
 
   @media(max-width:990px){
-    .fondo_cisrular {
+    .inova-img_content{
       display: none;
     }
+    .fondo_cisrular {
+      height:600px !important;
+      width: 98% !important;
+    }
+
+    .fondo-redondo_container{
+      padding-right: 70px;
+      position: relative;
+      bottom: 140px;
+      max-width: 80%;
+    }
+    .inova-items-container{
+      position: relative !important;
+      bottom: 30px;
+    }
+    .tamImage{
+      margin-top: 60px;
+    }
+  }
+  
+  /* @media(max-width:700px){
+
+    .fondo_cisrular {
+      height:620px !important;
+    }
+  } */
+
+  @media(max-width:700px){
+
+    .fondo-redondo_container{
+      max-width: 100%;
+    }
+    .fondo_cisrular {
+      width: 95% !important;
+    }
+    .especial{
+      font-size: 30px !important ;
+    }
+    .about-content span {
+      font-size: 12px ;
+    }
+    .about-content p {
+      font-size: 15px !important;
+    } 
+    .inova-items-container{
+      right: 10px !important;
+    }
+    .inova-items h7{
+      font-size:13px !important;
+    }
+  }
+  
+  
+  @media(max-width:560px){
+    .h3-about-area{
+      font-size: 25px !important;
+    }
+    .especial1{
+      font-size: 27px !important ;
+    }
+
+  }
+    
+  @media(max-width:450px){
+    .about-content span {
+      font-size: 12px ;
+    }
+
+    .especial{
+      font-size: 20px !important ;
+    }
+    .about-content span {
+      font-size: 10px;
+    }
+    .about-content p {
+      font-size: 12px !important;
+    }
+    .h3-about-area {
+      font-size: 19px !important;
+    }
+    .especial1{
+      font-size: 20px !important;
+    }
+    
+
+
+  }
+  
+  @media(max-width:425px){
+
+    .fondo-redondo_container{
+      top: -170px;
+      padding-right: 0px !important;
+    }
+    .about-content-container{
+      width: 90% !important;
+    }
+    
+    .fondo_cisrular {
+      width: 120% !important;
+      height:420px !important;
+      top: -50px !important;
+    }
+
+  
+
+    .fondo-redondo_container{
+      margin-top: 150px;
+    }
+    .inova-items-container{
+      width: 100%;
+      padding: 0 30px 0 10px !important;
+      right: 0;
+      bottom: 40px;
+    }
+    .inova-items h7{
+      font-size: 9px !important;
+      max-width: 100px;
+    }
+
   }
   
   /*================FINHOMEPAGE====================*/
@@ -2001,6 +2164,24 @@
     } 
   }
   
+  @media(max-width:470px){
+    .section-title-serviceII {
+      width: 90px;
+    }
+    .tamImageServicios{
+      width: 50px !important;
+      height: 50px !important;
+    }
+    .section-title-serviceII h3{
+      width: 100%;
+      font-size: 15px !important;
+    }
+    .boxRedondo_services{
+      width: 90px !important;
+      height: 90px !important;
+    }
+  }
+  
   @media(max-width:460px){
    
 
@@ -2025,3 +2206,28 @@
     }
   }
     /*================fin servicios && talk-area responsive====================*/
+
+
+
+
+    @media(max-width:992px){
+      .about-area-mundo{
+        width: 100%;
+        margin-top: 0px !important;
+      }
+    }
+    @media(max-width:768px){
+
+      .mundo-content_animation{
+        margin-top: 60px !important;
+      }
+    
+      .about-area-mundo{
+        flex-direction: column-reverse;
+        width: 90%;
+      }
+      .about-content_Mundo p{
+        text-align: center !important;
+      }
+    
+    }
