@@ -1931,9 +1931,6 @@
       justify-content: center !important;
     }
 
-    .about-content-nos{
-      width: 100% !important;
-    }
   }
   
   @media(max-width:1100px){
@@ -1942,9 +1939,6 @@
       justify-content: center;
       flex-direction: column;
       padding-top: 80px;
-    }
-    .ita-team-img_container{
-      justify-content: flex-start !important;
     }
     .about-content-nos, .fondo_team{
       margin-left: 0px;
@@ -2085,46 +2079,146 @@
   /*================NOSOTROSPAGE====================*/
   
   @media(max-width:1600px){
-
-    .about-content-nos, .fondo_team{
-      margin-left: 0px;
-    }
-
-    .content-ita-team-data{
-      width: 100%;
-      justify-content: space-around;
-    }
-  }
-  @media(max-width:1000px){
-
-    .about-area .fondo_cisrular_team {
-      display: none;
-    }
     
-    .ita-team-img_container{
-      justify-content: center !important;
+    .fondo_team{
+      margin-right: 600px !important;
     }
-    .about-content-nos{
-      width: 80% !important;
 
-    }
     .about-area-nosotros{
-
-      padding: 0;
+      padding-left: 50px;
     }
-    
+    .fondo_cisrular_team {
+      width: 90% !important;
+    }
     .content-ita-team-data{
       width: 100%;
-      flex-direction: column;
       justify-content: center;
     }
+   
+    .ita-team-img_container{
+      width: 100%;
+      justify-content: center;
+    }
+    .tamImageNos{
+      margin-left: 200px;
+    }
+  }
+  
+  
+  
+  @media(max-width:1200px){
+    .fondo_team{
+      margin-right: 200px !important;
+    }
+    .about-content-nos{
+      margin-right: 200px !important;
+    }
 
+    .about-area-nosotros{
+      padding-left: 0px;
+    }
+    .fondo_cisrular_team {
+      height: 900px;
+      width: 90% !important;
+    }
+    .tamImageNos {
+      display: none;
+    }
+    .ita-team-img_container{
+      margin: 0 !important;
+    }
+    .about-area-nosotros{
+      padding: 0 !important;
+    }
+  }
 
-    @media(max-width:878px){
-      .profile-container{
-        width: 100%;
-        align-items: center;
-      }
+  
+  @media(max-width:878px){
+
+    .fondo_team {
+      position: relative;
+      height: 110px;
+      width:480px;
+      margin-right: 100px !important;
+      top:110px;
+    }
+    .about-content-nos{
+      position: relative;
+      top: 80px;
+      margin-right: 100px !important;
+    }
+    .about-content-nos h4, h5{
+      font-size: 25px !important;
+    }
+
+    .fondo_cisrular_team {
+      height: 800px !important;
+      width: 100% !important;
+    }
+    .profile-container{
+      width: 100%;
+      align-items: center;
+    }
+
+  }
+
+  @media(max-width:660px){
+
+    .fondo_team {
+      position: relative;
+      height: 70px;
+      width:320px;
+      margin-right: 100px !important;
+      top:40px;
+    }
+
+    .about-content-nos{
+      margin-right: 70px !important;
+      width: 370px;
+      top: 0px;
+    }
+    .about-content-nos h4, h5{
+      font-size: 19px !important;
+    }
+    .fondo_cisrular_team {
+      height: 550px !important;
+    }
+    .parrafo{
+      display: none;
+    }
+
+    .nos-team_profiles_container{
+      margin-top: 0 !important;
+    }
+  }
+
+  @media(max-width:470px){
+
+  
+
+    .fondo_team {
+      position: relative;
+      height: 50px;
+      width:220px;
+      margin-right: 30px !important;
+      top:0px;
+    }
+    
+    .about-content-nos{
+      margin-right: 0px !important;
+      width: 270px;
+      top: -90px;
+    }
+    .fondo_cisrular_team {
+      height: 400px !important;
+    }
+    .about-content-nos h4, h5{
+      font-size: 16px !important;
+    }
+
+    .content-ita-team-data{
+      margin-bottom: -200px !important;
+
     }
   }
 
@@ -2163,7 +2257,7 @@
       margin-top: 200px;
     } 
   }
-  
+
   @media(max-width:470px){
     .section-title-serviceII {
       width: 90px;

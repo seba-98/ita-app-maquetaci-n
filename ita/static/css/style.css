@@ -1632,26 +1632,28 @@ About Area CSS
 
 .about-area .fondo_cisrular_team {
   position: absolute;
-  height: 140%;
-  width:90%;
-  top: 5%;
+  height: 160%;
+  width:64%;
   left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
 }
 
 
 .ita-team-img_container{
-  margin: 10px 0 10px 0;
-  width: 100%;
+  width: 80%;
   z-index: 100;
   display: flex;
   justify-content: flex-start;
+  /* border: 2px solid orchid; */
 }
 
 
 .fondo_team {
   position: relative;
-  height: 110px;
-  width:440px;
+  height: 130px;
+  width:540px;
 }
 
 .content-ita-team-data{
@@ -1659,34 +1661,34 @@ About Area CSS
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: 74%;
+  max-height: 300px;
+  /* border: 2px solid blue; */
 }
 
 .about-content-nos{
   width: 500px;
+  /* border: 2px solid red; */
 }
 
 .about-content-nos, .fondo_team{
-  margin-left: 200px;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 .about-area-nosotros{
+  /* border: 1px solid yellow; */
   width: 100%;
-  padding-top: 30px;
-  padding-left: 150px;
+  padding-left: 260px;
+  margin-top: 120px;
 }
 .about-area-nosotros h5{
   color: var(--blue-color_ita);
   font-size: 30px;
 }
-.about-image-nos{
-
-}
 
 
 .tamImageNos{
-  height: 400px !important;
-  width: 540px !important;
+  height: 300px !important;
+  width: 440px !important;
 }
 
 .tamImageSofEmpre{
@@ -1723,6 +1725,9 @@ About Area CSS
   width: 100%;
   padding: 0 10% 0 10%;
   
+}
+.nos-team_profiles_container{
+  margin-top: 200px !important;
 }
 .boxRedondoNosotros1{
   display: flex !important;
