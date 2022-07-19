@@ -1019,7 +1019,11 @@ Main Hero Area CSS
 =================================================*/
 .robot {
   background-image: url(../images/main-hero/robot.png);     
-  
+}
+.entrada {
+  background-image: url(../images/main-hero/entrada.png);   
+}
+.robot, .entrada{
   width:500px !important;
   height: 400px;
   text-align: center;  
@@ -1028,27 +1032,23 @@ Main Hero Area CSS
   background-position: center;
   background-clip: content-box;
   position:absolute;
+}
+.robot{
   left: 56%;
 }
-
-
-.entrada {
-  background-image: url(../images/main-hero/entrada.png);     
-  /*width: 322px;
-  height: 250px;*/
-  width:650px;
-  height: 550px;
-  text-align: center;  
-  background-repeat: no-repeat;
-  /*background-size: cover;*/
-  background-size: 650px 550px;
-  /*float:right;*/
-  position:absolute;
+ .entrada{
   left: 50%;
-  top:-5%;
-  z-index: 100;
- 
 }
+
+@media(max-width:900px){  .entrada{ left: 40% !important; } }
+@media(max-width:700px){  .entrada{ left: 30% !important; } }
+@media(max-width:550px){  .entrada{ left: 10% !important; } }
+@media(max-width:470px){  .entrada{ left: 0% !important;   } }
+@media(max-width:425px){  .entrada{ left: -15% !important; } }
+@media(max-width:394px){  .entrada{ left: -20% !important; } }
+@media(max-width:334px){  .entrada{ left: -34% !important; } }
+
+
 
 .proyectos {
   background-image: url(../images/main-hero/proyecto.png);     
@@ -1724,7 +1724,6 @@ About Area CSS
   display: flex;
   width: 100%;
   padding: 0 10% 0 10%;
-  
 }
 .nos-team_profiles_container{
   margin-top: 200px !important;
@@ -1735,6 +1734,7 @@ About Area CSS
   align-items: center;
   transition: background-color 1s linear;
 }
+
 
 .profile-container{
   flex-direction: column;
