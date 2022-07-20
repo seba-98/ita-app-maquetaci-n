@@ -353,55 +353,6 @@ navbar
 =================================================*/
 
 
-.resp-nav-menu{
-  font-size: 30px; 
-  color: white;
-  display: flex;
-  justify-content: space-between; 
-  flex-direction: row;
-}
-
-.icons-resp-nav{
-  width: 130px;
-  display: flex;
-  justify-content: space-around; 
-  align-items: center;
-  flex-direction: row;
-
-}
-
-@media(max-width:1200px){
-  #view-search-btn{
-    display: none;
-  }
-  /* #view-search-close{
-    display: none;
-  } */
-
-  #resp-search-btn{
-    display: block;
-  }
-  /* #resp-search-close{
-    display: none;
-  } */
-
-
-}
-@media(min-width:1200px){
-  #view-search-btn{
-    display: block;
-   }
-   /*
-  #view-search-close{
-    display: none;
-  } */
-  #resp-search-btn{
-    display: none;
-  }
-  /* #resp-search-close{
-    display: none;
-  } */
-}
 
 
 

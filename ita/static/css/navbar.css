@@ -32,6 +32,128 @@ Topbar Area CSS
   padding-left: 25px;
 }
 
+
+.nav-sidebar-links .nav-item a:hover {
+  color: var(--btn-gradient-color) !important;
+}
+
+.hover-link {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  border-radius: 5px;
+  bottom: 0;
+  left: 0;
+  background-color:var(--btn-gradient-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.sidebar-active-link {
+  
+  color: var(--btn-gradient-color) !important;
+}
+
+.sidebar-active-link:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  background-color:var(--btn-gradient-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-sidebar-links{
+  display: flex;
+  flex-direction: row !important;
+  /* justify-content: space-around !important; */
+  margin: 30px 0 30px 0;
+  /* background-color: var(--blue-color_ita) !important; */
+  width: 100%;
+  border-radius: 4px;
+}
+.nav-sidebar-links li{
+  margin: 3px;
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: center;
+  width: 25%;
+}
+
+.nav-sidebar-links .nav-item a:hover{
+  color: var(--main-color) ;
+}
+
+.nav-sidebar-links .nav-item a{
+  color: var(--blue-color_ita);
+  height: 100%;
+
+  transition: all 0.6s;
+
+  /* border: 1px solid blue; */
+
+}
+.resp-nav-menu{
+  font-size: 30px; 
+  color: white;
+  display: flex;
+  justify-content: space-between; 
+  flex-direction: row;
+}
+
+.icons-resp-nav{
+  width: 130px;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  flex-direction: row;
+
+}
+
+@media(max-width:1200px){
+  #view-search-btn{
+    display: none;
+  }
+  #resp-search-btn{
+    display: block;
+  }
+}
+@media(min-width:1200px){
+  .nav-sidebar-links{
+    display: none !important;
+  }
+
+
+  #view-search-btn{
+    display: block;
+   }
+  #resp-search-btn{
+    display: none;
+  }
+}
+
+
+
 .topbar-information li:last-child {
   margin-right: 0;
 }
@@ -254,6 +376,7 @@ Navbar Area CSS
 .main-navbar .navbar .navbar-nav .nav-item:hover a, .main-navbar .navbar .navbar-nav .nav-item.active a {
   color: var(--main-color);
 }
+
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu {
   border: none;
@@ -999,7 +1122,7 @@ Sidebar Modal CSS
 }
 
 .sidebarModal.modal .modal-body {
-  padding: 25px;
+  padding: 13px;
 }
 
 .sidebarModal.modal .modal-body .sidebar-content {
@@ -1296,7 +1419,7 @@ Sidebar Modal CSS
     width: 315px;
   }
   .sidebarModal.modal .modal-body {
-    padding: 20px;
+    padding: 13px;
   }
   .sidebarModal.modal .modal-body .sidebar-content h3 {
     font-size: 20px;
@@ -1409,7 +1532,7 @@ Sidebar Modal CSS
     width: 315px;
   }
   .sidebarModal.modal .modal-body {
-    padding: 20px;
+    padding: 13px;
   }
   .sidebarModal.modal .modal-body .sidebar-content h3 {
     font-size: 20px;
