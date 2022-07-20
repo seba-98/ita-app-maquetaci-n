@@ -11537,8 +11537,8 @@ Buy Now Btn
 }
 
 .fondo_cerebro {
-  background-image: url(/static/images/fondos/fondo_cerebro.png);
+  background-image: url(../../static/images/fondos/fondo_cerebro.png);
 }
 .fondo_lineas {
-  background-image: url(/static/images/fondos/fopndo_lineas.png);
+  background-image: url(../../static/images/fondos/fopndo_lineas.png);
 }
