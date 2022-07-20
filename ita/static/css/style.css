@@ -349,9 +349,67 @@ Default Btn CSS
 }
 
 /*================================================
-Section Title CSS
+navbar
 =================================================*/
 
+
+.resp-nav-menu{
+  font-size: 30px; 
+  color: white;
+  display: flex;
+  justify-content: space-between; 
+  flex-direction: row;
+}
+
+.icons-resp-nav{
+  width: 130px;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  flex-direction: row;
+
+}
+
+@media(max-width:1200px){
+  #view-search-btn{
+    display: none;
+  }
+  /* #view-search-close{
+    display: none;
+  } */
+
+  #resp-search-btn{
+    display: block;
+  }
+  /* #resp-search-close{
+    display: none;
+  } */
+
+
+}
+@media(min-width:1200px){
+  #view-search-btn{
+    display: block;
+   }
+   /*
+  #view-search-close{
+    display: none;
+  } */
+  #resp-search-btn{
+    display: none;
+  }
+  /* #resp-search-close{
+    display: none;
+  } */
+}
+
+
+
+
+
+/*================================================
+Section Title CSS
+=================================================*/
 .section-titleNews {
   max-width: 78%;
   margin-bottom: 20px;
@@ -1041,10 +1099,16 @@ Main Hero Area CSS
 }
 
 @media(max-width:900px){  .entrada{ left: 40% !important; } }
-@media(max-width:700px){  .entrada{ left: 30% !important; } }
-@media(max-width:550px){  .entrada{ left: 10% !important; } }
-@media(max-width:470px){  .entrada{ left: 0% !important;   } }
-@media(max-width:425px){  .entrada{ left: -15% !important; } }
+@media(max-width:700px){  .entrada{ left: 30% !important;  bottom: 80px;} }
+@media(max-width:550px){  .entrada{ left: 20% !important; } }
+@media(max-width:470px){  .entrada{ left: 10% !important;   } }
+@media(max-width:425px){  
+  .entrada{
+   left: -15% !important; 
+   margin-bottom: -220px;
+  }
+}
+
 @media(max-width:394px){  .entrada{ left: -20% !important; } }
 @media(max-width:334px){  .entrada{ left: -34% !important; } }
 

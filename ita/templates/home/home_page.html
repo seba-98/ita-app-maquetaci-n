@@ -41,18 +41,49 @@
 
 
      <div class="navbar-area">
+
         <div class="main-responsive-nav">
+            
             <div class="container">
-                <div class="main-responsive-menu">
+
+                <div class="main-responsive-menu  resp-nav-menu" >
                     <div class="logo">
                         <a href="#">
                             <img src="../../static/images/logo.png" alt="image">
                         </a>
                     </div>
+
+
+
+                    <div class="others-options-responsive icons-resp-nav">
+                        <div class="option-item">
+
+                            <i class="search-btn ri-search-line" id="resp-search-btn"></i>
+                            <i class="close-btn ri-close-line"   id="resp-search-close"  style="display: none;"></i>
+
+                            <div class="search-overlay search-popup">
+                                <div class='search-box'>
+                                    <form class="search-form">
+                                        <input class="search-input" placeholder="Buscar..." type="text">
+
+                                        <button class="search-button" type="submit">
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="option-item">
+                            <div class="side-menu-btn">
+                                <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-
         <div class="main-navbar navbar-with-navy-color">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md navbar-light">
@@ -68,28 +99,20 @@
                             <li class="nav-item">
                                 <a href="nosotros.html" class="nav-link ">Nosotros</a>
                             </li>
-                            <!--
-                            <li class="nav-item">
-                                <a href="/proyectos/" class="nav-link {% if page == 'proyectos' %} active {% endif %}">Proyectos</a>
-                            </li>
-                            -->
                             <li class="nav-item">
                                 <a href="servicios.html" class="nav-link ">Servicios</a>
                             </li>
                             <li class="nav-item">
                                 <a href="noticias.html" class="nav-link ">News</a>
                             </li>
-                            <!--
-                            <li class="nav-item">
-                                <a href="/contacto/" class="nav-link {% if page == 'contacto' %} active {% endif %}">Contacto</a>
-                            </li>
-                            -->
                         </ul>
 
                         <div class="others-options d-flex align-items-center">
                             <div class="option-item">
-                                <i class="search-btn ri-search-line"></i>
-                                <i class="close-btn ri-close-line"></i>
+
+                                <i class="search-btn ri-search-line" id="view-search-btn"></i>
+                                <i class="close-btn ri-close-line"   id="view-search-close" style="display: none;"></i>
+                                
                                 <div class="search-overlay search-popup">
                                     <div class='search-box'>
                                         <form class="search-form">
@@ -115,43 +138,11 @@
         </div>
 
         <div class="others-option-for-responsive">
-            <div class="container">
-                <div class="dot-menu">
-                    <div class="inner">
-                        <div class="circle circle-one"></div>
-                        <div class="circle circle-two"></div>
-                        <div class="circle circle-three"></div>
-                    </div>
-                </div>
 
-                <div class="container">
-                    <div class="option-inner">
-                        <div class="others-options d-flex align-items-center">
-                            <div class="option-item">
-                                <i class="search-btn ri-search-line"></i>
-                                <i class="close-btn ri-close-line"></i>
-                                <div class="search-overlay search-popup">
-                                    <div class='search-box'>
-                                        <form class="search-form">
-                                            <input class="search-input" placeholder="Search..." type="text">
-
-                                            <button class="search-button" type="submit">
-                                                <i class="ri-search-line"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="option-item">
-                                <div class="side-menu-btn">
-                                    <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- <div class="container" style="border: 3px solid red; bottom: 20px;">
+            </div> -->
+            
+            
         </div>
     </div>
     <!-- End Navbar Area -->
@@ -823,6 +814,7 @@
 
 <script type="text/javascript" src="../../static/js/ita.js"></script>
         <!-- Links of JS files -->
+        <script src="../../static/js/searchNav.js"></script>
         <script src="../../static/js/jquery.min.js"></script>
         <script src="../../static/js/bootstrap.bundle.min.js"></script>
         <script src="../../static/js/jquery.meanmenu.js"></script> 
