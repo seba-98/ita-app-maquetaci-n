@@ -3,7 +3,7 @@
 
 const container = document.querySelector("#app");
 //const localEarth = "../images/planeta/earthmap1k.jpg";
-const localEarth = "/static/images/planeta/earthmap1k.png";
+const localEarth = "../../static/images/planeta/earthmap1k.png";
 
 const externalEarth =
   "http://s3-us-west-2.amazonaws.com/s.cdpn.io/1206469/earthmap1k.jpg";
