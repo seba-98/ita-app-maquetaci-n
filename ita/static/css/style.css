@@ -1032,6 +1032,10 @@ Main Hero Area CSS
 .entrada {
   background-image: url(../images/main-hero/entrada.png);   
 }
+.robot-content{
+  display: flex;
+  justify-content: center;
+}
 .robot, .entrada{
   width:500px !important;
   height: 400px;
@@ -1048,6 +1052,9 @@ Main Hero Area CSS
  .entrada{
   left: 50%;
 }
+
+@media(max-width:570px){  .robot-content, .robot{ height:300px; }}
+
 
 @media(max-width:900px){  .entrada{ left: 40% !important; } }
 @media(max-width:700px){  .entrada{ left: 30% !important;  bottom: 80px;} }
@@ -11131,12 +11138,13 @@ Buy Now Btn
 
 
 
+
 .boxRedondo_services{  
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  box-shadow: 2px 2px 18px 25px rgba(138, 169, 236, 0.2);
-  border-radius: 30px;
+  box-shadow: 2px 2px 40px 30px  rgba(138, 169, 236, 0.2);
+  border-radius: 20px;
   width:150px;
 }
 .boxRedondo_services img{
@@ -11202,7 +11210,7 @@ Buy Now Btn
 @media only screen and (max-width: 1100px) {
 
   .robot { 
-    width: 100% !important;
+    width: 80% !important;
     text-align: center;  
     background-position: center;
     background-size: contain;
@@ -11533,6 +11541,14 @@ Buy Now Btn
   bottom: 0;
   display: flex;
   z-index:1;
+}
+
+@media(max-width:1100px){
+
+  .fondo-position{
+    background-size:contain;
+  }
+  
 
 }
 

@@ -2309,6 +2309,7 @@
   @media(max-width:470px){
     .section-title-serviceII {
       width: 90px;
+      margin: 50px;
     }
     .tamImageServicios{
       width: 50px !important;
