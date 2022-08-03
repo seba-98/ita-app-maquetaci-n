@@ -10818,7 +10818,7 @@ Pagination CSS
 Buy Now Btn
 ====================================*/
 .mail-now-btn {
-  right: 0px;
+  right: 30px;
   z-index: 99;
   top: 83%;
   position: fixed;
