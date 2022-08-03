@@ -543,6 +543,7 @@ Section Title CSS
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
+  
 }
 
 
@@ -550,7 +551,8 @@ Section Title CSS
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 150px;
+  align-items: center;
+  width: 180px;
   margin: 20px 30px 20px 30px;
 }
 
@@ -1200,10 +1202,12 @@ Main Hero Area CSS
   
   .robot-content{
     flex-direction: column-reverse;
-    padding: 0px 0;
+    padding: 0;
   }
   .main-hero-content{
     width: 80%;
+    /* border: 1px solid red; */
+    height: 460px;
   }
   .main-hero-content span, .main-hero-content h1, .main-hero-content h4{
     font-size: 30px !important;
@@ -2009,8 +2013,9 @@ About Area CSS
   width: 100% !important;
   display: flex !important;
   flex-direction: row !important;
-  justify-content: space-around !important;
+  justify-content: center !important;
   flex-wrap: wrap !important;
+  /* border: 1px solid red; */
 }
 
 
@@ -10813,7 +10818,7 @@ Pagination CSS
 Buy Now Btn
 ====================================*/
 .mail-now-btn {
-  right: 30px;
+  right: 0px;
   z-index: 99;
   top: 83%;
   position: fixed;
@@ -10929,8 +10934,7 @@ Buy Now Btn
 }
 
 .boxRedondo{  
-  margin-top:50px ;
-  margin-bottom: 50px;
+  margin:50px 30px;
   width: 400px;
   height: 500px;
   display: flex;
@@ -11231,11 +11235,13 @@ Buy Now Btn
 
 .boxRedondo_services{  
   display: flex !important;
+  margin-bottom:13px;
   justify-content: center !important;
   align-items: center !important;
   box-shadow: 2px 2px 40px 30px  rgba(138, 169, 236, 0.2);
   border-radius: 20px;
   width:150px;
+  
 }
 .boxRedondo_services img{
   width: 90px;
@@ -11261,6 +11267,7 @@ Buy Now Btn
   margin:auto;
   margin-top: 0px;
 }
+
 
 .image_tama_itaII{ 
   text-align: center;       
@@ -11598,7 +11605,7 @@ Buy Now Btn
 .fondo-position{
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -11621,6 +11628,7 @@ Buy Now Btn
 
 .fondo_cerebro {
   background-image: url(../../static/images/fondos/fondo_cerebro.png);
+  background-position:right;
 }
 .fondo_lineas {
   background-image: url(../../static/images/fondos/fopndo_lineas.png);

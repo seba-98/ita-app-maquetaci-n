@@ -1905,8 +1905,12 @@
   }
 
     @media(max-width:390px){
-      .azul_title, .azul_title_info{
+      .azul_title{
         width: 100%;
+      }
+      .azul_title_info{
+        width: 80%;
+        font-size: 9px !important;
       }
       .seccionAzul_content{
         margin-top: 100px;
@@ -1922,7 +1926,6 @@
         width: 240px !important;
        }
 
-      
     }
 
   
@@ -1950,7 +1953,7 @@
       display: none;
     }
     .fondo_cisrular {
-      height:600px !important;
+      height:630px !important;
       width: 98% !important;
     }
 
@@ -2040,7 +2043,7 @@
   @media(max-width:425px){
 
     .fondo-redondo_container{
-      top: -170px;
+      top: -270px !important;
       padding-right: 0px !important;
     }
     .about-content-container{
@@ -2373,4 +2376,20 @@
         text-align: center !important;
       }
     
+    }
+
+
+    /*=================BOTONES FLOTANTES===================*/
+
+    @media screen and (max-width:580px) {
+      .mail-now-btn, .buy-now-btn{
+        right: 0px;
+      }
+    }
+
+    @media screen and (max-width:580px) {
+      .mail-now-btn, .buy-now-btn{
+         padding: 9px 9px 3px;
+        font-size: 10px;
+      }
     }
