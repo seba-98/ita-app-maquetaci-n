@@ -309,6 +309,9 @@ Default Btn CSS
   white-space: nowrap;
   font-family: var(--heading-font-family);
   text-decoration: none;
+  border-radius:40px;
+  border: none;
+  cursor: pointer;
 }
 
 .default-btn:before {
@@ -1026,34 +1029,24 @@ Main Slides Area CSS
 /*================================================
 Main Hero Area CSS
 =================================================*/
-.robot {
-  background-image: url(../images/main-hero/robot.png);     
-}
+
 .entrada {
   background-image: url(../images/main-hero/entrada.png);   
 }
-.robot-content{
-  display: flex;
-  justify-content: center;
-}
-.robot, .entrada{
-  width:500px !important;
+
+ .entrada{
+  width:700px !important;
   height: 400px;
   text-align: center;  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-clip: content-box;
+  background-attachment:unset;
   position:absolute;
-}
-.robot{
-  left: 56%;
 }
  .entrada{
   left: 50%;
 }
-
-@media(max-width:570px){  .robot-content, .robot{ height:300px; }}
 
 
 @media(max-width:900px){  .entrada{ left: 40% !important; } }
@@ -1109,14 +1102,21 @@ Main Hero Area CSS
 }
 
 
-
-
+.robot{
+  width: 700px;
+  height: 500px;
+}
+.robot-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
 .main-hero-area {
   position: relative;
   z-index: 1;
   overflow: hidden;
 }
-
 
 .main-hero-item-news {
   background-color: var(--blue-color_ita);
@@ -1127,29 +1127,117 @@ Main Hero Area CSS
   padding-top: 105px;
   padding-bottom: 100px; 
 }
-
-
 .main-hero-item {
   background-color: var(--blue-color_ita);
   background-position: center center;
   position: relative;
   z-index: 1;
-  padding: 50px 0 50px 0;
+  /* padding: 50px 0 50px 0; */
 }
 .main-hero-content{
-  height: 400px;
+  height: 600px;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;position: relative;
-  left: 160px;
 }
+.list-home-inputs{
+  /* border: 1px solid red; */
+  margin-top: 30px;
+  width: 80%;
+  padding-right: 40px;
+}
+.userInputs{
+  border-radius: 6px;
+  border: none;
+  margin: 1% 0;
+  height: 40px;
+  background-color:#393875;
+  padding: 25px 0;
+}
+.userInputs::placeholder{
+  color: white;
+  padding-left: 20px;
+}
+.userEmail{
+  width: 100%;  
+}
+.userWeb{
+  width: 100%;
+}
+.inputs-phone{
+  /* border: 1px solid red; */
+  width: 100%;
+}
+.userArea{
+  width: 38%;
+  /* margin-right: 10px; */
+}
+.userPhone{
+  width: 60%;
+}
+
 .main-hero-content span, .main-hero-content h1, .main-hero-content h4{
   width: 80%;
   font-family: var(--heading-font-family);
+  font-size: 60px !important;
   font-weight: 900;
+}
+
+@media screen and (max-width:1650px) {
+
+  .main-hero-content span, .main-hero-content h1, .main-hero-content h4{
+    font-size: 40px !important;
+  }
+  .robot{
+    width: 500px;
+    height: 400px;
+  }
+}
+@media screen and (max-width:1240px) {
+
+  
+  .robot-content{
+    flex-direction: column-reverse;
+    padding: 0px 0;
+  }
+  .main-hero-content{
+    width: 80%;
+  }
+  .main-hero-content span, .main-hero-content h1, .main-hero-content h4{
+    font-size: 30px !important;
+  }
+  .robot{
+    width: 400px;
+    height: 300px;
+  }
+}
+@media screen and (max-width:630px) {
+
+  .list-home-inputs{
+    padding-right: 0px;
+    /* border: 1px solid red; */
+    width: 90% !important;
+  }
+
+  .main-hero-content{
+    width: 95%;
+  }
+  .inputs-phone{
+    flex-direction: row;
+  }
+  .main-hero-content span, .main-hero-content h1, .main-hero-content h4{
+    font-size: 30px !important;
+  }
+  .robot{
+    width: 300px;
+    height:200px;
+  }
 
 }
+
+
 .main-hero-item.item-bg-2 {
   background-image: url(../images/main-hero/hero-bg-2.jpg);
 }
@@ -1607,10 +1695,11 @@ About Area CSS
 }
 
 .about-area .fondo_cisrular {
+  z-index: -10 !important;
   position: absolute;
-  height: 165%;
+  height: 155%;
   width:67%;
-  top: -100px;
+  top: -10px;
   left: 0;
 }
 
@@ -1842,6 +1931,7 @@ About Area CSS
 
 .fondo-redondo_container{
   /* border: 2px solid yellow; */
+  padding-top: 100px !important;
   width: 100% !important;
   display: flex;
   flex-direction: row;
@@ -11207,27 +11297,6 @@ Buy Now Btn
 
 
 
-@media only screen and (max-width: 1100px) {
-
-  .robot { 
-    width: 80% !important;
-    text-align: center;  
-    background-position: center;
-    background-size: contain;
-    position:relative;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    z-index: 100;
-  }
-  .main-hero-content{
-    left: 0px;
-    height: 320px;
-  }
-
-}
-
 @media only screen and (max-width: 425px) {
 
   .container-fluid1 {
@@ -11237,9 +11306,7 @@ Buy Now Btn
     margin-left:auto;
   }
 
-  .main-hero-content {
-    max-width: 450px;
-  }
+ 
 
 
  
