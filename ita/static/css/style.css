@@ -283,11 +283,11 @@ img {
 Default Btn CSS
 =================================================*/
 .default-btn {
-  padding: 15.8px 35px;
+  padding: 10px 35px;
   text-align: center;
   color: var(--white-color) !important;
-  font-size: var(--font-size);
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 300;
   -webkit-transition: var(--transition);
   transition: var(--transition);
   display: -webkit-inline-box;
@@ -1032,38 +1032,6 @@ Main Slides Area CSS
 Main Hero Area CSS
 =================================================*/
 
-.entrada {
-  background-image: url(../images/main-hero/entrada.png);   
-}
-
- .entrada{
-  width:700px !important;
-  height: 400px;
-  text-align: center;  
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment:unset;
-  position:absolute;
-}
- .entrada{
-  left: 50%;
-}
-
-
-@media(max-width:900px){  .entrada{ left: 40% !important; } }
-@media(max-width:700px){  .entrada{ left: 30% !important;  bottom: 80px;} }
-@media(max-width:550px){  .entrada{ left: 20% !important; } }
-@media(max-width:470px){  .entrada{ left: 10% !important;   } }
-@media(max-width:425px){  
-  .entrada{
-   left: -15% !important; 
-   margin-bottom: -220px;
-  }
-}
-
-@media(max-width:394px){  .entrada{ left: -20% !important; } }
-@media(max-width:334px){  .entrada{ left: -34% !important; } }
 
 
 
@@ -1136,6 +1104,100 @@ Main Hero Area CSS
   z-index: 1;
   /* padding: 50px 0 50px 0; */
 }
+.hero-nosotros{
+  height: 800px;
+  /* border: 1px solid green; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+}
+
+
+.nosotros--h1{
+  font-size: 120px !important;
+  font-weight: 600;
+}
+.nosotros--h4{
+  font-size: 30px !important;
+  font-weight: 600;
+}
+
+.nosotros--img{
+  background-image: url(../images/main-hero/hero--nosotros.png);   
+  width:1000px ;
+  height: 700px;
+  text-align: center;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment:unset;
+  position:relative;
+}
+
+@media screen and (max-width:500px){
+  
+
+  .nosotros--img{
+    width:100px ;
+    height: 100px ;
+  }
+
+}
+
+
+@media screen and (max-width:1500px){
+  .nosotros--img{
+    margin-top: -80px;
+    height: 800px;
+  }
+  .main-hero-content-nosotros{
+    height: 300px !important;
+    padding-bottom: 100px;
+  }
+  
+  .hero-nosotros{
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .nosotros--h1{
+    font-size: 90px !important;
+  }
+  .nosotros--h4{
+    font-size: 20px !important;
+    font-weight: 600;
+  }
+}
+ 
+@media screen and (max-width:930px){
+  .nosotros--img{
+    height: 600px;
+    width: 550px;
+  }
+  
+}
+@media screen and (max-width:600px){
+  .nosotros--img{
+    margin-top: 0px;
+    height: 380px;
+    width: 450px;
+  }
+  .nosotros--h1{
+    font-size: 60px !important;
+  }
+  .nosotros--h4{
+    font-size: 16px !important;
+  }
+}
+@media screen and (max-width:430px){
+  .nosotros--img{
+    height: 300px;
+    width: 300px;
+  }
+}
+
+
+
 .main-hero-content{
   height: 600px;
   width: 40%;
@@ -1180,7 +1242,7 @@ Main Hero Area CSS
   width: 60%;
 }
 
-.main-hero-content span, .main-hero-content h1, .main-hero-content h4{
+.hero--home span, .hero--home h1, .hero--home h4{
   width: 80%;
   font-family: var(--heading-font-family);
   font-size: 60px !important;
@@ -1189,7 +1251,7 @@ Main Hero Area CSS
 
 @media screen and (max-width:1650px) {
 
-  .main-hero-content span, .main-hero-content h1, .main-hero-content h4{
+  .hero--home span, .hero--home h1, .hero--home h4{
     font-size: 40px !important;
   }
   .robot{
@@ -1209,7 +1271,7 @@ Main Hero Area CSS
     /* border: 1px solid red; */
     height: 460px;
   }
-  .main-hero-content span, .main-hero-content h1, .main-hero-content h4{
+  .hero--home span, .hero--home h1, .hero--home h4{
     font-size: 30px !important;
   }
   .robot{
@@ -1231,7 +1293,7 @@ Main Hero Area CSS
   .inputs-phone{
     flex-direction: row;
   }
-  .main-hero-content span, .main-hero-content h1, .main-hero-content h4{
+  .hero--home span, .hero--home h1, .hero--home h4{
     font-size: 30px !important;
   }
   .robot{
@@ -11318,23 +11380,7 @@ Buy Now Btn
 
  
 
-  .entrada {
-    background-image: url(../images/main-hero/entrada.png);     
-    /*width: 322px;
-    height: 250px;*/
-    width:450px;
-    height: 350px;
-    text-align: center;  
-    background-repeat: no-repeat;
-    /*background-size: cover;*/
-    background-size: 450px 350px;
-    /*float:right;*/
-    position:relative;
-    left: -30%;
-    top:0%;
-    z-index: 100;
-   
-  }
+
 
   .proyectos {
     background-image: url(../images/main-hero/proyecto.png);     
