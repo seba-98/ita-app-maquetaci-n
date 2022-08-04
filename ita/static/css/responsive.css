@@ -2139,6 +2139,10 @@
 
   
   @media(max-width:878px){
+    .ita-team-img_container{
+      padding-bottom: 0px;
+    }
+    
 
     .fondo_team {
       position: relative;

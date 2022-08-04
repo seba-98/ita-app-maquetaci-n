@@ -1824,10 +1824,12 @@ About Area CSS
   display: flex;
   justify-content: flex-start;
   /* border: 2px solid orchid; */
+  padding-bottom: 150px;
 }
 
 
 .fondo_team {
+  /* border: 2px solid red; */
   position: relative;
   height: 130px;
   width:540px;
@@ -1838,7 +1840,7 @@ About Area CSS
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 74%;
+  width: 78%;
   max-height: 300px;
   /* border: 2px solid blue; */
 }
@@ -1852,7 +1854,7 @@ About Area CSS
   margin-top: 0px;
 }
 .about-area-nosotros{
-  /* border: 1px solid yellow; */
+  /* border: 5px solid yellow; */
   width: 100%;
   padding-left: 260px;
   margin-top: 120px;
@@ -1862,10 +1864,16 @@ About Area CSS
   font-size: 30px;
 }
 
+.about-image-nos{
+  /* border: 5px solid red; */
+}
 
 .tamImageNos{
-  height: 300px !important;
-  width: 440px !important;
+  margin-left: 0px;
+  /* border: 5px solid orange; */
+  height: 340px !important;
+  width: 480px !important;
+  
 }
 
 .tamImageSofEmpre{
