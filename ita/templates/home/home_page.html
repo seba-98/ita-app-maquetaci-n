@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../static/css/style.css">
-
+        <title>Ita | Home</title>
         <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../static/css/aos.css">
         <link rel="stylesheet" href="../../static/css/animate.min.css">
@@ -52,9 +52,6 @@
                             <img src="../../static/images/logo.png" alt="image">
                         </a>
                     </div>
-
-
-
                     <div class="others-options-responsive icons-resp-nav">
                         <div class="option-item">
 
@@ -98,13 +95,13 @@
                             </li>
                             <li class="nav-item">
                                 <a href="nosotros.html" class="nav-link ">Nosotros</a>
-                            </li>
+                            <!-- </li>
                             <li class="nav-item">
                                 <a href="servicios.html" class="nav-link ">Servicios</a>
                             </li>
                             <li class="nav-item">
                                 <a href="noticias.html" class="nav-link ">News</a>
-                            </li>
+                            </li> -->
                         </ul>
 
                         <div class="others-options d-flex align-items-center">
@@ -165,12 +162,12 @@
                         <li class="nav-item ">
                             <a href="nosotros.html" class="nav-link hover-link">Nosotros</a>
                         </li>
-                        <li class="nav-item ">
+                        <!-- <li class="nav-item ">
                             <a href="servicios.html" class="nav-link hover-link">Servicios</a>
                         </li>
                         <li class="nav-item ">
                             <a href="noticias.html" class="nav-link hover-link">News</a>
-                        </li>
+                        </li> -->
                     </ul>
 
 
@@ -380,53 +377,64 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Start Main Hero Area -->
     <div class="main-hero-area">
         <div class="page-banner-areaGeneral">
             <div class="main-hero-item ">
                 <div class="robot-content">
                     <!-- <div class="robot" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true"></div> -->
-                    <form class="main-hero-content hero--home">                           
+                    <form class="main-hero-content hero--home" id="robotForm" autocomplete="off">         
+                                     
                         <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true"></span>
                         <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Inteligencia<span class="overlay"></span></h1>
                         <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Tecnológica Aplicada <span class="overlay"></span></h1>
                         
                         <div class="list-home-inputs">
-                            <input class="userEmail userInputs" placeholder="Correo electrónico" type="email" name="email">
+                                <input class="userEmail userInputs" id="robotEmailInput"  placeholder="Correo electrónico" type="email" name="robot-email">
+                                <div class="help-block with-errors " id="roboErrEmail" style="display:none ;">
+                                    <ul class="list-unstyled">
+                                        <li class="inputErr">Ingrese un correo válido</li>
+                                    </ul>
+                                </div>
                             <div class="inputs-phone">
-                                <input type="text" name="area" placeholder="Cód.país" class="userArea userInputs">
-                                <input type="tel" name="phone" placeholder="Teléfono" class="userPhone userInputs">
+                                <!-- <div class="form-group"> -->
+                                    <input type="text" name="robot-area" maxlength="4" minlength="3" id="robotAreaInput" placeholder="Cód.país" class="userArea userInputs">
+                                    <div class="help-block with-errors " id="roboErrArea" style="display:none ;">
+                                        <ul class="list-unstyled">
+                                            <li class="inputErr">El código de area debe ser valido, incluir +</li>
+                                        </ul>
+                                    </div>
+                                <!-- </div> -->
+                                <!-- <div class="form-group"> -->
+                                    <input type="tel" name="robot-phone" id="robotPhoneInput" placeholder="Teléfono" class="userPhone userInputs">
+                                    <div class="help-block with-errors " id="roboErrPhone" style="display:none ;">
+                                        <ul class="list-unstyled">
+                                            <li class="inputErr">Ingrese un teléfono válido</li>
+                                        </ul>
+                                    </div>
+                                <!-- </div> -->
                             </div>
-                            <input class="userWeb userInputs" type="text" placeholder="Sitio web" name="userweb">
-                        </div>
+                            <!-- <div class="form-group"> -->
+                                <input class="userWeb userInputs" id="robotWebInput" type="text" placeholder="Sitio web" name="robot-userweb">
+                                <div class="help-block with-errors " id="roboErrWeb" style="display:none ;">
+                                    <ul class="list-unstyled">
+                                        <li class="inputErr">Ingrese su sitio web</li>
+                                    </ul>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                            <p class="inputSuccess" id="successAlert">Enviado !</p>
                         
                         
                         <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                            <button href="contacto.html" class="default-btn">Contáctanos</button>
+                            <button href="contacto.html" class="default-btn"  id="robot-btn">Contáctanos</button>
                         </div>
                     </form>
                     <img src="../../static/images/main-hero/hero-bg-1.jpg" class="robot" alt="" srcset="">
                 </div>
 
             </div>
-    
-            
+ 
         </div>
         
      
@@ -812,10 +820,6 @@
                                     </td>
                                 </tr>
                         </table>
-                       
-                        
-
-                        
                     </div>
                 </div>
             </div>
@@ -860,9 +864,10 @@
         <script src="../../static/js/nice-select.min.js"></script>
         <script src="../../static/js/tilt.jquery.min.js"></script>
         <script src="../../static/js/parallax.min.js"></script>
-		<script src="../../static/js/jquery.ajaxchimp.min.js"></script>
 		<script src="../../static/js/form-validator.min.js"></script>
         <script src="../../static/js/contact-form-script.js"></script>
+		<script src="../../static/js/jquery.ajaxchimp.min.js"></script>
+        <script src="../../static/js/contact-robot-form.js"></script>
         <script src="../../static/js/aos.js"></script>
         <script src="../../static/js/wow.min.js"></script>
         <script src="../../static/js/main.js"></script>

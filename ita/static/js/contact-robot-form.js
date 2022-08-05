@@ -1,39 +1,38 @@
 /*==============================================================*/
 // Contact Form  JS
 /*==============================================================*/
+(function ($) {
 
-const nombre=  document.getElementById('form-name');
-const email=   document.getElementById('form-email');
-const asunto=  document.getElementById('form-affair');
-const telefono=document.getElementById('form-phone');
-const mensaje= document.getElementById('form-message');
-
-
-const nombreErr= document.getElementById('name-err');
-const emailErr= document.getElementById('email-err');
-const asuntoErr= document.getElementById('affair-err');
-const telefonoErr= document.getElementById('phone-err');
-const mensajeErr= document.getElementById('message-err');
+const robotEmail= document.getElementById('robotEmailInput');
+const robotArea= document.getElementById('robotAreaInput');
+const robotPhone= document.getElementById('robotPhoneInput');
+const robotWeb= document.getElementById('robotWebInput');
 
 
-
-nombre.addEventListener('focus', ()=> nombreErr.style.display = 'none')
-email.addEventListener('focus', ()=> emailErr.style.display = 'none')
-asunto.addEventListener('focus', ()=> asuntoErr.style.display = 'none')
-telefono.addEventListener('focus', ()=> telefonoErr.style.display = 'none')
-mensaje.addEventListener('focus', ()=> mensajeErr.style.display = 'none')
-
-const btn = document.getElementById('contact-page_button');
+const emailErr= document.getElementById('roboErrEmail');
+const areaErr= document.getElementById('roboErrArea');
+const phoneErr= document.getElementById('roboErrPhone');
+const webErr= document.getElementById('roboErrWeb');
 
 
 
-$("#contactForm, #contactFormTwo").validator().on('submit', function(event) {
+robotEmail.addEventListener('focus', ()=> emailErr.style.display = 'none')
+robotArea.addEventListener('focus', ()=> areaErr.style.display = 'none')
+robotPhone.addEventListener('focus', ()=> phoneErr.style.display = 'none')
+robotWeb.addEventListener('focus', ()=> webErr.style.display = 'none')
+
+const btn = document.getElementById('robot-btn');
+const success = document.getElementById('successAlert');
+
+
+
+$("#robotForm").validator().on('submit', function(event) {
 
     event.preventDefault();
 
-    btn.value = 'Enviando...';
+    btn.innerHTML = 'Enviando...';
     const serviceID = 'service_jzdvvif';
-    const templateID = 'template_l3zw1dm';
+    const templateID = 'template_9cfekpi';
 
     validate();
 
@@ -42,80 +41,72 @@ $("#contactForm, #contactFormTwo").validator().on('submit', function(event) {
       if(validate()){
         emailjs.sendForm(serviceID, templateID, this)
           .then(() => {
-              btn.value = 'Enviar email';
+              btn.innerHTML = 'Enviar email';
               formSuccess();
-          
+              success.style.display='block'
+              
             }, (err) => {
-                btn.value = 'Enviar email';
-                formError();
-                submitMSG(false, err);
+              btn.innerHTML = 'Enviar email';
+              formError();
+              submitMSG(false, err);
+              success.style.display='block'
+              success.innerHTML = 'Hubo un error al enviar';
               });
             
           }else{
             submitMSG(false, 'Complete el formulario');
           }
+          setTimeout(()=>success.style.display='none',5000)
     }
-    }); 
+  }); 
 
     
 
     function validate(){
 
      
-      if( nombre.value.length <= 2 ){
-        nombreErr.style.display='block'
-        return false
-      }
-      else nombreErr.style.display='none'
-        
-      
-      if( !isValidEmail(email.value) ){
+      if( !isValidEmail(robotEmail.value) ){
         emailErr.style.display='block'
         return false
       }
       else emailErr.style.display='none'
 
-      if( asunto.value.length < 5 ){
-        asuntoErr.style.display='block'
+      if( robotArea.value.length < 3 || robotArea.value.length > 4 ||  !robotArea.value.includes('+') ){
+        areaErr.style.display='block'
         return false
       }
-      else asuntoErr.style.display='none' 
+      else areaErr.style.display='none' 
       
-      if( telefono.value.length < 5 ){
-        telefonoErr.style.display='block'
+      if( robotPhone.value.length < 5 ){
+        phoneErr.style.display='block'
         return false
       }
-      else telefonoErr.style.display='none'
+      else phoneErr.style.display='none'
 
-      if( mensaje.value.length < 10 ){
-        mensajeErr.style.display='block'
+      if( robotWeb.value.length < 10 ){
+        webErr.style.display='block'
         return false
       }
-      else mensajeErr.style.display='none'
+      else webErr.style.display='none'
       return true
     }
 
 
-
-
     function formSuccess(){
       // $("#contactForm, #contactFormTwo")[0].reset();
-      const formTwo = document.getElementById('contactFormTwo');
-      const contactForm = document.getElementById('contactForm');
+      const form = document.getElementById('robotForm');
 
-      if(formTwo){
-        formTwo.reset();
+      if(form){
+        form.reset();
       }
       
-      if(contactForm){
-        contactForm.reset();
+      if(form){
+        form.reset();
       }
       submitMSG(true, "Mensaje enviado");
   }
-
-
   function formError(){
-      $("#contactForm, #contactFormTwo").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $("#robotForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
           $(this).removeClass();
       });
   }
@@ -147,7 +138,7 @@ function isValidEmail(email) {
   };
 
 
-
+}(jQuery));
 
 
 
