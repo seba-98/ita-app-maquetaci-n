@@ -26,6 +26,10 @@ const success = document.getElementById('successAlert');
 
 
 
+
+
+
+
 $("#robotForm").validator().on('submit', function(event) {
 
     event.preventDefault();

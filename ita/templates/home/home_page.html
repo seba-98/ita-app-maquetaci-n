@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="../../static/css/footer.css">
         <link rel="stylesheet" href="../../static/css/dark.css">
 		<link rel="stylesheet" href="../../static/css/responsive.css">
+		<link rel="stylesheet" href="../../static/css/selectCustom.css">
         <link rel="icon" type="image/png" href="../../static/images/favicon.png">
 
 
@@ -398,9 +399,25 @@
                                         <li class="inputErr">Ingrese un correo válido</li>
                                     </ul>
                                 </div>
+
                             <div class="inputs-phone">
-                                <!-- <div class="form-group"> -->
-                                    <input type="text" name="robot-area" maxlength="4" minlength="3" id="robotAreaInput" placeholder="Cód.país" class="userArea userInputs">
+                                <div class="form-group">
+
+
+                                   <div name="robot-area" id="robotAreaInput">
+                                    <input type="text" id="selectInputValue" style="display: none;"/>
+                                        <div id="select_field">
+                                            <img class="select_img" src="../../static/images/flags/argentina.png" alt="" srcset="">
+                                            <p id="selected_text"></p>
+                                        </div>
+                                        
+                                        <ul id="select_list">
+                                        </ul>
+                                    </div>
+
+
+
+
                                     <div class="help-block with-errors " id="roboErrArea" style="display:none ;">
                                         <ul class="list-unstyled">
                                             <li class="inputErr">El código de area debe ser valido, incluir +</li>
@@ -528,7 +545,7 @@
     <div class="about-area ptb-50 pb-150">
         <div style="width: 100%;">
             
-            <div class="fondo_cerebro fondo-position" ></div>
+            <div class="fondo_cerebro" ></div>
                 <div class="section-title2 " data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <span>Qué hacemos y</span>
                     <h2>Cómo lo hacemos <span class="overlay"></span></h2>                    
@@ -721,8 +738,7 @@
     
     <!-- Start About Area -->
     <div class="about-area about-area-us ptb-50 pb-150">
-        <div class="fondo_lineas fondo-position"> </div>
-
+        <div class="fondo_lineas"> </div>
         <div class="container-fluid1">
             <div class="row align-items-center maxrow">
                 <div class="col-lg-6 col-md-12">
@@ -848,36 +864,38 @@
 
 
 <script type="text/javascript" src="../../static/js/ita.js"></script>
-        <!-- Links of JS files -->
-        <script src="../../static/js/searchNav.js"></script>
-        <script src="../../static/js/jquery.min.js"></script>
-        <script src="../../static/js/bootstrap.bundle.min.js"></script>
-        <script src="../../static/js/jquery.meanmenu.js"></script> 
-        <script src="../../static/js/owl.carousel.min.js"></script>
-        <script src="../../static/js/jquery.appear.js"></script>
-        <script src="../../static/js/odometer.min.js"></script>
-        <script src="../../static/js/jquery.magnific-popup.min.js"></script>
-        <script src="../../static/js/fancybox.min.js"></script>
-        <script src="../../static/js/tweenmax.min.js"></script>
-        <script src="../../static/js/ScrollMagic.min.js"></script>
-        <script src="../../static/js/animation.gsap.min.js"></script>
-        <script src="../../static/js/debug.addIndicators.min.js"></script>
-        <script src="../../static/js/mixitup.min.js"></script>
-        <script src="../../static/js/nice-select.min.js"></script>
-        <script src="../../static/js/tilt.jquery.min.js"></script>
-        <script src="../../static/js/parallax.min.js"></script>
-		<script src="../../static/js/form-validator.min.js"></script>
-        <script src="../../static/js/contact-form-script.js"></script>
-		<script src="../../static/js/jquery.ajaxchimp.min.js"></script>
-        <script src="../../static/js/contact-robot-form.js"></script>
-        <script src="../../static/js/aos.js"></script>
-        <script src="../../static/js/wow.min.js"></script>
-        <script src="../../static/js/main.js"></script>
-        <script type="text/javascript" src="../../static/js/three.js"></script>
-        <script type="text/javascript" src="../../static/js/index.mjs"></script>
+    <!-- Links of JS files -->
+    
+    <script src="../../static/js/selectCustom.js"></script>
+    <script src="../../static/js/jquery.min.js"></script>
+    <script src="../../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../../static/js/jquery.meanmenu.js"></script> 
+    <script src="../../static/js/owl.carousel.min.js"></script>
+    <script src="../../static/js/jquery.appear.js"></script>
+    <script src="../../static/js/odometer.min.js"></script>
+    <script src="../../static/js/jquery.magnific-popup.min.js"></script>
+    <script src="../../static/js/fancybox.min.js"></script>
+    <script src="../../static/js/tweenmax.min.js"></script>
+    <script src="../../static/js/ScrollMagic.min.js"></script>
+    <script src="../../static/js/animation.gsap.min.js"></script>
+    <script src="../../static/js/debug.addIndicators.min.js"></script>
+    <script src="../../static/js/mixitup.min.js"></script>
+    <script src="../../static/js/nice-select.min.js"></script>
+    <script src="../../static/js/tilt.jquery.min.js"></script>
+    <script src="../../static/js/parallax.min.js"></script>
+    <script src="../../static/js/jquery.ajaxchimp.min.js"></script>
+    <script src="../../static/js/form-validator.min.js"></script>
+    <script src="../../static/js/aos.js"></script>
+    <script src="../../static/js/wow.min.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <script type="text/javascript" src="../../static/js/three.js"></script>
+    <script type="module" src="../../static/js/index.mjs"></script>
 
-<script type="text/javascript">
-
+    <script type="text/javascript" src="../../static/js/contact-form-script.js" ></script>
+        
+    <script src="../../static/js/contact-robot-form.js"></script>
+    <script type="text/javascript">
+            
     function cargar(){
         var seccionAzul = document.getElementById("seccionAzul");        
         //productos.style.display = "none";
