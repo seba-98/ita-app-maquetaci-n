@@ -47,7 +47,7 @@
         
     for (const option of options) {
         let inputValue = document.getElementById('selectInputValue');
-
+            
         option.addEventListener('click',(e)=>{
         selectedfield.innerHTML=option.outerHTML;
         inputValue.value =  option.textContent.trim();

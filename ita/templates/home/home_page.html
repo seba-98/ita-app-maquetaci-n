@@ -393,54 +393,50 @@
                         <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Tecnológica Aplicada <span class="overlay"></span></h1>
                         
                         <div class="list-home-inputs">
-                                <input class="userEmail userInputs" id="robotEmailInput"  placeholder="Correo electrónico" type="email" name="robot-email">
-                                <div class="help-block with-errors " id="roboErrEmail" style="display:none ;">
-                                    <ul class="list-unstyled">
-                                        <li class="inputErr">Ingrese un correo válido</li>
-                                    </ul>
-                                </div>
+                            <input class="userEmail userInputs" id="robotEmailInput"  placeholder="Correo electrónico" type="email" name="robot-email">
+                            <div class="help-block with-errors " id="roboErrEmail" style="display:none ;">
+                                <ul class="list-unstyled">
+                                    <li class="inputErr">Ingrese un correo válido</li>
+                                </ul>
+                            </div>
 
                             <div class="inputs-phone">
-                                <div class="form-group">
-
-
-                                   <div name="robot-area" id="robotAreaInput">
-                                    <input type="text" id="selectInputValue" style="display: none;"/>
-                                        <div id="select_field">
-                                            <img class="select_img" src="../../static/images/flags/argentina.png" alt="" srcset="">
-                                            <p id="selected_text"></p>
+                                <div class="area-phone">
+                                    <div class="form-group">
+                                       <div name="robot-area" id="robotAreaInput">
+                                            <input type="text" id="selectInputValue" style="display: none;"/>
+                                            <div id="select_field">
+                                                <img class="select_img" src="../../static/images/flags/argentina.png" alt="" srcset="">
+                                                <p id="selected_text"></p>
+                                            </div>
+                                            
+                                            <ul id="select_list">
+                                            </ul>
                                         </div>
+                                            <div class="help-block with-errors " id="roboErrArea" style="display:none ;">
+                                                <ul class="list-unstyled">
+                                                    <li class="inputErr">El código de area debe ser valido, incluir +</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="phone">
+                                        <input type="tel" name="robot-phone" id="robotPhoneInput" placeholder="Teléfono" class="input-phone userInputs">
                                         
-                                        <ul id="select_list">
-                                        </ul>
+                                        <div class="help-block with-errors " id="roboErrPhone" style="display:none ;">
+                                            <ul class="list-unstyled">
+                                                <li class="inputErr">Ingrese un teléfono válido</li>
+                                            </ul>
+                                        </div>
                                     </div>
-
-
-
-
-                                    <div class="help-block with-errors " id="roboErrArea" style="display:none ;">
-                                        <ul class="list-unstyled">
-                                            <li class="inputErr">El código de area debe ser valido, incluir +</li>
-                                        </ul>
-                                    </div>
-                                <!-- </div> -->
-                                <!-- <div class="form-group"> -->
-                                    <input type="tel" name="robot-phone" id="robotPhoneInput" placeholder="Teléfono" class="userPhone userInputs">
-                                    <div class="help-block with-errors " id="roboErrPhone" style="display:none ;">
-                                        <ul class="list-unstyled">
-                                            <li class="inputErr">Ingrese un teléfono válido</li>
-                                        </ul>
-                                    </div>
-                                <!-- </div> -->
-                            </div>
-                            <!-- <div class="form-group"> -->
+                                </div>
                                 <input class="userWeb userInputs" id="robotWebInput" type="text" placeholder="Sitio web" name="robot-userweb">
                                 <div class="help-block with-errors " id="roboErrWeb" style="display:none ;">
                                     <ul class="list-unstyled">
                                         <li class="inputErr">Ingrese su sitio web</li>
                                     </ul>
                                 </div>
-                                <!-- </div> -->
                             </div>
                             <p class="inputSuccess" id="successAlert">Enviado !</p>
                         

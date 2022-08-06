@@ -1,14 +1,15 @@
 #robotAreaInput{
-
-    width: 100px;
+    width: 100px !important;
     /* border: 4px solid purple; */
     background-color: rgb(255, 255, 255, 0.7);
     border-radius: 6px;
     padding: 10px;
 }
 #select_list{
+    max-height: 100px;
     list-style: none;
     overflow: hidden;
+    overflow-y: scroll;
     padding: 0%;
     display:none;
 }

@@ -1117,18 +1117,46 @@ Main Hero Area CSS
 .userWeb{
   width: 100%;
 }
+.robot-area-content{
+  width: 20%;
+  /* border: 1px solid yellow; */
+}
+
+.phone{
+  width: 90%;
+}
+.input-phone{
+  width: 100% !important;
+  /* border: 1px solid green; */
+}
+
 .inputs-phone{
-  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid blue; */
+  width: 100% !important;
+}
+#robotPhoneInput{
   width: 100%;
+}
+
+.area-phone{
+  /* border: 1px solid red; */
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  width:20%;
 }
 .userArea{
   width: 38%;
   /* margin-right: 10px; */
 }
-.userPhone{
-  width: 60%;
-}
 
+
+@media screen and (max-width:528px) {
+  .phone{
+    width:63%;
+  }
+}
 
 
 /*================================SECCION HEROS==================================================*/
@@ -1239,7 +1267,7 @@ Main Hero Area CSS
     /* border: 1px solid red; */
     width: 90% !important;
   }
-  .inputs-phone{
+  .area-phone{
     flex-direction: row;
   }
   .hero--home span, .hero--home h1, .hero--home h4, .nosotros--h1{
