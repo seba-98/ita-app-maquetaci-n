@@ -1101,8 +1101,12 @@ Main Hero Area CSS
   margin: 1% 0;
   height: 40px;
   background-color:#393875;
+  color: white;
   padding: 25px 0;
+  text-align: start;
 }
+
+
 .userInputs::placeholder{
   color: white;
   padding-left: 20px;
@@ -1152,15 +1156,9 @@ Main Hero Area CSS
   /* border: 1px solid green; */
 
 }
-.nosotros--h1{
-  font-size: 60px !important;
-  font-weight: 600;
+.content-nosotros-titles{
+  margin-top: 80px;
 }
-.nosotros--h4{
-  font-size: 30px !important;
-  font-weight: 600;
-}
-
 .nosotros--img{
   text-align: center;  
   position:relative;
@@ -1193,11 +1191,8 @@ Main Hero Area CSS
     flex-direction: column-reverse;
 
   }
-  .nosotros--h4{
-    font-size: 20px !important;
-    font-weight: 600;
-  }
 }
+
 @media screen and (max-width:930px){
   .nosotros--img{
     height: 600px;
@@ -1213,9 +1208,9 @@ Main Hero Area CSS
     width: 250px !important;
     height: 200px !important;
   }
-  .nosotros--h4{
+  /* .nosotros--h4{
     font-size: 16px !important;
-  }
+  } */
   .list-home-inputs{
     padding-right: 0px;
     /* border: 1px solid red; */
@@ -1224,7 +1219,7 @@ Main Hero Area CSS
   .inputs-phone{
     flex-direction: row;
   }
-  .hero--home span, .hero--home h1, .hero--home h4{
+  .hero--home span, .hero--home h1, .hero--home h4, .nosotros--h1{
     font-size: 30px !important;
   }
 }
@@ -1241,7 +1236,7 @@ Main Hero Area CSS
 /*ROBOT*/
 
 
-.hero--home span, .hero--home h1, .hero--home h4{
+.hero--home span, .hero--home h1, .hero--home h4, .nosotros--h1{
   width: 80%;
   font-family: var(--heading-font-family);
   font-size: 60px !important;
@@ -1283,12 +1278,12 @@ Main Hero Area CSS
   .hero-nosotros{
     flex-direction: column-reverse;
   }
-  .nosotros--h4{
+  /* .nosotros--h4{
     font-size: 20px !important;
     font-weight: 600;
-  }
+  } */
 
-  .hero--home span, .hero--home h1, .hero--home h4{
+  .hero--home span, .hero--home h1, .hero--home h4, .nosotros--h1{
     font-size: 40px !important;
   }
   .robot, .nosotros--img{
@@ -1300,8 +1295,12 @@ Main Hero Area CSS
   .robot-content{
     flex-direction: column-reverse;
   }
-  .hero--home span, .hero--home h1, .hero--home h4{
-    font-size: 30px !important;
+  .hero--home span, .hero--home h1, .hero--home h4, .nosotros--h1{
+    font-size: 40px !important;
+  }
+  .nosotros--h4{
+    
+    font-size: 20px !important;
   }
 }
 
@@ -1348,19 +1347,10 @@ Main Hero Area CSS
   height: 60%;
   width: 60%;
 }
-
-
 .tamImageIV{
   height: 60%;
   width: 60%;
 }
-
-/* .tamImageServicios{
-  height: 80%;
-  width: 80%;
-  padding-top: 10%;
-} */
-
 
 .tamImageHome{
   height: 45%;
@@ -1737,6 +1727,10 @@ Partner Area CSS
 /*================================================
 About Area CSS
 =================================================*/
+
+.about-area-us{
+  margin-left: -98px;
+}
 .about-area {
   position: relative;
   z-index: 1;
@@ -6251,18 +6245,89 @@ Gallery Area CSS
 CONTACT AREA
 =================================================*/
 
+.talk-area-contact{
+  background-image: url(../images/fondos/fondo_cerebro.0fffa5ed7bed.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.contact-hero{
+  height: 400px;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid yellow; */
+  justify-content: flex-start;
+}
+.contact-hero-info{
+  /* border: 1px solid red; */
+  color: white !important;
+  margin-left: 180px;
+}
+.contact-hero-info span, .contact-hero-info h1{
+  /* border: 1px solid red; */
+  font-size: 40px;
+  color: white !important;
+}
+.contact-hero-info h4{
+  font-family: Uber Move Light;
+  font-size: 20px;
+  color: white;
+}
 
+.contacto-form-container{
+  display: flex;
+  justify-content: center;
+}
+.contact-form-info{
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
 .talk-area-contact{
   background-color: #F5F5F5;
 }
-
 .talk-imageConta {
   position: relative;
   display: flex;
   justify-content: center;
   z-index: 1;  
 }
+.phone-contact-inputs{
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-area{
+  width: 35% !important;
+}
+.contact-phone{
+  width:60% !important;
+}
 
+@media screen and (max-width:1200px) {
+  .contact-hero{
+    height: 400px;
+    display: flex;
+    align-items: center;
+  }
+  .contact-hero-info{
+    margin-left: 100px;
+  }
+  .contact-form-info{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .contact-hero{
+    justify-content: center;
+  }
+  .contact-hero-info{
+    margin-left: 0px;
+    padding: 40px;
+  }
+}
 
 
 
@@ -11081,6 +11146,8 @@ Buy Now Btn
 }
 .azul-item p{
  font-size: 14px !important;
+ text-align: left !important;
+ margin-left: 15px;
 }
 .tamImageIII{
   max-height:20px ;
@@ -11107,6 +11174,11 @@ Buy Now Btn
  .iconoComo, .iconoComo2{
   width: 100%;
 }
+
+.iconoComo img, .iconoComo2 img{
+  margin-left: 64px;
+}
+
 
 .seccionAzul_position h3{
   text-align: center;
@@ -11565,6 +11637,10 @@ Buy Now Btn
     margin-left: auto;
     margin-right: auto;
     width: 140px;
+  }
+
+  .select-us{
+    margin-right: 82px !important;
   }
 
   .select-us h4{

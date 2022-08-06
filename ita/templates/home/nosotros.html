@@ -49,20 +49,47 @@
      <!--==========================NAVBAR==========================-->
 
 
-
      <div class="navbar-area">
+
         <div class="main-responsive-nav">
+            
             <div class="container">
-                <div class="main-responsive-menu">
+
+                <div class="main-responsive-menu  resp-nav-menu" >
                     <div class="logo">
                         <a href="#">
                             <img src="../../static/images/logo.png" alt="image">
                         </a>
                     </div>
+                    <div class="others-options-responsive icons-resp-nav">
+                        <div class="option-item">
+
+                            <i class="search-btn ri-search-line" id="resp-search-btn"></i>
+                            <i class="close-btn ri-close-line"   id="resp-search-close"  style="display: none;"></i>
+
+                            <div class="search-overlay search-popup">
+                                <div class='search-box'>
+                                    <form class="search-form">
+                                        <input class="search-input" placeholder="Buscar..." type="text">
+
+                                        <button class="search-button" type="submit">
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="option-item">
+                            <div class="side-menu-btn">
+                                <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-
         <div class="main-navbar navbar-with-navy-color">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md navbar-light">
@@ -78,28 +105,25 @@
                             <li class="nav-item">
                                 <a href="nosotros.html" class="nav-link active">Nosotros</a>
                             </li>
+                            <li class="nav-item ">
+                                <a href="contacto.html" class="nav-link hover-link">Contacto</a>
+                            </li>
+
                             <!--
                             <li class="nav-item">
-                                <a href="/proyectos/" class="nav-link {% if page == 'proyectos' %} active {% endif %}">Proyectos</a>
-                            </li>
-                            -->
-                            <!-- <li class="nav-item">
                                 <a href="servicios.html" class="nav-link ">Servicios</a>
                             </li>
                             <li class="nav-item">
                                 <a href="noticias.html" class="nav-link ">News</a>
                             </li> -->
-                            <!--
-                            <li class="nav-item">
-                                <a href="/contacto/" class="nav-link {% if page == 'contacto' %} active {% endif %}">Contacto</a>
-                            </li>
-                            -->
                         </ul>
 
                         <div class="others-options d-flex align-items-center">
                             <div class="option-item">
-                                <i class="search-btn ri-search-line"></i>
-                                <i class="close-btn ri-close-line"></i>
+
+                                <i class="search-btn ri-search-line" id="view-search-btn"></i>
+                                <i class="close-btn ri-close-line"   id="view-search-close" style="display: none;"></i>
+                                
                                 <div class="search-overlay search-popup">
                                     <div class='search-box'>
                                         <form class="search-form">
@@ -125,43 +149,11 @@
         </div>
 
         <div class="others-option-for-responsive">
-            <div class="container">
-                <div class="dot-menu">
-                    <div class="inner">
-                        <div class="circle circle-one"></div>
-                        <div class="circle circle-two"></div>
-                        <div class="circle circle-three"></div>
-                    </div>
-                </div>
 
-                <div class="container">
-                    <div class="option-inner">
-                        <div class="others-options d-flex align-items-center">
-                            <div class="option-item">
-                                <i class="search-btn ri-search-line"></i>
-                                <i class="close-btn ri-close-line"></i>
-                                <div class="search-overlay search-popup">
-                                    <div class='search-box'>
-                                        <form class="search-form">
-                                            <input class="search-input" placeholder="Search..." type="text">
-
-                                            <button class="search-button" type="submit">
-                                                <i class="ri-search-line"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="option-item">
-                                <div class="side-menu-btn">
-                                    <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- <div class="container" style="border: 3px solid red; bottom: 20px;">
+            </div> -->
+            
+            
         </div>
     </div>
     <!-- End Navbar Area -->
@@ -172,11 +164,29 @@
             <div class="modal-content">
                 <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
 
-                <div class="modal-body">
+                <div class="modal-body" >
                     <a href="index.html">
                         <img src="../../static/images/logo_black.png" class="black-logo" alt="image">
                         <img src="../../static/imagesimages/logo.png" class="white-logo" alt="image">
                     </a>
+                    <ul class="navbar-nav ms-auto nav-sidebar-links">
+                        <li class="nav-item active">
+                            <a href="home_page.html" class="nav-link hover-link " >Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="nosotros.html" class="nav-link hover-link sidebar-active-link">Nosotros</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="contacto.html" class="nav-link hover-link">Contacto</a>
+                        </li>
+                        <!-- 
+                        <li class="nav-item ">
+                            <a href="noticias.html" class="nav-link hover-link">News</a>
+                        </li> -->
+                    </ul>
+
+
+
                     <div class="sidebar-content">
                         <h3>Acerca de</h3>
                         <p>Seleccionamos y trabajamos con un cupo limitado de propuestas para ser parte de proyectos tecnológicos innovadores que logren cambiar el mundo.
@@ -280,6 +290,103 @@
     </div>
     <!--==========================FIN NAVBAR==========================-->
 
+     <!-- Sidebar Modal -->
+     <div class="sidebarModal modal right fade" id="sidebarModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
+
+                <div class="modal-body">
+                    <a href="index.html">
+                        <img src="../../static/images/logo_black.png" class="black-logo" alt="image">
+                        <img src="../../static/imagesimages/logo.png" class="white-logo" alt="image">
+                    </a>
+                    <div class="sidebar-content">
+                        <h3>Acerca de</h3>
+                        <p>Seleccionamos y trabajamos con un cupo limitado de propuestas para ser parte de proyectos tecnológicos innovadores que logren cambiar el mundo.
+
+                            Desarrollamos software que logre materializar ideas con tecnología disruptiva.
+                        </p>
+
+                        <div class="sidebar-btn">
+                            <a href="contacto.html" class="default-btn">Contactanos</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-contact-info">
+                        <h3>Información de contacto</h3>
+
+                        <ul class="info-list">
+                            <!-- <li><i class="ri-phone-fill"></i> <a href="tel:5548457290"><FONT FACE="Uber Move Medium">(55)48457290</FONT></a></li></a></li>-->
+                            
+                            <li ><i class="ri-mail-line "></i> <a href="mailto:contacto.ita@globalita.io">contacto.ita@globalita.io</a></li> 
+
+                            <!-- <li><i class="ri-map-pin-line"></i> boulevard de las Rosas, Coacalco de Berriozabal</li> -->
+                        </ul>
+                    </div>
+                    <ul class="sidebar-social-list">
+                        <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="ri-behance-fill"></i></a></li>
+                    </ul>
+                    <div class="contact-form">
+                        <h3>Deja tu mensaje</h3>
+
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" required data-error="El nombre debe ser mayor a 2 caracteres" placeholder="Nombre">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" required data-error="Por favor escribe tu correo electrónico" placeholder="Correo Electrónico">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="affair" class="form-control" required data-error="Por favor escribe el asunto" placeholder="Asunto">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input type="number" name="phone_number" class="form-control" required data-error="Por favor escribe tu teléfono" placeholder="Teléfono">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" cols="30" rows="6" required data-error="Por favor escribe tu mensaje" placeholder="Escribe un mensaje..."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="default-btn">Enviar mensaje<span></span></button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+                        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                    <script type="text/javascript">
+                        emailjs.init('K8JUpz_RvVxk56xZI')
+                    </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==========================FIN NAVBAR==========================-->
+
 
 
 
@@ -307,9 +414,9 @@
                     <h1 data-aos="fade-right" class="nosotros--h1" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Nosotros<span class="overlay"></span></h1>
                     <h4 data-aos="fade-right" class="nosotros--h4" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Te presentamos a ITA TEAM</h4>
                     
-                    <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                    <!-- <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                         <a href="contacto.html" class="default-btn">Contáctanos</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <img class="nosotros--img" src="../../static/images/main-hero/hero--nosotros.png" data-aos="fade-down"></img>
@@ -529,7 +636,6 @@
         </div>
        
         <div  data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-
             <div class="about-btn centerBoton">
                 <a href="contacto.html" class="default-btn">Contáctanos</a>
             </div>

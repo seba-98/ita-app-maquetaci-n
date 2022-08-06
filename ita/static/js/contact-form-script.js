@@ -4,14 +4,14 @@
 
 const nombre=  document.getElementById('form-name');
 const email=   document.getElementById('form-email');
-const asunto=  document.getElementById('form-affair');
+const area=  document.getElementById('form-area');
 const telefono=document.getElementById('form-phone');
 const mensaje= document.getElementById('form-message');
 
 
 const nombreErr= document.getElementById('name-err');
 const emailErr= document.getElementById('email-err');
-const asuntoErr= document.getElementById('affair-err');
+const areaErr= document.getElementById('area-err');
 const telefonoErr= document.getElementById('phone-err');
 const mensajeErr= document.getElementById('message-err');
 
@@ -19,7 +19,7 @@ const mensajeErr= document.getElementById('message-err');
 
 nombre.addEventListener('focus', ()=> nombreErr.style.display = 'none')
 email.addEventListener('focus', ()=> emailErr.style.display = 'none')
-asunto.addEventListener('focus', ()=> asuntoErr.style.display = 'none')
+area.addEventListener('focus', ()=> areaErr.style.display = 'none')
 telefono.addEventListener('focus', ()=> telefonoErr.style.display = 'none')
 mensaje.addEventListener('focus', ()=> mensajeErr.style.display = 'none')
 
@@ -31,22 +31,23 @@ $("#contactForm, #contactFormTwo").validator().on('submit', function(event) {
 
     event.preventDefault();
 
-    btn.value = 'Enviando...';
     const serviceID = 'service_jzdvvif';
     const templateID = 'template_l3zw1dm';
-
+    
     validate();
-
+    
     if(event.isDefaultPrevented()) {
-
+      
       if(validate()){
+        
+        btn.innerHTML = 'Enviando...';
         emailjs.sendForm(serviceID, templateID, this)
           .then(() => {
-              btn.value = 'Enviar email';
-              formSuccess();
-          
-            }, (err) => {
-                btn.value = 'Enviar email';
+            btn.innerHTML = 'Enviar email';
+            formSuccess();
+            
+          }, (err) => {
+                btn.innerHTML = 'Enviar email';
                 formError();
                 submitMSG(false, err);
               });
@@ -75,11 +76,11 @@ $("#contactForm, #contactFormTwo").validator().on('submit', function(event) {
       }
       else emailErr.style.display='none'
 
-      if( asunto.value.length < 5 ){
-        asuntoErr.style.display='block'
+      if( area.value.length < 3 || area.value.length > 4 ||  !area.value.includes('+')){
+        areaErr.style.display='block'
         return false
       }
-      else asuntoErr.style.display='none' 
+      else areaErr.style.display='none' 
       
       if( telefono.value.length < 5 ){
         telefonoErr.style.display='block'
