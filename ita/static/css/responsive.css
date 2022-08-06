@@ -1114,10 +1114,7 @@
     bottom: 70px;
     left: 0;
   }
-  .main-hero-item {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
+
   
   .main-hero-item .container-fluid {
     padding-right: var(--bs-gutter-x, 0.75rem);
@@ -1953,6 +1950,10 @@
     .inova-img_content{
       display: none;
     }
+    .about-area .fondo_cisrular {
+      top: -10px;
+    }
+    
     .fondo_cisrular {
       height:630px !important;
       width: 98% !important;
@@ -1962,6 +1963,7 @@
       padding-right: 70px;
       position: relative;
       bottom: 140px;
+      padding-top: 100px;
       max-width: 80%;
     }
     .inova-items-container{
@@ -2043,12 +2045,20 @@
   
   @media(max-width:425px){
 
+    .content-about-area{
+      margin-bottom: -200px;
+    }
+
     .fondo-redondo_container{
-      top: -270px !important;
       padding-right: 0px !important;
+      top: -270px !important;
     }
     .about-content-container{
       width: 90% !important;
+    }
+    .about-area-mundo{
+      margin-bottom: 250px !important;
+      margin-top: 0px !important;
     }
     
     .fondo_cisrular {

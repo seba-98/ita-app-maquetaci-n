@@ -1072,135 +1072,6 @@ Main Hero Area CSS
 }
 
 
-.robot{
-  width: 700px;
-  height: 500px;
-}
-.robot-content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  height: 700px;
-  position:relative;
-  margin-top: -120px;
-  /* border: 2px solid red; */
-}
-.main-hero-area {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.main-hero-item-news {
-  background-color: var(--blue-color_ita);
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding-top: 105px;
-  padding-bottom: 100px; 
-}
-.main-hero-item {
-  background-color: var(--blue-color_ita);
-  background-position: center center;
-  position: relative;
-  z-index: 1;
-}
-.hero-nosotros{
-  height: 800px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  /* border: 1px solid green; */
-
-}
-
-
-.nosotros--h1{
-  font-size: 120px !important;
-  font-weight: 600;
-}
-.nosotros--h4{
-  font-size: 30px !important;
-  font-weight: 600;
-}
-
-.nosotros--img{
-  background-image: url(../images/main-hero/hero--nosotros.png);   
-  width:1000px ;
-  height: 700px;
-  text-align: center;  
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment:unset;
-  position:relative;
-}
-
-@media screen and (max-width:500px){
-  .nosotros--img{
-    width:100px ;
-    height: 100px ;
-    
-  }
-}
-
-
-@media screen and (max-width:1500px){
-  .nosotros--img{
-    margin-top: -80px;
-    height: 800px;
-  }
-  .main-hero-content-nosotros{
-    height: 300px !important;
-    padding-bottom: 100px;
-  }
-  
-  .hero-nosotros{
-    flex-direction: column-reverse;
-    height: auto;
-  }
-  .nosotros--h1{
-    font-size: 90px !important;
-  }
-  .nosotros--h4{
-    font-size: 20px !important;
-    font-weight: 600;
-  }
-}
-
-@media screen and (max-width:1240px){
-  .robot-content{
-    height: auto !important;
-    margin-top: 0px;
-  }
-}
-@media screen and (max-width:930px){
-  .nosotros--img{
-    height: 600px;
-    width: 550px;
-  }
-  
-}
-@media screen and (max-width:600px){
-  .nosotros--img{
-    margin-top: 0px;
-    height: 380px;
-    width: 450px;
-  }
-  .nosotros--h1{
-    font-size: 60px !important;
-  }
-  .nosotros--h4{
-    font-size: 16px !important;
-  }
-}
-@media screen and (max-width:430px){
-  .nosotros--img{
-    height: 300px;
-    width: 300px;
-  }
-}
-
 .inputErr{
   color: red;
 }
@@ -1254,53 +1125,101 @@ Main Hero Area CSS
   width: 60%;
 }
 
-.hero--home span, .hero--home h1, .hero--home h4{
-  width: 80%;
-  font-family: var(--heading-font-family);
+
+
+/*================================SECCION HEROS==================================================*/
+
+/*NOSOTROS*/
+.main-hero-item-news {
+  background-color: var(--blue-color_ita);
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 105px;
+  padding-bottom: 100px; 
+}
+.main-hero-item {
+  background-color: var(--blue-color_ita);
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  /* border: 2px solid red; */
+}
+.hero-nosotros{
+  height: 700px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid green; */
+
+}
+.nosotros--h1{
   font-size: 60px !important;
-  font-weight: 900;
+  font-weight: 600;
+}
+.nosotros--h4{
+  font-size: 30px !important;
+  font-weight: 600;
 }
 
-@media screen and (max-width:1650px) {
+.nosotros--img{
+  text-align: center;  
+  position:relative;
+}
 
-  .hero--home span, .hero--home h1, .hero--home h4{
-    font-size: 40px !important;
+@media screen and (max-width:500px){
+  .nosotros--img{
+    width:100px ;
+    height: 100px ;
+    
   }
+}
+
+
+@media screen and (max-width:1500px){
   .robot{
-    width: 500px;
-    height: 400px;
+    width: 400px  !important;
+    height: 400px !important;
   }
-}
-@media screen and (max-width:1240px) {
+  .nosotros--img{
+    width:500px  !important;
+    height: 400px !important;
+  }
 
-  
-  .robot-content{
+  .main-hero-content-nosotros{
+    height: 300px !important;
+    padding-bottom: 100px;
+  }
+  .hero-nosotros, .robot-content{
     flex-direction: column-reverse;
-    padding: 0;
+
   }
-  .main-hero-content{
-    width: 80%;
-    /* border: 1px solid red; */
-    height: 460px;
-  }
-  .hero--home span, .hero--home h1, .hero--home h4{
-    font-size: 30px !important;
-  }
-  .robot{
-    width: 400px;
-    height: 300px;
+  .nosotros--h4{
+    font-size: 20px !important;
+    font-weight: 600;
   }
 }
-@media screen and (max-width:630px) {
-
+@media screen and (max-width:930px){
+  .nosotros--img{
+    height: 600px;
+    width: 550px;
+  }
+  
+}
+@media screen and (max-width:630px){
+  .nosotros--img{
+    margin-top: 0px;
+  }
+  .robot, .nosotros--img{
+    width: 250px !important;
+    height: 200px !important;
+  }
+  .nosotros--h4{
+    font-size: 16px !important;
+  }
   .list-home-inputs{
     padding-right: 0px;
     /* border: 1px solid red; */
     width: 90% !important;
-  }
-
-  .main-hero-content{
-    width: 95%;
   }
   .inputs-phone{
     flex-direction: row;
@@ -1308,18 +1227,87 @@ Main Hero Area CSS
   .hero--home span, .hero--home h1, .hero--home h4{
     font-size: 30px !important;
   }
-  .robot{
+}
+@media screen and (max-width:430px){
+  .nosotros--img{
+    height: 300px;
     width: 300px;
-    height:200px;
   }
-
 }
 
+
+/*================================SECCION HEROS==================================================*/
+
+/*ROBOT*/
+
+
+.hero--home span, .hero--home h1, .hero--home h4{
+  width: 80%;
+  font-family: var(--heading-font-family);
+  font-size: 60px !important;
+  font-weight: 900;
+}
+
+.robot,.nosotros--img{
+  width: 700px;
+  height: 500px;
+}
+.robot-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  height: 800px;
+  position:relative;
+  margin-top: -120px;
+}
+.main-hero-area {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media screen and (max-width:1500px) {
+
+  .hero--home{
+    width: 80%;
+  }
+  .main-hero-content-nosotros{
+    height: 300px !important;
+    padding-bottom: 100px;
+  }
+  .robot-content{
+    height: 1000px;
+    padding-top: 150px;
+  }
+  .hero-nosotros{
+    flex-direction: column-reverse;
+  }
+  .nosotros--h4{
+    font-size: 20px !important;
+    font-weight: 600;
+  }
+
+  .hero--home span, .hero--home h1, .hero--home h4{
+    font-size: 40px !important;
+  }
+  .robot, .nosotros--img{
+    width: 500px;
+    height: 400px;
+  }
+}
+@media screen and (max-width:1240px) {
+  .robot-content{
+    flex-direction: column-reverse;
+  }
+  .hero--home span, .hero--home h1, .hero--home h4{
+    font-size: 30px !important;
+  }
+}
 
 .main-hero-item.item-bg-2 {
   background-image: url(../images/main-hero/hero-bg-2.jpg);
 }
-
 .main-hero-item.item-bg-3 {
   background-image: url(../images/main-hero/hero-bg-3.jpg);
 }
@@ -1419,12 +1407,6 @@ Main Hero Area CSS
 }
 
 
-
-
-.main-hero-content {
-  max-width: 1050px;
-  z-index: 10;
-}
 
 .main-hero-content span {
   font-size: var(--font-size);
@@ -1777,7 +1759,7 @@ About Area CSS
   position: absolute;
   height: 155%;
   width:67%;
-  top: -10px;
+  top: -130px;
   left: 0;
 }
 
@@ -1785,8 +1767,8 @@ About Area CSS
 
 .about-area-mundo{
   width: 80%;
-  margin-top: 300px !important;
-  margin-bottom: 150px !important;
+  margin-top: 170px !important;
+  margin-bottom: 120px !important;
   display: flex;
   justify-content: space-around;
 }
@@ -1807,7 +1789,7 @@ About Area CSS
 
 }
 .about-content_Mundo p {
-  font-size: 20px;
+  font-size: 27px;
   line-height: 1.4;
   position: relative;
   color: var(--blue-color_ita);
@@ -2017,7 +1999,7 @@ About Area CSS
 
 .fondo-redondo_container{
   /* border: 2px solid yellow; */
-  padding-top: 100px !important;
+  padding-bottom: 60px !important;
   width: 100% !important;
   display: flex;
   flex-direction: row;
