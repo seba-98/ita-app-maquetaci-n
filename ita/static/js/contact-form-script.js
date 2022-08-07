@@ -3,16 +3,13 @@
 /*==============================================================*/
 
 
- 
-
-const nombre=  document.getElementById('form-name');
 const email=   document.getElementById('form-email');
 const area=  document.getElementById('selectInputValue');
 const telefono=document.getElementById('form-phone');
 const mensaje= document.getElementById('form-message');
+const formulario= document.getElementById('contactFormTwo');
 
 
-const nombreErr= document.getElementById('name-err');
 const emailErr= document.getElementById('email-err');
 const areaErr= document.getElementById('area-err');
 const telefonoErr= document.getElementById('phone-err');
@@ -20,7 +17,6 @@ const mensajeErr= document.getElementById('message-err');
 
 
 
-nombre.addEventListener('focus', ()=> nombreErr.style.display = 'none')
 email.addEventListener('focus', ()=> emailErr.style.display = 'none')
 area.addEventListener('focus', ()=> areaErr.style.display = 'none')
 telefono.addEventListener('focus', ()=> telefonoErr.style.display = 'none')
@@ -29,56 +25,44 @@ mensaje.addEventListener('focus', ()=> mensajeErr.style.display = 'none')
 const btn = document.getElementById('contact-page_button');
 
 
-
 $("#contactFormTwo").validator().on('submit', function(event) {
-
-    event.preventDefault();
-
-    const serviceID = 'service_jzdvvif';
+  
+      event.preventDefault();
+  
+  
+  const serviceID = 'service_jzdvvif';
     const templateID = 'template_l3zw1dm';
-
-    console.log(
-      nombre,
-      email,
-      area,
-      telefono,
-      mensaje,
-    );
+  
     
-    // validate();
+    validate();
     
-    // if(event.isDefaultPrevented()) {
+    if(event.isDefaultPrevented()) {
       
-    //   if(validate()){
+      if(validate()){
         
-    //     btn.innerHTML = 'Enviando...';
-    //     emailjs.sendForm(serviceID, templateID, this)
-    //       .then(() => {
-    //         btn.innerHTML = 'Enviar email';
-    //         formSuccess();
+        btn.innerHTML = 'Enviando...';
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            btn.innerHTML = 'Enviar email';
+            formSuccess();
             
-    //       }, (err) => {
-    //             btn.innerHTML = 'Enviar email';
-    //             formError();
-    //             submitMSG(false, err);
-    //           });
+          }, (err) => {
+                btn.innerHTML = 'Enviar email';
+                formError();
+                submitMSG(false, err);
+              });
             
-    //       }else{
-    //         submitMSG(false, 'Complete el formulario');
-    //       }
-    // }
+          }else{
+            submitMSG(false, 'Complete el formulario');
+          }
+    }
   }); 
 
     
 
     function validate(){
 
-     
-      if( nombre.value.length <= 2 ){
-        nombreErr.style.display='block'
-        return false
-      }
-      else nombreErr.style.display='none'
+
         
       
       if( !isValidEmail(email.value) ){
@@ -87,24 +71,24 @@ $("#contactFormTwo").validator().on('submit', function(event) {
       }
       else emailErr.style.display='none'
 
-      if( area.value.length < 3 || area.value.length > 4 ||  !area.value.includes('+')){
-        areaErr.style.display='block'
-        return false
-      }
-      else areaErr.style.display='none' 
+      // if( area.value.length < 3 || area.value.length > 4 ||  !area.value.includes('+')){
+      //   areaErr.style.display='block'
+      //   return false
+      // }
+      // else areaErr.style.display='none' 
       
-      if( telefono.value.length < 5 ){
-        telefonoErr.style.display='block'
-        return false
-      }
-      else telefonoErr.style.display='none'
+      // if( telefono.value.length < 5 ){
+      //   telefonoErr.style.display='block'
+      //   return false
+      // }
+      // else telefonoErr.style.display='none'
 
-      if( mensaje.value.length < 10 ){
-        mensajeErr.style.display='block'
-        return false
-      }
-      else mensajeErr.style.display='none'
-      return true
+      // if( mensaje.value.length < 10 ){
+      //   mensajeErr.style.display='block'
+      //   return false
+      // }
+      // else mensajeErr.style.display='none'
+      // return true
     }
 
 
@@ -163,7 +147,7 @@ function isValidEmail(email) {
 
 
 
-// (function ($) {
+// 
 //     "use strict"; // Start of use strict
 //     $("#contactForm, #contactFormTwo").validator().on("submit", function (event) {
 //         event.preventDefault();
