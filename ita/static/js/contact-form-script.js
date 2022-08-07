@@ -2,9 +2,12 @@
 // Contact Form  JS
 /*==============================================================*/
 
+
+ 
+
 const nombre=  document.getElementById('form-name');
 const email=   document.getElementById('form-email');
-const area=  document.getElementById('form-area');
+const area=  document.getElementById('selectInputValue');
 const telefono=document.getElementById('form-phone');
 const mensaje= document.getElementById('form-message');
 
@@ -27,36 +30,44 @@ const btn = document.getElementById('contact-page_button');
 
 
 
-$("#contactForm, #contactFormTwo").validator().on('submit', function(event) {
+$("#contactFormTwo").validator().on('submit', function(event) {
 
     event.preventDefault();
 
     const serviceID = 'service_jzdvvif';
     const templateID = 'template_l3zw1dm';
+
+    console.log(
+      nombre,
+      email,
+      area,
+      telefono,
+      mensaje,
+    );
     
-    validate();
+    // validate();
     
-    if(event.isDefaultPrevented()) {
+    // if(event.isDefaultPrevented()) {
       
-      if(validate()){
+    //   if(validate()){
         
-        btn.innerHTML = 'Enviando...';
-        emailjs.sendForm(serviceID, templateID, this)
-          .then(() => {
-            btn.innerHTML = 'Enviar email';
-            formSuccess();
+    //     btn.innerHTML = 'Enviando...';
+    //     emailjs.sendForm(serviceID, templateID, this)
+    //       .then(() => {
+    //         btn.innerHTML = 'Enviar email';
+    //         formSuccess();
             
-          }, (err) => {
-                btn.innerHTML = 'Enviar email';
-                formError();
-                submitMSG(false, err);
-              });
+    //       }, (err) => {
+    //             btn.innerHTML = 'Enviar email';
+    //             formError();
+    //             submitMSG(false, err);
+    //           });
             
-          }else{
-            submitMSG(false, 'Complete el formulario');
-          }
-    }
-    }); 
+    //       }else{
+    //         submitMSG(false, 'Complete el formulario');
+    //       }
+    // }
+  }); 
 
     
 
@@ -146,10 +157,6 @@ function isValidEmail(email) {
         );
       return match;
   };
-
-
-
-
 
 
 

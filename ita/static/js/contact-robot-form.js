@@ -4,7 +4,7 @@
 (function ($) {
 
 const robotEmail= document.getElementById('robotEmailInput');
-const robotArea= document.getElementById('robotAreaInput');
+const robotArea= document.getElementById('selectInputValue');
 const robotPhone= document.getElementById('robotPhoneInput');
 const robotWeb= document.getElementById('robotWebInput');
 
@@ -26,21 +26,19 @@ const success = document.getElementById('successAlert');
 
 
 
-
-
-
-
 $("#robotForm").validator().on('submit', function(event) {
 
     event.preventDefault();
 
-    btn.innerHTML = 'Enviando...';
     const serviceID = 'service_jzdvvif';
     const templateID = 'template_9cfekpi';
-
+    
     validate();
-
+    
     if(event.isDefaultPrevented()) {
+      
+      btn.innerHTML = 'Enviando...';
+
 
       if(validate()){
         emailjs.sendForm(serviceID, templateID, this)
@@ -81,18 +79,7 @@ $("#robotForm").validator().on('submit', function(event) {
       }
       else areaErr.style.display='none' 
       
-      if( robotPhone.value.length < 5 ){
-        phoneErr.style.display='block'
-        return false
-      }
-      else phoneErr.style.display='none'
 
-      if( robotWeb.value.length < 10 ){
-        webErr.style.display='block'
-        return false
-      }
-      else webErr.style.display='none'
-      return true
     }
 
 

@@ -1105,6 +1105,15 @@ Main Hero Area CSS
   padding: 25px 0;
   text-align: start;
 }
+.userInputsContact{
+  border-radius: 6px;
+  border: none;
+  margin: 1% 0;
+  height: 50px;
+  color: black;
+  padding: 25px 0;
+  text-align: start;
+}
 
 
 .userInputs::placeholder{
@@ -1117,23 +1126,17 @@ Main Hero Area CSS
 .userWeb{
   width: 100%;
 }
-.robot-area-content{
-  width: 20%;
-  /* border: 1px solid yellow; */
-}
 
 .phone{
-  width: 90%;
+  width: 75%;
 }
-.input-phone{
+.contact-phone  {
   width: 100% !important;
-  /* border: 1px solid green; */
 }
 
 .inputs-phone{
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid blue; */
   width: 100% !important;
 }
 #robotPhoneInput{
@@ -1141,7 +1144,6 @@ Main Hero Area CSS
 }
 
 .area-phone{
-  /* border: 1px solid red; */
   flex-direction: row !important;
   justify-content: space-between !important;
   width:20%;
@@ -1152,10 +1154,14 @@ Main Hero Area CSS
 }
 
 
-@media screen and (max-width:528px) {
+@media screen and (max-width:970px) {
   .phone{
-    width:63%;
+    width:65%;
   }
+  .area-phone{
+    width:30%;
+  }
+  
 }
 
 
@@ -1802,9 +1808,9 @@ About Area CSS
 .about-area .fondo_cisrular {
   z-index: -10 !important;
   position: absolute;
-  height: 155%;
+  height: 115%;
   width:67%;
-  top: -130px;
+  top: -10px;
   left: 0;
 }
 

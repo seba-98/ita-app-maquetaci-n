@@ -27,22 +27,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../static/css/style.css">
-        <title>Ita | Contacto</title>
-        <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../static/css/aos.css">
-        <link rel="stylesheet" href="../../static/css/animate.min.css">
-        <link rel="stylesheet" href="../../static/css/remixicon.css">
-        <link rel="stylesheet" href="../../static/css/odometer.min..css">
-        <link rel="stylesheet" href="../../static/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="../../static/css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="../../static/css/magnific-popup.min.css">
-        <link rel="stylesheet" href="../../static/css/fancybox.min.css">
-        <link rel="stylesheet" href="../../static/css/nice-select.min.css">
-        <link rel="stylesheet" href="../../static/css/navbar.css">
-        <link rel="stylesheet" href="../../static/css/footer.css">
-        <link rel="stylesheet" href="../../static/css/dark.css">
-		<link rel="stylesheet" href="../../static/css/responsive.css">
-        <link rel="icon" type="image/png" href="../../static/images/favicon.png">
+    <title>Ita | Contacto</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/aos.css">
+    <link rel="stylesheet" href="../../static/css/animate.min.css">
+    <link rel="stylesheet" href="../../static/css/remixicon.css">
+    <link rel="stylesheet" href="../../static/css/odometer.min..css">
+    <link rel="stylesheet" href="../../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../static/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../../static/css/fancybox.min.css">
+    <link rel="stylesheet" href="../../static/css/nice-select.min.css">
+    <link rel="stylesheet" href="../../static/css/navbar.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <link rel="stylesheet" href="../../static/css/dark.css">
+    <link rel="stylesheet" href="../../static/css/responsive.css">
+    <link rel="stylesheet" href="../../static/css/selectCustom.css">
+    <link rel="icon" type="image/png" href="../../static/images/favicon.png">
+    
 
 
     <title>Contacto</title>
@@ -256,16 +258,6 @@
 
                         <form id="contactFormTwo" novalidate autocomplete="off">
                             <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input id="form-name" type="text" name="name" class="form-control" required data-error="El nombre debe ser mayor a 2 caracteres" placeholder="Nombre">
-                                        <div class="help-block with-errors " id="name-err" style="display:none ;">
-                                            <ul class="list-unstyled">
-                                                <li >El nombre debe ser mayor a 2 caracteres</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
                                 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
@@ -277,17 +269,29 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 
-                                <div class="phone-contact-inputs">
-                                    <div class="form-group contact-area">
-                                        <input id="form-area" type="number" maxlength="4"  name="area" class="form-control" required data-error="Por favor escribe un código de area válido" placeholder="Cód.País">
-                                        <div class="help-block with-errors" id="area-err" style="display: none;">
-                                            <ul class="list-unstyled">
-                                                <li>Por favor escribe un código de area válido (Incluir el +)</li>
+                                
+                                <div class="inputs-phone">
+                                    <div class="area-phone">
+                                        <div name="robot-area" id="robotAreaInput">
+                                            <input type="text" value="+52" id="selectInputValue" style="display: none;"/>
+                                            <div id="select_field">
+                                                <img class="select_img" src="../../static/images/flags/mexico.png" alt="" srcset="">
+                                                <p id="selected_text">+51</p>
+                                            </div>
+                                            <ul id="select_list">
                                             </ul>
+                                            <div class="help-block with-errors " id="roboErrArea" style="display:none ;">
+                                                <ul class="list-unstyled">
+                                                    <li class="inputErr">El código de area debe ser valido, incluir +</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group contact-phone">
+
+
+                                    <div class="form-group phone">
                                         <input id="form-phone" type="number"  name="phone" class="form-control" required data-error="Por favor escribe un teléfono válido" placeholder="Teléfono">
                                         <div class="help-block with-errors" id="phone-err" style="display: none;">
                                             <ul class="list-unstyled">
@@ -317,8 +321,9 @@
                             </div>
                         </form>
 
+                    
                     <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
+                    <script type="text/javascript" src="../../static/js/" ></script>   
                     <script type="text/javascript">
                         emailjs.init('K8JUpz_RvVxk56xZI')
                     </script>
@@ -387,10 +392,6 @@
                                     </td>
                                 </tr>
                         </table>
-                       
-                        
-
-                        
                     </div>
                 </div>
             </div>
@@ -414,6 +415,7 @@
     
     <script type="text/javascript" src="../../static/js/ita.js"></script>
     <!-- Links of JS files -->
+    
     <script src="../../static/js/jquery.min.js"></script>
     <script src="../../static/js/bootstrap.bundle.min.js"></script>
     <script src="../../static/js/jquery.meanmenu.js"></script> 
@@ -427,6 +429,7 @@
     <script src="../../static/js/animation.gsap.min.js"></script>
     <script src="../../static/js/debug.addIndicators.min.js"></script>
     <script src="../../static/js/mixitup.min.js"></script>
+    <script src="../../static/js/selectCustom.js"></script>
     <script src="../../static/js/nice-select.min.js"></script>
     <script src="../../static/js/tilt.jquery.min.js"></script>
     <script src="../../static/js/parallax.min.js"></script>
@@ -437,9 +440,9 @@
     <script src="../../static/js/main.js"></script>
     <script type="text/javascript" src="../../static/js/three.js"></script>
     <script type="module" src="../../static/js/index.mjs"></script>
+    
     </body>
 
-    <script type="text/javascript" src="../../static/js/contact-form-script.js" ></script>
 </html>
 
 
