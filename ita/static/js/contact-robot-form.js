@@ -27,8 +27,7 @@ const success = document.getElementById('successAlert');
 
 
 $("#robotForm").validator().on('submit', function(event) {
-
-    event.preventDefault();
+  event.preventDefault();
 
     const serviceID = 'service_jzdvvif';
     const templateID = 'template_9cfekpi';
@@ -37,28 +36,28 @@ $("#robotForm").validator().on('submit', function(event) {
     
     if(event.isDefaultPrevented()) {
       
-      btn.innerHTML = 'Enviando...';
-
-
       if(validate()){
+        
+        btn.innerHTML = 'Enviando...';
         emailjs.sendForm(serviceID, templateID, this)
           .then(() => {
-              btn.innerHTML = 'Enviar email';
+              btn.innerHTML = 'Contactanos';
               formSuccess();
               success.style.display='block'
               
             }, (err) => {
-              btn.innerHTML = 'Enviar email';
+              btn.innerHTML = 'Contactanos';
               formError();
               submitMSG(false, err);
               success.style.display='block'
               success.innerHTML = 'Hubo un error al enviar';
               });
-            
-          }else{
-            submitMSG(false, 'Complete el formulario');
           }
+          // else{
+          //   submitMSG(false, 'Complete el formulario');
+          // }
           setTimeout(()=>success.style.display='none',5000)
+      
     }
   }); 
 
@@ -66,20 +65,17 @@ $("#robotForm").validator().on('submit', function(event) {
 
     function validate(){
 
-     
       if( !isValidEmail(robotEmail.value) ){
         emailErr.style.display='block'
         return false
       }
       else emailErr.style.display='none'
-
-      if( robotArea.value.length < 3 || robotArea.value.length > 4 ||  !robotArea.value.includes('+') ){
-        areaErr.style.display='block'
-        return false
-      }
-      else areaErr.style.display='none' 
-      
-
+      // if( robotArea.value.length < 3 || robotArea.value.length > 4 ||  !robotArea.value.includes('+') ){
+      //   areaErr.style.display='block'
+      //   return false
+      // }
+      // else areaErr.style.display='none' 
+      return true
     }
 
 

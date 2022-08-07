@@ -1202,9 +1202,6 @@ Main Hero Area CSS
   /* border: 1px solid green; */
 
 }
-.content-nosotros-titles{
-  margin-top: 80px;
-}
 .nosotros--img{
   text-align: center;  
   position:relative;
@@ -5881,8 +5878,12 @@ Talk Area CSS
  #contactFormTwo .form-group {
   margin-bottom: 20px;
 }
+#sidebarForm .form-group .form-control{
+ background-color:  rgb(246, 242, 242);
+ margin-bottom: 10px;
+}
 
- #contactFormTwo .form-group .form-control {
+ #contactFormTwo .form-group .form-control, form .form-group .form-control{
   height: 55px;
   color: #9B8DAC;
   -webkit-box-shadow: unset !important;
@@ -5896,48 +5897,48 @@ Talk Area CSS
   font-size: 15px;
 }
 
- #contactFormTwo .form-group .form-control::-webkit-input-placeholder {
+ #contactFormTwo .form-group .form-control::-webkit-input-placeholder, form .form-group .form-control::-webkit-input-placeholder {
   color: #9B8DAC;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
- #contactFormTwo .form-group .form-control:-ms-input-placeholder {
+ #contactFormTwo .form-group .form-control:-ms-input-placeholder, form .form-group .form-control:-ms-input-placeholder {
   color: #9B8DAC;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
- #contactFormTwo .form-group .form-control::-ms-input-placeholder {
+ #contactFormTwo .form-group .form-control::-ms-input-placeholder, form .form-group .form-control::-ms-input-placeholder {
   color: #9B8DAC;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
- #contactFormTwo .form-group .form-control::placeholder {
+ #contactFormTwo .form-group .form-control::placeholder, form .form-group .form-control::placeholder {
   color: #9B8DAC;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
- #contactFormTwo .form-group .form-control:focus {
+ #contactFormTwo .form-group .form-control:focus, form .form-group .form-control:focus {
   border-color: var(--main-color);
   background-color: transparent;
 }
 
- #contactFormTwo .form-group .form-control:focus::-webkit-input-placeholder {
+ #contactFormTwo .form-group .form-control:focus::-webkit-input-placeholder, form .form-group .form-control:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
- #contactFormTwo .form-group .form-control:focus:-ms-input-placeholder {
+ #contactFormTwo .form-group .form-control:focus:-ms-input-placeholder, form .form-group .form-control:focus:-ms-input-placeholder {
   color: transparent;
 }
 
- #contactFormTwo .form-group .form-control:focus::-ms-input-placeholder {
+ #contactFormTwo .form-group .form-control:focus::-ms-input-placeholder, form .form-group .form-control:focus::-ms-input-placeholder {
   color: transparent;
 }
 
- #contactFormTwo .form-group .form-control:focus::placeholder {
+ #contactFormTwo .form-group .form-control:focus::placeholder, form .form-group .form-control:focus::placeholder {
   color: transparent;
 }
 
@@ -6318,7 +6319,8 @@ CONTACT AREA
 .contact-hero-info{
   /* border: 1px solid red; */
   color: white !important;
-  margin-left: 180px;
+  margin-left: 280px;
+  margin-bottom: 80px;
 }
 .contact-hero-info span, .contact-hero-info h1{
   /* border: 1px solid red; */
@@ -6368,9 +6370,6 @@ CONTACT AREA
     display: flex;
     align-items: center;
   }
-  .contact-hero-info{
-    margin-left: 100px;
-  }
   .contact-form-info{
     width: 90%;
   }
@@ -6387,6 +6386,13 @@ CONTACT AREA
     margin-left: 0px;
     padding: 40px;
   }
+}
+@media screen and (max-width:767px) {
+
+  .contact-hero-info{
+    margin-bottom: 10px;
+  }
+
 }
 
 

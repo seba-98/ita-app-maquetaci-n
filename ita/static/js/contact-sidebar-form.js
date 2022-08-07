@@ -3,114 +3,90 @@
 /*==============================================================*/
 
 
-const email=   document.getElementById('form-email');
-const area=  document.getElementById('selectInputValue');
-const telefono=document.getElementById('form-phone');
-const mensaje= document.getElementById('form-message');
-const formulario= document.getElementById('contactFormTwo');
+const sidebarEmail= document.getElementById('form-sidebar-email');
+const sidebarArea= document.getElementById('selectSidebarInputValue');
+const sidebarPhone= document.getElementById('form-sidebar-phone');
+const sidebarWeb= document.getElementById('sidebar-form-web');
+
+const emailErr= document.getElementById('sidebar-email-err');
 
 
-const emailErr= document.getElementById('email-err');
-const areaErr= document.getElementById('area-err');
-const telefonoErr= document.getElementById('phone-err');
-const mensajeErr= document.getElementById('message-err');
+sidebarEmail.addEventListener('focus', ()=> emailErr.style.display = 'none')
+
+const btn = document.getElementById('sidebar-form-btn');
+const success = document.getElementById('msgSubmitTwo');
 
 
 
-email.addEventListener('focus', ()=> emailErr.style.display = 'none')
-area.addEventListener('focus', ()=> areaErr.style.display = 'none')
-telefono.addEventListener('focus', ()=> telefonoErr.style.display = 'none')
-mensaje.addEventListener('focus', ()=> mensajeErr.style.display = 'none')
+$("#sidebarForm").validator().on('submit', function(event) {
+  event.preventDefault();
 
-const btn = document.getElementById('contact-page_button');
-
-
-$("#contactFormTwo").validator().on('submit', function(event) {
   
-    event.preventDefault();
-    const serviceID = 'service_jzdvvif';
-    const templateID = 'template_59smb5f';
+  const serviceID = 'service_jzdvvif';
+  const templateID = 'template_59smb5f';
   
-    
-    validate();
-    
-    if(event.isDefaultPrevented()) {
-      
-      if(validate()){
-        
-        btn.innerHTML = 'Enviando...';
+  validate();
+  
+  if(event.isDefaultPrevented()) {
+    console.log(
+      sidebarEmail.value,
+      sidebarArea.value,
+      sidebarPhone.value,
+      sidebarWeb.value,
+    );
+
+    if(validate()){
+      btn.innerHTML = 'Enviando...';
         emailjs.sendForm(serviceID, templateID, this)
           .then(() => {
-            btn.innerHTML = 'Enviar email';
-            formSuccess();
-            
-          }, (err) => {
-                btn.innerHTML = 'Enviar email';
-                formError();
-                submitMSG(false, err);
+              btn.innerHTML = 'Contactanos';
+              formSuccess();
+              success.style.display='block'
+            }, (err) => {
+              btn.innerHTML = 'Contactanos';
+              formError();
+              success.style.display='block'
+              success.innerHTML = 'Hubo un error al enviar';
               });
-            
-          }else{
-            // submitMSG(false, 'Complete el formulario');
           }
+          // else{
+          //   submitMSG(false, 'Complete el formulario');
+          // }
+          setTimeout(()=>success.style.display='none',5000)
     }
+    
   }); 
 
     
 
     function validate(){
 
-
-        
-      
-      if( !isValidEmail(email.value) ){
+      if( !isValidEmail(sidebarEmail.value) ){
         emailErr.style.display='block'
         return false
       }
       else emailErr.style.display='none'
-
-      // if( area.value.length < 3 || area.value.length > 4 ||  !area.value.includes('+')){
+      // if( robotArea.value.length < 3 || robotArea.value.length > 4 ||  !robotArea.value.includes('+') ){
       //   areaErr.style.display='block'
       //   return false
       // }
       // else areaErr.style.display='none' 
-      
-      // if( telefono.value.length < 5 ){
-      //   telefonoErr.style.display='block'
-      //   return false
-      // }
-      // else telefonoErr.style.display='none'
-
-      // if( mensaje.value.length < 10 ){
-      //   mensajeErr.style.display='block'
-      //   return false
-      // }
-      // else mensajeErr.style.display='none'
-
       return true
     }
 
 
-
-
     function formSuccess(){
-      // $("#contactForm, #contactFormTwo")[0].reset();
-      const formTwo = document.getElementById('contactFormTwo');
-      const contactForm = document.getElementById('contactForm');
-
-      if(formTwo){
-        formTwo.reset();
+      const form = document.getElementById('sidebarForm');
+      if(form){
+        form.reset();
       }
-      
-      if(contactForm){
-        contactForm.reset();
+      if(form){
+        form.reset();
       }
       submitMSG(true, "Mensaje enviado");
   }
-
-
   function formError(){
-      $("#contactForm, #contactFormTwo").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $("#sidebarForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
           $(this).removeClass();
       });
   }
@@ -146,7 +122,10 @@ function isValidEmail(email) {
 
 
 
-// 
+
+
+
+// (function ($) {
 //     "use strict"; // Start of use strict
 //     $("#contactForm, #contactFormTwo").validator().on("submit", function (event) {
 //         event.preventDefault();

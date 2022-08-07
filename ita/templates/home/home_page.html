@@ -23,8 +23,6 @@
 		<link rel="stylesheet" href="../../static/css/responsive.css">
 		<link rel="stylesheet" href="../../static/css/selectCustom.css">
         <link rel="icon" type="image/png" href="../../static/images/favicon.png">
-
-
     <title>Document</title>
 </head>
 <body>
@@ -198,79 +196,72 @@
                         </ul>
                     </div>
                     <ul class="sidebar-social-list">
-                        <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="ri-behance-fill"></i></a></li>
+                        <li><a href="https://www.facebook.com/globalita.io" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                        <li><a href="https://www.instagram.com/globalita.io/" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                        <li><a href="https://www.behance.net/globalita" target="_blank"><i class="ri-behance-fill"></i></a></li>
                     </ul>
                     <div class="contact-form">
                         <h3>Deja tu mensaje</h3>
 
-                        <!-- <form id="contactForm" autocomplete="off">
+
+                        <form id="sidebarForm" novalidate autocomplete="off">
                             <div class="row">
-                                <div class="col-lg-12 col-md-6">
+                                
+                                <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <input id="form-name" type="text" name="name" class="form-control" required data-error="Por favor escribe tu nombre" placeholder="Nombre">
-                                        <div class="help-block with-errors " id="name-err" style="display:none ;">
+                                        <input id="form-sidebar-email" type="email" name="email" class="form-control" required data-error="Por favor escribe un email válido" placeholder="Correo Electrónico">
+                                        <div class="" id="sidebar-email-err" style="display: none;">
                                             <ul class="list-unstyled">
-                                                <li >El nombre debe ser mayor a 2 caracteres</li>
+                                                <li class="inputErr">Por favor escribe un email válido</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 
-
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="form-group">
-                                        <input id="form-email" type="email" name="email" class="form-control" required data-error="Por favor escribe tu correo electrónico" placeholder="Correo Electrónico">
-                                        <div class="help-block with-errors " id="email-err" style="display:none ;">
-                                            <ul class="list-unstyled">
-                                                <li >El email debe tener un formato válido</li>
+                                <div class="inputs-phone">
+                                    <div class="area-phone">
+                                        <div name="robot-area" id="sidebarAreaInput">
+                                            <input type="text" value="+52" id="selectSidebarInputValue" name="contact-area" style="display: none;"/>
+                                            <div id="select_sidebar_field">
+                                                <img class="select_img" src="../../static/images/flags/mexico.png" alt="" srcset="">
+                                                <p id="selected_sidebar_text">+52</p>
+                                            </div>
+                                            <ul id="select_sidebar_list">
                                             </ul>
                                         </div>
                                     </div>
 
-                                </div>
 
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="form-group">
-                                        <input id="form-affair" type="text" name="affair" class="form-control" required data-error="El asunto debe tener al menos 5 caracteres" placeholder="Asunto">
-                                        <div class="help-block with-errors " id="affair-err" style="display:none ;">
+                                    <div class="form-group phone">
+                                        <input id="form-sidebar-phone" type="number"  name="phone" class="form-control" required data-error="Por favor escribe un teléfono válido" placeholder="Teléfono">
+                                        <div class="help-block with-errors" id="phone-err" style="display: none;">
                                             <ul class="list-unstyled">
-                                                <li >El asunto debe tener al menos 5 caracteres</li>
+                                                <li>Por favor escribe un teléfono válido</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-
+                                
+                                
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <input id="form-phone" type="text" name="phone_number" class="form-control" required data-error="El teléfono debe tener un formato válido" placeholder="Teléfono">
-                                        <div class="help-block with-errors " id="phone-err" style="display:none ;">
+                                        <input id="sidebar-form-web" name="contact-web" class="form-control" cols="30" rows="6" required data-error="Por favor escribe un mensaje de 10 o mas caracteres" placeholder="Sitio web"></input>
+                                        <div class="help-block with-errors" id="message-err" style="display: none;">
                                             <ul class="list-unstyled">
-                                                <li >El teléfono debe tener un formato válido</li>
+                                                <li>Por favor escribe un mensaje de 10 o mas caracteres</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="message" id="form-message" class="form-control" cols="30" rows="6" required data-error="El mensaje debe tener al menos 10 caracteres" placeholder="Escribe un mensaje..."></textarea>
-                                        <div class="help-block with-errors " id="message-err" style="display:none ;">
-                                            <ul class="list-unstyled">
-                                                <li >El mensaje debe tener al menos 10 caracteres</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <button type="submit" id="contact-page_button" class="default-btn">Enviar mensaje<span></span></button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <button type="submit" class="default-btn" id="sidebar-form-btn">Contactanos<span></span></button>
+                                    <div id="msgSubmitTwo" class="h3 text-center hidden"></div>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
-                        </form> -->
+                        </form>
+
                     </div>
                 </div>
             </div>
@@ -401,7 +392,7 @@
                             <div class="inputs-phone">
                                 <div class="area-phone">
                                     <div name="robot-area" id="robotAreaInput">
-                                        <input type="text" value="+52" id="selectInputValue" style="display: none;"/>
+                                        <input type="text" value="+52" id="selectInputValue" name="robot-area" style="display: none;"/>
                                         <div id="select_field">
                                             <img class="select_img" src="../../static/images/flags/mexico.png" alt="" srcset="">
                                             <p id="selected_text">+52</p>
@@ -848,10 +839,11 @@
         
 
 
-<script type="text/javascript" src="../../static/js/ita.js"></script>
+    <script type="text/javascript" src="../../static/js/ita.js"></script>
     <!-- Links of JS files -->
-    
+    <script src="../../static/js/searchNav.js"></script>
     <script src="../../static/js/selectCustom.js"></script>
+    <script src="../../static/js/selectSidebarCustom.js"></script>
     <script src="../../static/js/jquery.min.js"></script>
     <script src="../../static/js/bootstrap.bundle.min.js"></script>
     <script src="../../static/js/jquery.meanmenu.js"></script> 
@@ -875,10 +867,8 @@
     <script src="../../static/js/main.js"></script>
     <script type="text/javascript" src="../../static/js/three.js"></script>
     <script type="module" src="../../static/js/index.mjs"></script>
-
-    <script type="text/javascript" src="../../static/js/contact-form-script.js" ></script>
-        
     <script src="../../static/js/contact-robot-form.js"></script>
+    <script src="../../static/js/contact-sidebar-form.js"></script>
     <script type="text/javascript">
             
     function cargar(){
