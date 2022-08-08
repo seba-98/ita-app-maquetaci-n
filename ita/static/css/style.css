@@ -519,6 +519,18 @@ Section Title CSS
   z-index: 1;
 }
 
+@media screen and (max-width:422px) {
+
+  .section-title2 span {
+  font-size: 35px;
+}
+
+.section-title2 h2 {
+  font-size:47px;
+}
+  
+}
+
 .seccionA {
   width: 100%;
   color: var(--main-color);
@@ -1825,7 +1837,7 @@ About Area CSS
 .about-area-mundo{
   width: 80%;
   margin-top: 170px !important;
-  margin-bottom: 120px !important;
+  margin-bottom: 100px !important;
   display: flex;
   justify-content: space-around;
 }
@@ -2034,6 +2046,7 @@ About Area CSS
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 .inova-items{
   display: flex;
@@ -11827,9 +11840,9 @@ Buy Now Btn
   right: 0;
   left: 0;
   top: 0%;
-  bottom: 0;
+  bottom: 20%;
   display: flex;
-  z-index:1;
+  z-index:0;
 }
 
 
@@ -11837,6 +11850,13 @@ Buy Now Btn
   
   .fondo_lineas, .fondo_cerebro{
     background-size: contain;
+  }
+}
+
+@media screen and (max-width:991px) {
+  
+  .fondo_lineas{
+    bottom: 50%;
   }
 }
 
