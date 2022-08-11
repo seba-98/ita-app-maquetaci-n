@@ -28,12 +28,6 @@ $("#sidebarForm").validator().on('submit', function(event) {
   validate();
   
   if(event.isDefaultPrevented()) {
-    console.log(
-      sidebarEmail.value,
-      sidebarArea.value,
-      sidebarPhone.value,
-      sidebarWeb.value,
-    );
 
     if(validate()){
       btn.innerHTML = 'Enviando...';
