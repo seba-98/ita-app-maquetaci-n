@@ -1239,23 +1239,9 @@ Main Hero Area CSS
     right: 0px;
   }
   
-
-  .robot{
-    width: 400px  !important;
-    height: 400px !important;
-  }
-  .nosotros--img{
-    width:500px  !important;
-    height: 400px !important;
-  }
-
   .main-hero-content-nosotros{
     height: 300px !important;
     padding-bottom: 100px;
-  }
-  .hero-nosotros, .robot-content{
-    flex-direction: column-reverse;
-
   }
 }
 
@@ -1340,41 +1326,59 @@ Main Hero Area CSS
 @media screen and (max-width:1500px) {
 
   .hero--home{
-    width: 80%;
+    width: 45%;
+  }
+  .robot-content{
+    padding-top: 200px ;
   }
   .main-hero-content-nosotros{
     height: 300px !important;
-    padding-bottom: 100px;
   }
-  .robot-content{
-    height: 1000px;
-    padding-top: 150px;
-  }
-  .hero-nosotros{
-    flex-direction: column-reverse;
-  }
-  /* .nosotros--h4{
+  
+  .nosotros--h4{
     font-size: 20px !important;
     font-weight: 600;
-  } */
+  }
 
   .hero--home span, .hero--home h1, .hero--home h4, .nosotros--h1{
     font-size: 40px !important;
   }
-  .robot, .nosotros--img{
+  .robot{
     width: 500px;
     height: 400px;
+    margin-bottom: 100px;
+  }
+  .nosotros--img{
+    width: 500px;
+    height: 400px;
+    margin-bottom: 200px;
   }
 }
-@media screen and (max-width:1240px) {
+@media screen and (max-width:1000px) {
+  .hero--home{
+    width: 80%;
+  }
+  .nosotros--img{
+    margin-bottom: 0px;
+  }
+  .robot{
+    margin-bottom: 0px;
+  }
+  .hero-nosotros{
+    flex-direction: column-reverse;
+  }
   .robot-content{
     flex-direction: column-reverse;
+    height: 1100px;
+    padding-top: 180px !important;
+  }
+  .robot-content{
+    padding-top: 200px;
   }
   .hero--home span, .hero--home h1, .hero--home h4, .nosotros--h1{
     font-size: 40px !important;
   }
   .nosotros--h4{
-    
     font-size: 20px !important;
   }
 }
