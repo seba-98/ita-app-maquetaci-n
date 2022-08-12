@@ -11053,6 +11053,7 @@ Buy Now Btn
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
+  display: none;
   /*
   -webkit-animation-name: tada;
           animation-name: tada;
@@ -11068,6 +11069,9 @@ Buy Now Btn
   font-size: 30px;
 }
 
+.search-btn,.close-btn{
+  display: none !important;
+}
 
 
 .buy-now-btn {
@@ -11078,7 +11082,7 @@ Buy Now Btn
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   border-radius: 30px;
-  display: inline-block;
+  display: none;
   color: var(--white-color) !important;
   background-color: #25D366;
   padding: 9px 12px 8px;
