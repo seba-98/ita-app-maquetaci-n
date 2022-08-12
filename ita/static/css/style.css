@@ -11843,49 +11843,86 @@ Buy Now Btn
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  width: 100%;
-  height: auto;
+  width: 60%;
+  height: 100%;
   right: 0;
   left: 0;
-  top: 0%;
-  bottom: 20%;
+  top: 10%;
   display: flex;
   z-index:0;
 }
 
 
 @media screen and (max-width:1300px) {
-  
-  .fondo_lineas, .fondo_cerebro{
-    background-size: contain;
-  }
-}
-
-@media screen and (max-width:991px) {
-  
   .fondo_lineas{
-    bottom: 50%;
+    top: 33%;
+    height: 50%;
+  }
+  .fondo_cerebro{
+    background-size: cover;
+    top: 20%;
+    background-position:bottom, right !important;
+    width: 100%;
+    height: 80%;
+  }
+}
+@media screen and (max-width:990px) {
+  .fondo_lineas{
+    top: 10%;
+    height: 40%;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width:960px) {
+  .fondo_cerebro{
+    top: 50%;
+    height: 50%;
+  }
+}
+@media screen and (max-width:700px) {
+  .fondo_cerebro{
+    top: 50%;
+    height: 50%;
+  }
+}
+@media screen and (max-width:500px) {
+  .fondo_cerebro{
+    top: 40%;
+    height: 60%;
+  }
+}
+@media screen and (max-width:400px) {
+  .fondo_cerebro{
+    top: 40%;
+    height: 60%;
   }
 }
 
 
 
-@media screen and (max-width:882px) {.fondo_lineas{bottom: 49%;}}
-@media screen and (max-width:850px) {.fondo_lineas{bottom: 48%;}}
-@media screen and (max-width:800px) {.fondo_lineas{bottom: 47%;}}
-@media screen and (max-width:767px) {.fondo_lineas{bottom: 45%;}}
-@media screen and (max-width:757px) {.fondo_lineas{bottom: 44%;}}
-@media screen and (max-width:680px) {.fondo_lineas{bottom: 43%;}}
-@media screen and (max-width:650px) {.fondo_lineas{bottom: 41%;}}
-@media screen and (max-width:590px) {.fondo_lineas{bottom: 40%;}}
-@media screen and (max-width:570px) {.fondo_lineas{bottom: 38%;}}
-@media screen and (max-width:500px) {.fondo_lineas{bottom: 37%;}}
-@media screen and (max-width:500px) {.fondo_lineas{bottom: 36%;}}
-@media screen and (max-width:499px) {.fondo_lineas{bottom: 30%;}}
-@media screen and (max-width:497px) {.fondo_lineas{bottom: 38%;}}
-@media screen and (max-width:425px) {.fondo_lineas{bottom: 44%;}}
-@media screen and (max-width:406px) {.fondo_lineas{bottom: 40%;}}
-@media screen and (max-width:350px) {.fondo_lineas{bottom: 36%;}}
+@media screen and (max-width:850px) {.fondo_lineas{top: 15%;}}
+@media screen and (max-width:720px) {.fondo_lineas{
+  top: 18%;
+  height: 40%;
+}}
+@media screen and (max-width:560px) {
+  .fondo_lineas{
+    top: 24%;
+  }
+}
+@media screen and (max-width:427px) {
+  .fondo_lineas{
+    top: 8%;
+    height: 50%;
+  }
+}
+@media screen and (max-width:370px) {
+  .fondo_lineas{
+    top: 13%;
+  }
+}
 
 /* 
 @media screen and (max-width:747px) {.fondo_lineas{bottom: 43%;}}
