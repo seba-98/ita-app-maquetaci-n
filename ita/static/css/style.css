@@ -11100,6 +11100,10 @@ Buy Now Btn
   */
 }
 
+.buy-now-btn {
+  font-size: 30px;
+  display: none !important;
+}
 .buy-now-btn i{
   font-size: 30px;
 }
