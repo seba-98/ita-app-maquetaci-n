@@ -1621,12 +1621,12 @@
     position: relative;
     left: 0;
   }
-  .main-hero-content h1 {
+  /* .main-hero-content h1 {
     font-size: 65px;
     margin-bottom: 0;
     color: var(--white-color);
     position: relative;
-  }
+  } */
   .main-banner-area .container-fluid {
     padding-right: var(--bs-gutter-x, 0.75rem);
     padding-left: var(--bs-gutter-x, 0.75rem);

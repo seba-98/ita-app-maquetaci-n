@@ -1047,23 +1047,7 @@ Main Hero Area CSS
 
 
 
-.proyectos {
-  background-image: url(../images/main-hero/proyecto.png);     
-  /*width: 322px;
-  height: 250px;*/
-  width:530px;
-  height: 420px;
-  text-align: center;  
-  background-repeat: no-repeat;
-  /*background-size: cover;*/
-  background-size: 530px 420px;
-  /*float:right;*/
-  position:absolute;
-  left: 49%;
-  top:2%;
-  z-index: 100;
- 
-}
+
 
 .news {
   background-image: url(../images/main-hero/news.png);     
@@ -1226,8 +1210,6 @@ Main Hero Area CSS
     
   }
 }
-
-
 @media screen and (max-width:1500px){
 
   .main-hero-content-nosotros{
@@ -1264,9 +1246,6 @@ Main Hero Area CSS
     margin: 70px 0 0 0;
   }
 
-  /* .nosotros--h4{
-    font-size: 16px !important;
-  } */
   .list-home-inputs{
     padding-right: 0px;
     /* border: 1px solid red; */
@@ -1285,10 +1264,6 @@ Main Hero Area CSS
     height: 250px !important;
   }
 
-  /* .nosotros--img{
-    height: 300px;
-    width: 300px;
-  } */
 }
 
 
@@ -1398,6 +1373,9 @@ Main Hero Area CSS
   height: 100%;
   width: 100%;
 }
+
+
+
 
 .container-fluid1 {
   width:100%;
