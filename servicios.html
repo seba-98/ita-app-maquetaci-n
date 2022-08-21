@@ -1,0 +1,901 @@
+<!-- {% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %} -->
+<!-- EXTRA CSS -->
+<!-- {% endblock extra_css %}
+
+{% block content %}
+
+{% include 'includes/navbar.html' with page='servicios' %}
+ -->
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/style.css">
+        <title>Ita | Servicios</title>
+        <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../static/css/aos.css">
+        <link rel="stylesheet" href="../../static/css/animate.min.css">
+        <link rel="stylesheet" href="../../static/css/remixicon.css">
+        <link rel="stylesheet" href="../../static/css/odometer.min..css">
+        <link rel="stylesheet" href="../../static/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../../static/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../../static/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="../../static/css/fancybox.min.css">
+        <link rel="stylesheet" href="../../static/css/nice-select.min.css">
+        <link rel="stylesheet" href="../../static/css/navbar.css">
+        <link rel="stylesheet" href="../../static/css/footer.css">
+        <link rel="stylesheet" href="../../static/css/dark.css">
+		<link rel="stylesheet" href="../../static/css/responsive.css">
+        <link rel="icon" type="image/png" href="../../static/images/favicon.png">
+
+
+    <title>Servicios</title>
+</head>
+<body>
+
+
+
+    
+<!--==========================NAVBAR==========================-->
+
+<div class="navbar-area">
+    <div class="main-responsive-nav">
+        <div class="container">
+            <div class="main-responsive-menu">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../../static/images/logo.png" alt="image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-navbar navbar-with-navy-color">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="../../static/images/logo.png" alt="image">
+                </a>
+
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="home_page.html" class="nav-link " >Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="nosotros.html" class="nav-link ">Nosotros</a>
+                        </li>
+                        <!--
+                        <li class="nav-item">
+                            <a href="/proyectos/" class="nav-link {% if page == 'proyectos' %} active {% endif %}">Proyectos</a>
+                        </li>
+                        -->
+                        <li class="nav-item">
+                            <a href="servicios.html" class="nav-link active">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="noticias.html" class="nav-link ">News</a>
+                        </li>
+                        <!--
+                        <li class="nav-item">
+                            <a href="/contacto/" class="nav-link {% if page == 'contacto' %} active {% endif %}">Contacto</a>
+                        </li>
+                        -->
+                    </ul>
+
+                    <div class="others-options d-flex align-items-center">
+                        <div class="option-item">
+                            <i class="search-btn ri-search-line"></i>
+                            <i class="close-btn ri-close-line"></i>
+                            <div class="search-overlay search-popup">
+                                <div class='search-box'>
+                                    <form class="search-form">
+                                        <input class="search-input" placeholder="Buscar..." type="text">
+
+                                        <button class="search-button" type="submit">
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="option-item">
+                            <div class="side-menu-btn">
+                                <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="others-option-for-responsive">
+        <div class="container">
+            <div class="dot-menu">
+                <div class="inner">
+                    <div class="circle circle-one"></div>
+                    <div class="circle circle-two"></div>
+                    <div class="circle circle-three"></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="option-inner">
+                    <div class="others-options d-flex align-items-center">
+                        <div class="option-item">
+                            <i class="search-btn ri-search-line"></i>
+                            <i class="close-btn ri-close-line"></i>
+                            <div class="search-overlay search-popup">
+                                <div class='search-box'>
+                                    <form class="search-form">
+                                        <input class="search-input" placeholder="Search..." type="text">
+
+                                        <button class="search-button" type="submit">
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="option-item">
+                            <div class="side-menu-btn">
+                                <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Navbar Area -->
+
+    <!-- Sidebar Modal -->
+    <div class="sidebarModal modal right fade" id="sidebarModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
+
+            <div class="modal-body">
+                <a href="index.html">
+                    <img src="../../static/images/logo_black.png" class="black-logo" alt="image">
+                    <img src="../../static/images/logo.png" class="white-logo" alt="image">
+                </a>
+                <div class="sidebar-content">
+                    <h3>Acerca de</h3>
+                    <p>Seleccionamos y trabajamos con un cupo limitado de propuestas para ser parte de proyectos tecnológicos innovadores que logren cambiar el mundo.
+
+                        Desarrollamos software que logre materializar ideas con tecnología disruptiva.
+                    </p>
+
+                    <div class="sidebar-btn">
+                        <a href="contacto.html" class="default-btn">Contactanos</a>
+                    </div>
+                </div>
+                <div class="sidebar-contact-info">
+                    <h3>Información de contacto</h3>
+
+                    <ul class="info-list">
+                        <!-- <li><i class="ri-phone-fill"></i> <a href="tel:5548457290"><FONT FACE="Uber Move Medium">(55)48457290</FONT></a></li></a></li>-->
+                        
+                        <li ><i class="ri-mail-line "></i> <a href="mailto:contacto.ita@globalita.io">contacto.ita@globalita.io</a></li> 
+
+                        <!-- <li><i class="ri-map-pin-line"></i> boulevard de las Rosas, Coacalco de Berriozabal</li> -->
+                    </ul>
+                </div>
+                <ul class="sidebar-social-list">
+                    <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="ri-behance-fill"></i></a></li>
+                </ul>
+                <div class="contact-form">
+                    <h3>Deja tu mensaje</h3>
+
+                    <form id="contactForm" autocomplete="off">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-6">
+                                <div class="form-group">
+                                    <input id="form-name" type="text" name="name" class="form-control" required data-error="Por favor escribe tu nombre" placeholder="Nombre">
+                                    <div class="help-block with-errors " id="name-err" style="display:none ;">
+                                        <ul class="list-unstyled">
+                                            <li >El nombre debe ser mayor a 2 caracteres</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div class="col-lg-12 col-md-6">
+                                <div class="form-group">
+                                    <input id="form-email" type="email" name="email" class="form-control" required data-error="Por favor escribe tu correo electrónico" placeholder="Correo Electrónico">
+                                    <div class="help-block with-errors " id="email-err" style="display:none ;">
+                                        <ul class="list-unstyled">
+                                            <li >El email debe tener un formato válido</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-12 col-md-6">
+                                <div class="form-group">
+                                    <input id="form-affair" type="text" name="affair" class="form-control" required data-error="El asunto debe tener al menos 5 caracteres" placeholder="Asunto">
+                                    <div class="help-block with-errors " id="affair-err" style="display:none ;">
+                                        <ul class="list-unstyled">
+                                            <li >El asunto debe tener al menos 5 caracteres</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <input id="form-phone" type="text" name="phone_number" class="form-control" required data-error="El teléfono debe tener un formato válido" placeholder="Teléfono">
+                                    <div class="help-block with-errors " id="phone-err" style="display:none ;">
+                                        <ul class="list-unstyled">
+                                            <li >El teléfono debe tener un formato válido</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea name="message" id="form-message" class="form-control" cols="30" rows="6" required data-error="El mensaje debe tener al menos 10 caracteres" placeholder="Escribe un mensaje..."></textarea>
+                                    <div class="help-block with-errors " id="message-err" style="display:none ;">
+                                        <ul class="list-unstyled">
+                                            <li >El mensaje debe tener al menos 10 caracteres</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <button type="submit" id="contact-page_button" class="default-btn">Enviar mensaje<span></span></button>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--==========================FIN NAVBAR==========================-->
+
+
+
+
+<!-- Start Main Hero Area -->
+<div class="main-hero-area">
+    <div class="page-banner-areaGeneral">
+        <div class="main-hero-item ">
+            <div class="container-fluid1">
+                <div class="proyectos" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true"></div>
+                <div class="main-hero-content">                           
+                   
+                    <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true"></span>
+                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Servicios<span class="overlay"></span></h1>
+                    <h4 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Materializamos tu idea</h4>
+                    
+                    <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                        <a href="contacto.html" class="default-btn">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Main Hero Area -->
+
+
+
+<!-- Inicia Propuestas de valor Area -->
+
+<div class="software-area">
+    <div class="software-product_container">
+
+        <div class="soft-product-data_container">
+
+            <div class="soft-product-img_container" >
+                <img src="../../static/images/services/Servicios.png" alt="image" >
+            </div>
+            
+            <div class="soft-product-items_container">
+                <div class="software-product-title">
+                    <h3><FONT FACE="Uber Move Medium" size="6">Software de Producto</FONT> <span class="overlay"></span></h3>
+                </div>
+                
+                <div class="soft-product-items">
+
+                    <div class="soft-product-item">
+                        
+                        <p><FONT FACE="Uber Move Medium" size="4">Procesos</FONT></p>
+                        <div class="soft-product-item_img" data-tilt>
+                            <img src="../../static/images/services/Serv_Borde.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+
+                        <div>
+                            <p><FONT FACE="Uber Move Medium">Desarrollo propuesta de valor</FONT></p>
+                        </div> 
+                    </div>
+                    <div class="soft-product-item">
+                        
+                        <p><FONT FACE="Uber Move Medium" size="4">Procesos</FONT></p>
+                        <div class="soft-product-item_img" data-tilt>
+                            <img src="../../static/images/services/Serv_Borde.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+
+                        <div>
+                            <p><FONT FACE="Uber Move Medium">Desarrollo propuesta de valor</FONT></p>
+                        </div> 
+                    </div>
+                    <div class="soft-product-item">
+                        
+                        <p><FONT FACE="Uber Move Medium" size="4">Procesos</FONT></p>
+                        <div class="soft-product-item_img" data-tilt>
+                            <img src="../../static/images/services/Serv_Borde.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+
+                        <div>
+                            <p><FONT FACE="Uber Move Medium">Desarrollo propuesta de valor</FONT></p>
+                        </div> 
+                    </div>
+                    <div class="soft-product-item">
+                        
+                        <p><FONT FACE="Uber Move Medium" size="4">Procesos</FONT></p>
+                        <div class="soft-product-item_img" data-tilt>
+                            <img src="../../static/images/services/Serv_Borde.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+
+                        <div>
+                            <p><FONT FACE="Uber Move Medium">Desarrollo propuesta de valor</FONT></p>
+                        </div> 
+                    </div>
+                    <div class="soft-product-item">
+                        
+                        <p><FONT FACE="Uber Move Medium" size="4">Procesos</FONT></p>
+                        <div class="soft-product-item_img" data-tilt>
+                            <img src="../../static/images/services/Serv_Borde.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+
+                        <div>
+                            <p><FONT FACE="Uber Move Medium">Desarrollo propuesta de valor</FONT></p>
+                        </div> 
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="software-implement_container">
+        
+        <div class="soft-implement-data_container">
+            
+            <div class="soft-product-img_container" >
+                <img src="../../static/images/services/Servicios1.png" alt="image" >
+            </div>
+            
+            <div class="soft-product-items_container">
+                <div class="software-product-title">
+                    <h3><FONT FACE="Uber Move Medium" size="6">Software de Implementación</FONT> <span class="overlay"></span></h3>
+                </div>
+                
+                <div class="soft-product-items">
+
+                    <div class="soft-product-item">
+                        
+                        <p><FONT FACE="Uber Move Medium" size="4">Procesos</FONT></p>
+                        <div class="soft-product-item_img" data-tilt>
+                            <img src="../../static/images/services/Serv_Borde.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+
+                        <div>
+                            <p><FONT FACE="Uber Move Medium">Desarrollo propuesta de valor</FONT></p>
+                        </div> 
+                    </div>
+                    <div class="soft-product-item">
+                        
+                        <p><FONT FACE="Uber Move Medium" size="4">Procesos</FONT></p>
+                        <div class="soft-product-item_img" data-tilt>
+                            <img src="../../static/images/services/Serv_Borde.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+
+                        <div>
+                            <p><FONT FACE="Uber Move Medium">Desarrollo propuesta de valor</FONT></p>
+                        </div> 
+                    </div>
+                    <div class="soft-product-item">
+                        
+                        <p><FONT FACE="Uber Move Medium" size="4">Procesos</FONT></p>
+                        <div class="soft-product-item_img" data-tilt>
+                            <img src="../../static/images/services/Serv_Borde.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+
+                        <div>
+                            <p><FONT FACE="Uber Move Medium">Desarrollo propuesta de valor</FONT></p>
+                        </div> 
+                    </div>
+                    <div class="soft-product-item">
+                        
+                        <p><FONT FACE="Uber Move Medium" size="4">Procesos</FONT></p>
+                        <div class="soft-product-item_img" data-tilt>
+                            <img src="../../static/images/services/Serv_Borde.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+
+                        <div>
+                            <p><FONT FACE="Uber Move Medium">Desarrollo propuesta de valor</FONT></p>
+                        </div> 
+                    </div>
+                    <div class="soft-product-item">
+                        
+                        <p><FONT FACE="Uber Move Medium" size="4">Procesos</FONT></p>
+                        <div class="soft-product-item_img" data-tilt>
+                            <img src="../../static/images/services/Serv_Borde.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+
+                        <div>
+                            <p><FONT FACE="Uber Move Medium">Desarrollo propuesta de valor</FONT></p>
+                        </div> 
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+    </div>   
+</div>
+
+<!-- Finaliza Propuestas de valor Area -->
+
+<br>
+
+
+<!-- Inicia Servicios -->
+<div class="services-area-style-two mt-100 mb-100" >
+        <div class="services-cards_container">
+
+                <div class="boxRedondoServicios" onmouseover="apareceProductos('productos')" onmouseout="desapareceProductos('productos')">
+                    <div class="imagen">        
+                        <img src="../../static/images/choose/choose-1.png" alt="image"></img>
+                        
+                        <!--<div class="imagen1">
+                            "Si quieres ir rapido, ve solo. Si quieres llegar lejos, ve acompañado"
+                        </div>-->
+                    </div>    
+                    <div class="titulo">
+                        Productos
+                    </div>
+                </div>
+        
+
+                <div class="boxRedondoServicios" onmouseover="apareceProductos('desarrollo')" onmouseout="desapareceProductos('desarrollo')">
+                    <div class="imagen">        
+                        <img src="../../static/images/choose/choose-2.png" alt="image"></img>
+                        
+                        <!--<div class="imagen1">
+                            "Si quieres ir rapido, ve solo. Si quieres llegar lejos, ve acompañado"
+                        </div>-->
+                    </div>    
+                    <div class="titulo">
+                        Desarrollo
+                    </div>
+                </div>
+        
+
+                <div class="boxRedondoServicios" onmouseover="apareceProductos('recurente')" onmouseout="desapareceProductos('recurente')">
+                    <div class="imagen">        
+                        <img src="../../static/images/choose/choose-3.png" alt="image"></img>
+                        
+                        <!--<div class="imagen1">
+                            "Si quieres ir rapido, ve solo. Si quieres llegar lejos, ve acompañado"
+                        </div>-->
+                    </div>    
+                    <div class="titulo">
+                        Recurente
+                    </div>
+                </div>
+            
+
+                <div class="boxRedondoServicios" onmouseover="apareceProductos('consultoria')" onmouseout="desapareceProductos('consultoria')">
+                    <div class="imagen">        
+                        <img src="../../static/images/choose/choose-4.png" alt="image"></img>
+                        
+                        <!--<div class="imagen1">
+                            "Si quieres ir rapido, ve solo. Si quieres llegar lejos, ve acompañado"
+                        </div>-->
+                    </div>    
+                    <div class="titulo">
+                        Consultoría
+                    </div>
+                </div>
+        </div>
+
+       
+
+        <div class=" row centrarServiciosfondo"  >
+            <div class="contenidoDivServicios" id="productos">
+                
+                <div class="row contenidoServicios">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="about-image" >
+                            <img src="../../static/images/services/recurso-web.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div>
+                            <p>Productoss</p>
+                            <h3>Aplicar fácil y rápido tecnologías en tu organización.</h3>
+                            <ul class="pricing-list">
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Chatbot</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Chat</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Tienda Digital</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Website/Landing Page</FONT></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row centrarServiciosfondo" id="desarrollo">
+            <div class="contenidoDivServicios">
+                
+                <div class="row contenidoServicios">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="about-image" >
+                            <img src="../../static/images/services/recurso-web.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div>
+                            <p>Desarrollo</p>
+                            <h3>Aplicar fácil y rápido tecnologías en tu organización.</h3>
+                            <ul class="pricing-list">
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Chatbot</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Chat</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Tienda Digital</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Website/Landing Page</FONT></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row centrarServiciosfondo" id="recurente">
+            <div class="contenidoDivServicios">
+                
+                <div class="row contenidoServicios">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="about-image" >
+                            <img src="../../static/images/services/recurso-web.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div>
+                            <p>Recurente</p>
+                            <h3>Aplicar fácil y rápido tecnologías en tu organización.</h3>
+                            <ul class="pricing-list">
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Chatbot</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Chat</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Tienda Digital</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Website/Landing Page</FONT></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row centrarServiciosfondo" id="consultoria">
+            <div class="contenidoDivServicios">
+                
+                <div class="row contenidoServicios">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="about-image" >
+                            <img src="../../static/images/services/recurso-web.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div>
+                            <p>Consultoría</p>
+                            <h3>Aplicar fácil y rápido tecnologías en tu organización.</h3>
+                            <ul class="pricing-list">
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Chatbot</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Chat</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Tienda Digital</FONT></li>
+                                <li><i class="ri-check-fill"></i> <FONT FACE="Uber Move Medium" size="2" color="#fff">Website/Landing Page</FONT></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> 
+</div>
+<!-- End Choose Area -->
+
+
+<!--Inicia Partner Digital -->
+<div class="about-services-area">
+    <img src="/static/images/fondos/fondo_redondo.png" class="fondo_cisrular_servicios" alt="image"/>
+    <div class="talk-area">
+        <div class="talk-content">
+
+            <div class="talk-text">
+                <div class="talk-title ">
+                    <h4>Te presentamos a nuestro</h4>
+                    <h5>Partner digital comercial</h5>
+                </div>
+    
+                <div class="talk-info ">
+                    <h6>3A PARTNER DIGITAL</h6>
+                    <br>
+                    <P><FONT FACE="Uber Move Medium">Es un equipo enfocado en desarrollar, planificar e</FONT>
+                    <br><FONT FACE="Uber Move Medium">implementar accionespublicitarias digitales.</FONT>
+                    <br><FONT FACE="Uber Move Medium">En conjunto con ellos vamos a acompañarte para</FONT>
+                    <br><FONT FACE="Uber Move Medium">lograr llevar adelante <b>tu producto al mercado.</b></FONT></P>
+                </div>
+                <div class="talk-meet">
+                    <a href="#">
+                        <p><b><FONT FACE="Uber Move Medium" color="#df0176">Conocé más -></FONT></b>
+                    </a>
+                </div>        
+            </div>
+
+            
+            <div class="talk-image" >
+                <img src="../../static/images/services/3av1.png" width="50%" height="50%" alt="image">
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+<!-- Finaliza Partner Digital -->
+
+<!-- Inicia Proyectos -->
+<!--<div class="projects-area with-black-background pb-100">-->
+    <div class="choose-area pt-100 pb-100">
+        <div class="container-fluid">
+            <div class="section-title">
+                <!--<span>PROJECTS</span>-->                
+                <h2>Algunos de nuestros <span>proyectos</span><span class="overlay"></span></h2>
+                <!--<p>We are leading technology solutions providing company all over the world doing over 40 years lorem ipsum dolor sit amet.</p>-->
+            </div>
+
+            <div class="projects-slides owl-carousel owl-theme">
+                <div class="projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                    <div class="projects-image">
+                        <a href="projects.html"><img src="../../static/images/projects/ICA_1.png" alt="image"></a>
+                    </div>
+                    <div class="projects-content">
+                        <h3>
+                            <a href="projects.html">ICA</a>
+                        </h3>
+                        <a href="projects.html" class="projects-btn">Ver más...</a>
+                    </div>
+                </div>
+
+                <div class="projects-item" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                    <div class="projects-image">
+                        <a href="projects.html"><img src="../../static/images/projects/Alchyme_1.png" alt="image"></a>
+                    </div>
+                    <div class="projects-content">
+                        <h3>
+                            <a href="projects.html">Alchyme</a>
+                        </h3>
+                        <a href="projects.html" class="projects-btn">Ver más...</a>
+                    </div>
+                </div>
+
+              
+
+                <div class="projects-item" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                    <div class="projects-image">
+                        <a href="projects.html"><img src="../../static/images/projects/Ki_1.png" alt="image"></a>
+                    </div>
+                    <div class="projects-content">
+                        <h3>
+                            <a href="projects.html">Ki</a>
+                        </h3>
+                        <a href="projects.html" class="projects-btn">Ver más...</a>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+          <!--=============================FOOTER=================================================================== -->
+            
+            
+          <footer class="footer-area with-navy-background margin-zero pt-50 ">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6">
+                        <!--<div class="single-footer-widget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">-->
+                            <div class="single-footer-widget">
+                                
+                                <table class="centertable">
+                                    <tr>
+                                        <td style="vertical-align:middle;">
+                                            <div class="widget-logo">
+                                                <a href="#"><img src="../../static/images/logo.png" alt="image"></a>
+                                                
+                                            </div>
+                                        </td>
+                                        <td >
+                                            <div class="vertical-line"></div>
+                                        </td>
+                                        <td style="vertical-align:middle;">
+                                            <ul class="widget-social">
+                                                <li>
+                                                    <a href="https://www.facebook.com/globalita.io" target="_blank">
+                                                        <i class="ri-facebook-fill"></i>
+                                                    </a>
+                                                </li>
+                                                <!--
+                                                    <li>
+                                                        <a href="#" target="_blank">
+                                                            <i class="ri-twitter-fill"></i>
+                                                        </a>
+                                                    </li>
+            
+                                                    <li>
+                                                        <a href="#" target="_blank">
+                                                            <i class="ri-youtube-fill"></i>
+                                                        </a>
+                                                    </li>
+                                                -->
+                                                
+                                                <li>
+                                                    <a href="https://www.behance.net/globalita" target="_blank">
+                                                        <i class="ri-behance-fill"></i>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="https://www.instagram.com/globalita.io/" target="_blank">
+                                                        <i class="ri-instagram-line"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                            </table>
+                        
+                            
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="copyright-area-content">
+                        <!--Copyright <script>document.write(new Date().getFullYear())</script>-->
+                        <p>
+                            © ITA MÉXICO.&nbsp; TODOS LOS DERECHOS RESERVADOS. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+<!-- End Projects Area -->
+
+
+    <script   script type="text/javascript" src="../../static/js/ita.js"></script>
+    <!-- Links of JS files -->
+    <script src="../../static/js/jquery.min.js"></script>
+    <script src="../../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../../static/js/jquery.meanmenu.js"></script> 
+    <script src="../../static/js/owl.carousel.min.js"></script>
+    <script src="../../static/js/jquery.appear.js"></script>
+    <script src="../../static/js/odometer.min.js"></script>
+    <script src="../../static/js/jquery.magnific-popup.min.js"></script>
+    <script src="../../static/js/fancybox.min.js"></script>
+    <script src="../../static/js/tweenmax.min.js"></script>
+    <script src="../../static/js/ScrollMagic.min.js"></script>
+    <script src="../../static/js/animation.gsap.min.js"></script>
+    <script src="../../static/js/debug.addIndicators.min.js"></script>
+    <script src="../../static/js/mixitup.min.js"></script>
+    <script src="../../static/js/nice-select.min.js"></script>
+    <script src="../../static/js/tilt.jquery.min.js"></script>
+    <script src="../../static/js/parallax.min.js"></script>
+    <script src="../../static/js/jquery.ajaxchimp.min.js"></script>
+    <script src="../../static/js/form-validator.min.js"></script>
+    <script src="../../static/js/contact-form-script.js"></script>
+    <script src="../../static/js/aos.js"></script>
+    <script src="../../static/js/wow.min.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <script type="text/javascript" src="../../static/js/three.js"></script>
+    <script type="module" src="../../static/js/index.mjs"></script>
+</body>
+</html>
+
+
+<!-- 
+ block javascript %} -->
+
+<script type="text/javascript">
+
+    function cargar(){
+        var productos = document.getElementById("productos");        
+        //productos.style.display = "none";
+        productos.style.cssText = 'opacity: 0; position:absolute;  transition: opacity 1s linear; transform: translate(-120%); transition-property: transform; transition-duration: 1s; transition-timing-function: linear;';
+
+        var desarrollo = document.getElementById("desarrollo");        
+        //desarrollo.style.display = "none";
+        desarrollo.style.cssText = 'opacity: 0; position:absolute;  transition: opacity 1s linear; transform: translate(-120%); transition-property: transform; transition-duration: 1s; transition-timing-function: linear;';
+
+        var recurente = document.getElementById("recurente");        
+        //recurente.style.display = "none";
+        recurente.style.cssText = 'opacity: 0; position:absolute;  transition: opacity 1s linear; transform: translate(-120%); transition-property: transform; transition-duration: 1s; transition-timing-function: linear;';
+
+        var consultoria = document.getElementById("consultoria");        
+        //consultoria.style.display = "none";
+        consultoria.style.cssText = 'opacity: 0; position:absolute;  transition: opacity 1s linear; transform: translate(-120%); transition-property: transform; transition-duration: 1s; transition-timing-function: linear;';
+
+        
+    }
+
+    cargar();
+
+    function apareceProductos(id){
+        var x = document.getElementById(id);        
+        //x.style.display = "";
+        x.style.cssText = 'opacity: 1; position:relative;  transition: opacity 1s linear; transform: translate(0%); transition-property: transform; transition-duration: 1s; transition-timing-function: linear;';
+        //x.style.cssText = 'opacity: 1; position:relative;  animation-duration: 3s; animation-name: slidein;';
+        
+            
+    }
+    function desapareceProductos(id){
+        var x = document.getElementById(id); 
+        const containers = document.getElementsByClassName('centrarServiciosfondo');
+
+        // for (i = 0; i <= containers.length; i++){
+        //     containers[i].style.paddingBottom='200px'
+        //     containers[i].style.paddingBottom='0px'
+
+        // //    setTimeout("document.getElementById('"+id+"').style.opacity = '" + (i / 10) + "'", (10 - i) * 100)       
+        // }
+
+        x.style.cssText = 'opacity: 1; position:relative;  transition: opacity 1s linear; transform: translate(-120%); transition-property: transform; transition-duration: 1s; transition-timing-function: linear;';
+        x.style.display = "none";
+    }
+
+</script>
+
+<!-- {% endblock %} 
+
+{% include 'includes/footer.html   
+
+{% endblock content %} -->

@@ -1,0 +1,551 @@
+<!-- {% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+
+{% include 'includes/navbar.html' with page='contacto' %}
+
+{% block javascript %} -->
+<script type="text/javascript" src="../../static/js/three.js"></script>
+<script type="module" src="../../static/js/index.mjs"></script>
+<!-- 
+{% endblock %} -->
+
+
+<!-- Start Main Hero Area -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <title>Ita | Contacto</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/aos.css">
+    <link rel="stylesheet" href="../../static/css/animate.min.css">
+    <link rel="stylesheet" href="../../static/css/remixicon.css">
+    <link rel="stylesheet" href="../../static/css/odometer.min..css">
+    <link rel="stylesheet" href="../../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../static/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="../../static/css/fancybox.min.css">
+    <link rel="stylesheet" href="../../static/css/nice-select.min.css">
+    <link rel="stylesheet" href="../../static/css/navbar.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <link rel="stylesheet" href="../../static/css/dark.css">
+    <link rel="stylesheet" href="../../static/css/responsive.css">
+    <link rel="stylesheet" href="../../static/css/selectCustom.css">
+    <link rel="icon" type="image/png" href="../../static/images/favicon.png">
+    
+    <title>Contacto</title>
+    
+     <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '592878638913736');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=592878638913736&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKTZ9N3J7C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-NKTZ9N3J7C');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5G8DHX3');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-217434236-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-217434236-3');
+    </script>
+    
+   
+</head>
+<body>
+
+
+   <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G8DHX3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+     <!--==========================NAVBAR==========================-->
+
+
+    <div class="navbar-area">
+
+        <div class="main-responsive-nav">
+            
+            <div class="container">
+
+                <div class="main-responsive-menu  resp-nav-menu" >
+                    <div class="logo">
+                        <a href="#">
+                            <img src="../../static/images/logo.png" alt="image">
+                        </a>
+                    </div>
+
+
+
+                    <div class="others-options-responsive icons-resp-nav">
+                        <div class="option-item">
+
+                            <i class="search-btn ri-search-line" id="resp-search-btn"></i>
+                            <i class="close-btn ri-close-line"   id="resp-search-close"  style="display: none;"></i>
+
+                            <div class="search-overlay search-popup">
+                                <div class='search-box'>
+                                    <form class="search-form">
+                                        <input class="search-input" placeholder="Buscar..." type="text">
+
+                                        <button class="search-button" type="submit">
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="option-item">
+                            <div class="side-menu-btn">
+                                <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="main-navbar navbar-with-navy-color">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="#">
+                        <img src="../../static/images/logo.png" alt="image">
+                    </a>
+
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="nosotros.html" class="nav-link ">Nosotros</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a href="contacto.html" class="nav-link active">Contacto</a>
+                            </li> -->
+                            <!-- <li class="nav-item">
+                                <a href="servicios.html" class="nav-link ">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="noticias.html" class="nav-link ">News</a>
+                            </li> -->
+                        </ul>
+
+                        <div class="others-options d-flex align-items-center">
+                            <div class="option-item">
+
+                                <i class="search-btn ri-search-line" id="view-search-btn"></i>
+                                <i class="close-btn ri-close-line"   id="view-search-close" style="display: none;"></i>
+                                
+                                <div class="search-overlay search-popup">
+                                    <div class='search-box'>
+                                        <form class="search-form">
+                                            <input class="search-input" placeholder="Buscar..." type="text">
+
+                                            <button class="search-button" type="submit">
+                                                <i class="ri-search-line"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="option-item">
+                                <div class="side-menu-btn">
+                                    <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="others-option-for-responsive">
+
+            <!-- <div class="container" style="border: 3px solid red; bottom: 20px;">
+            </div> -->
+            
+            
+        </div>
+    </div>
+        <!-- End Navbar Area -->
+    
+         <!-- Sidebar Modal -->
+         <div class="sidebarModal modal right fade" id="sidebarModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
+    
+                    <div class="modal-body" >
+                        <a href="index.html">
+                            <img src="../../static/images/logo_black.png" class="black-logo" alt="image">
+                            <img src="../../static/imagesimages/logo.png" class="white-logo" alt="image">
+                        </a>
+                        <ul class="navbar-nav ms-auto nav-sidebar-links">
+                            <li class="nav-item ">
+                                <a href="index.html" class="nav-link hover-link " >Home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="nosotros.html" class="nav-link hover-link">Nosotros</a>
+                            </li>
+                            <!-- <li class="nav-item ">
+                                <a href="contacto.html" class="nav-link hover-link sidebar-active-link">Contacto</a>
+                            </li> -->
+                            <!-- <li class="nav-item ">
+                                <a href="servicios.html" class="nav-link hover-link">Servicios</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="noticias.html" class="nav-link hover-link">News</a>
+                            </li> -->
+                        </ul>
+    
+    
+    
+                        <div class="sidebar-content">
+                            <h3>Acerca de</h3>
+                            <p>Seleccionamos y trabajamos con un cupo limitado de propuestas para ser parte de proyectos tecnológicos innovadores que logren cambiar el mundo.
+    
+                                Desarrollamos software que logre materializar ideas con tecnología disruptiva.
+                            </p>
+    
+                        </div>
+                        <div class="sidebar-contact-info">
+                            <h3>Información de contacto</h3>
+    
+                            <ul class="info-list">
+                                <!-- <li><i class="ri-phone-fill"></i> <a href="tel:5548457290"><FONT FACE="Uber Move Medium">(55)48457290</FONT></a></li></a></li>-->
+                                
+                                <li ><i class="ri-mail-line "></i> <a href="mailto:contacto.ita@globalita.io">contacto.ita@globalita.io</a></li> 
+    
+                                <!-- <li><i class="ri-map-pin-line"></i> boulevard de las Rosas, Coacalco de Berriozabal</li> -->
+                            </ul>
+                        </div>
+                        <ul class="sidebar-social-list">
+                            <li><a href="https://www.facebook.com/globalita.io" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                            <li><a href="https://www.instagram.com/globalita.io/" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                            <li><a href="https://www.behance.net/globalita" target="_blank"><i class="ri-behance-fill"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--==========================FIN NAVBAR==========================-->
+
+
+
+
+    <div class="main-hero-area" >
+        <div class="main-hero-item contact-hero ">
+            <div class="contact-hero-info">        
+                <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true"></span>
+                <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Contáctanos<span class="overlay"></span></h1>
+                <h4 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Materializamos tu idea</h4>
+            </div>
+        </div>
+    </div>
+        <!-- End Main Hero Area -->
+
+
+
+
+    <!-- Start Talk Area -->
+    <div class="talk-area-contact ptb-100 ">
+        <div class="contacto-form-container">
+            <div class="contact-form-info">
+                <div class="col-lg-6 col-md-12">
+                    
+                    <div class="talk-content-contact margin-zero">
+                        <span>Deja un comentario.</span>
+                        <h3>Nos gustaría saber más sobre tí. <span class="overlay"></span></h3>
+
+                        <form id="contactFormTwo" novalidate autocomplete="off">
+                            <div class="row">
+                                
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input id="form-email" type="email" name="email" class="form-control" required data-error="Por favor escribe un email válido" placeholder="Correo Electrónico">
+                                        <div class="help-block with-errors" id="email-err" style="display: none;">
+                                            <ul class="list-unstyled">
+                                                <li >Por favor escribe un email válido</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="inputs-phone">
+                                    <div class="area-phone">
+                                        <div name="robot-area" id="robotAreaInput">
+                                            <input type="text" value="+52" id="selectInputValue" name="contact-area" style="display: none;"/>
+                                            <div id="select_field">
+                                                <img class="select_img" src="../../static/images/flags/mexico.png" alt="" srcset="">
+                                                <p id="selected_text">+52</p>
+                                            </div>
+                                            <ul id="select_list">
+                                            </ul>
+                                            <div class="help-block with-errors " id="roboErrArea" style="display:none ;">
+                                                <ul class="list-unstyled">
+                                                    <li class="inputErr">El código de area debe ser valido, incluir +</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group phone">
+                                        <input id="form-phone" type="number"  name="phone" class="form-control" required data-error="Por favor escribe un teléfono válido" placeholder="Teléfono">
+                                        <div class="help-block with-errors" id="phone-err" style="display: none;">
+                                            <ul class="list-unstyled">
+                                                <li>Por favor escribe un teléfono válido</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input id="form-message" name="contact-web" class="form-control" cols="30" rows="6" required data-error="Por favor escribe un mensaje de 10 o mas caracteres" placeholder="Sitio web"></input>
+                                        <div class="help-block with-errors" id="message-err" style="display: none;">
+                                            <ul class="list-unstyled">
+                                                <li>Por favor escribe un mensaje de 10 o mas caracteres</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="default-btn" id="contact-page_button">Enviar Mensaje<span></span></button>
+                                    <div id="msgSubmitTwo" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+
+                    
+                    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                    <script type="text/javascript">
+                        emailjs.init('K8JUpz_RvVxk56xZI')
+                    </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     
+    <!--=============================FOOTER=================================================================== -->
+    
+    
+    <footer class="footer-area with-navy-background margin-zero pt-50 ">
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-12 col-md-6">
+                    <!--<div class="single-footer-widget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">-->
+                        <div class="single-footer-widget">
+                            
+                            <table class="centertable">
+                                <tr>
+                                    <td style="vertical-align:middle;">
+                                        <div class="widget-logo">
+                                            <a href="#"><img src="../../static/images/logo.png" alt="image"></a>
+                                            
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div class="vertical-line"></div>
+                                    </td>
+                                    <td style="vertical-align:middle;">
+                                        <ul class="widget-social">
+                                            <li>
+                                                <a href="https://www.facebook.com/globalita.io" target="_blank">
+                                                    <i class="ri-facebook-fill"></i>
+                                                </a>
+                                            </li>
+                                            <!--
+                                                <li>
+                                                    <a href="#" target="_blank">
+                                                        <i class="ri-twitter-fill"></i>
+                                                    </a>
+                                                </li>
+        
+                                                <li>
+                                                    <a href="#" target="_blank">
+                                                        <i class="ri-youtube-fill"></i>
+                                                    </a>
+                                                </li>
+                                            -->
+                                            
+                                            <li>
+                                                <a href="https://www.behance.net/globalita" target="_blank">
+                                                    <i class="ri-behance-fill"></i>
+                                                </a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="https://www.instagram.com/globalita.io/" target="_blank">
+                                                    <i class="ri-instagram-line"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright-area">
+            <div class="container">
+                <div class="copyright-area-content">
+                    <!--Copyright <script>document.write(new Date().getFullYear())</script>-->
+                    <p>
+                        © ITA MÉXICO.&nbsp; TODOS LOS DERECHOS RESERVADOS. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--=============================FOOTER=================================================================== -->
+        
+        
+
+
+    <script src="../../static/js/searchNav.js"></script>
+    <script type="text/javascript" src="../../static/js/ita.js"></script>
+    <!-- Links of JS files -->
+    <script src="../../static/js/jquery.min.js"></script>
+    <script src="../../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../../static/js/jquery.meanmenu.js"></script> 
+    <script src="../../static/js/owl.carousel.min.js"></script>
+    <script src="../../static/js/jquery.appear.js"></script>
+    <script src="../../static/js/odometer.min.js"></script>
+    <script src="../../static/js/jquery.magnific-popup.min.js"></script>
+    <script src="../../static/js/fancybox.min.js"></script>
+    <script src="../../static/js/tweenmax.min.js"></script>
+    <script src="../../static/js/ScrollMagic.min.js"></script>
+    <script src="../../static/js/animation.gsap.min.js"></script>
+    <script src="../../static/js/debug.addIndicators.min.js"></script>
+    <script src="../../static/js/mixitup.min.js"></script>
+    <script src="../../static/js/selectCustom.js"></script>
+    <script src="../../static/js/nice-select.min.js"></script>
+    <script src="../../static/js/tilt.jquery.min.js"></script>
+    <script src="../../static/js/parallax.min.js"></script>
+    <script src="../../static/js/jquery.ajaxchimp.min.js"></script>
+    <script src="../../static/js/form-validator.min.js"></script>
+    <script type="text/javascript" src="../../static/js/contact-form-script.js"></script>
+    <script src="../../static/js/aos.js"></script>
+    <script src="../../static/js/wow.min.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <script type="text/javascript" src="../../static/js/three.js"></script>
+    <script type="module" src="../../static/js/index.mjs"></script>
+    
+    </body>
+
+</html>
+
+
+    <!-- End Talk Area -->
+
+
+    <!-- Start Overview Area -->
+    <!--
+ <div class="overview-area pt-100 pb-75">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6">
+                <div class="overview-card">
+                    <h3>Telefono</h3>
+                    <span>
+                        <a href="tel:9901234567">(55) 55555555</a>
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="overview-card">
+                    <h3>Email </h3>
+                    <span>
+                        <a href="mailto:contacto.consult.ita@gmail.com">contacto.consult.ita@gmail.com</a>
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="overview-card">
+                    <h3>Soporte Tecnico</h3>
+                    <span>
+                        <a href="tel:15143125678">(55) 444444</a>
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="overview-card">
+                    <h3>Dirección</h3>
+                    <span>xxxxxxxxxxxxxxxxxxxx</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!-- End Overview Area -->
+
+
+   
+<!-- 
+
+{% include 'includes/footer.html    
+
+{% endblock content %} -->

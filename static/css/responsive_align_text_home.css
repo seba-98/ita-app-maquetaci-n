@@ -1,0 +1,150 @@
+
+
+/*
+    Este archivo css se encarga de alinear horizontalmente lo mas posible las secciones de : 
+    -Desarrollos innovadores
+    -4 Razones por la cuál elegirnos
+    
+    Respecto al hero de home
+    Debído a que cada una de estas secciones fue creada con su proio flujo responsive previo a requerir alinearse
+    hace uso de muchos media querys y detalles en cada cambio de tamaño para alinearlos lo mas posible
+
+*/
+
+
+
+    @media screen and (max-width:1700px){
+        .about-content{
+          margin-left:100px  ;
+        }
+      }
+      
+      @media screen and (max-width:1600px){
+      }
+      @media screen and (max-width:1500px){
+        .about-content{margin-left:180px  ;}
+      }
+      @media screen and (max-width:1490px){
+        .about-content{margin-left:170px  ;}
+      }
+      @media screen and (max-width:1460px){
+        .about-content{margin-left:160px  ;}
+      }
+      @media screen and (max-width:1424px){
+        .about-content{margin-left:145px  ;}
+      }
+      @media screen and (max-width:1364px){
+        .about-content{margin-left:140px  ;}
+      }
+      @media screen and (max-width:1328px){
+        .about-content{margin-left:134px  ;}
+      }
+      @media screen and (max-width:1290px){
+        .about-content{margin-left:124px  ;}
+      }
+      @media screen and (max-width:1250px){
+        .about-content{margin-left:114px  ;}
+      }
+      @media screen and (max-width:1240px){
+        .about-content{margin-left:100px  ;}
+      }
+      @media screen and (max-width:1220px){
+        .about-content{margin-left:90px  ;}
+    }
+  
+      @media screen and (max-width:1200px){
+        .about-content{margin-left:80px  ;}
+    }
+  
+      @media screen and (max-width:1170px){
+        .about-content{margin-left:60px  ;}
+    }
+  
+      @media screen and (max-width:1140px){
+        .about-content{margin-left:40px  ;}
+    }
+  
+      @media screen and (max-width:1050px){
+        .about-content{margin-left:30px  ;}
+    }
+    @media screen and (max-width:940px){
+      .about-content{margin-left:60px  ;}
+  }
+      @media screen and (max-width:992px){
+        .about-area-razon{
+          margin-left: 15% !important;
+        }
+    }
+    
+    
+    @media screen and (max-width:870px){
+      .about-content{margin-left:50px  ;}
+      .about-area-razon{
+        margin-left: 14% !important;
+      }
+    }
+    @media screen and (max-width:770px){
+      .about-content{
+        position: relative;
+        /* border: 1px solid red; */
+        bottom: 40px;
+      }
+      .about-area-razon{
+        margin-left: 10% !important;
+      }
+    }
+    @media screen and (max-width:750px){
+    .about-content{margin-left:48px  ;}
+    .about-area-razon{
+      margin-left: 8% !important;
+    }
+  }
+  @media screen and (max-width:735px){
+    .about-content{margin-left:47px  ;}
+  }
+  
+  @media screen and (max-width:700px){
+    .about-content{bottom: 0px;}
+    .main-hero-content{
+      /* border: 1px solid red; */
+      width: 90%;
+    }
+  }
+  @media screen and (max-width:630px){
+    .main-hero-content{
+      width: 80% !important;
+    }
+    .list-home-inputs{
+      width: 100% !important;
+    }
+  }
+  @media screen and (max-width:550px){
+    .about-content{
+      position: relative;
+      right: 5px;
+    }
+  }
+  @media screen and (max-width:500px){
+    .about-content{
+      position: relative;
+      right: 5px;
+    }
+  }
+  @media screen and (max-width:480px){
+    .about-content{
+      right: 15px;
+    }
+  }
+  @media screen and (max-width:450px){
+    .about-content{
+      right: 25px;
+    }
+  }
+  @media screen and (max-width:340px){
+    .about-content{
+      right: 26px;
+    }
+  }
+  
+  
+  

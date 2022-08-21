@@ -1,0 +1,66 @@
+/*
+    Este css se encarga  de modificar  de fondo de lineas de de la sección 
+  4 Razones por la
+  cuál elegirnos
+*/
+
+.fondo_lineas{
+    background-image: url(../../static/images/fondos/fopndo_lineas.png);;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:  100% 100%;
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    right: 0;
+    left: -10%;
+    top: 10%;
+    bottom: 0%;
+    display: flex;
+    z-index:0;
+    /* border: 1px solid grey; */
+  }
+  
+  @media screen and (max-width:992px) {
+    .fondo_lineas{
+      top: 10%;
+    }
+  }
+  @media screen and (max-width:990px) {
+    .fondo_lineas{
+      top: 7%;
+    }
+  }
+  @media screen and (max-width:750px) {
+    .fondo_lineas{
+      width: 600px;
+      height: 500px;
+      top: 12%;
+    }
+}
+@media screen and (max-width:570px) {
+    .fondo_lineas{
+        width: 500px;
+        height: 400px;
+        top: 25%;
+    }
+  }
+  @media screen and (max-width:480px) {
+    .fondo_lineas{
+      width: 400px;
+      height: 300px;
+      top: 35%;
+    }
+  }
+  @media screen and (max-width:450px) {
+    .fondo_lineas{
+      top: 30%;
+    }
+  }
+  @media screen and (max-width:425px) {
+    .fondo_lineas{
+      width: 300px;
+      height: 200px;
+    }
+  }
+  

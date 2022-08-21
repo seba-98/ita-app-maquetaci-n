@@ -1,0 +1,64 @@
+
+/*
+    Este css se encarga  de modificar  de fondo cerebro de la sección Qué hacemos y
+    Cómo lo hacemos
+*/
+
+.fondo_cerebro {
+    background-image: url(../../static/images/fondos/fondo_cerebro.0fffa5ed7bed.png);
+    background-position:bottom right;
+    background-repeat: no-repeat;
+    background-size: 1000px 600px;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    right: 0;
+    top: 40%;
+    bottom: 0;
+    display: flex;
+    z-index:1
+  }
+  
+  @media screen and (max-width:1080px){
+    .fondo_cerebro {
+        background-size: 800px 500px;
+    }
+}
+@media screen and (max-width:936px){
+    .fondo_cerebro {
+        top: 60%;
+    }
+}
+@media screen and (max-width:825px){
+    .fondo_cerebro {
+        background-size: 700px 550px;
+    }
+  }
+@media screen and (max-width:725px){
+    .fondo_cerebro {
+        background-size: 600px 450px;
+    }
+  }
+@media screen and (max-width:625px){
+    .fondo_cerebro {
+        background-size: 500px 350px;
+    }
+  }
+
+@media screen and (max-width:500px){
+    .fondo_cerebro {
+        top: 53%;
+        background-size: 450px 350px;
+    }
+  }
+@media screen and (max-width:470px){
+    .fondo_cerebro {
+        background-size: 400px 350px;
+    }
+  }
+@media screen and (max-width:425px){
+    .fondo_cerebro {
+        top: 45%;
+        background-size: 400px 350px;
+    }
+  }

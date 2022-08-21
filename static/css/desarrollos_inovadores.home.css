@@ -1,0 +1,53 @@
+.content-about-area{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-area .fondo_cisrular {
+    z-index: -10 !important;
+    position: absolute;
+    height: 115%;
+    width:67%;
+    top: -10px;
+    left: 0;
+  }
+  
+  .inova-items-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  .inova-items{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 150px !important;
+  }
+  .inova-img_content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .inova-img_content img{
+    width: 70px !important;
+  }
+  .inova-items h7{
+    color: var(--pink-color) !important;
+    text-align: center !important;
+  }
+  
+  .fondo-redondo_container{
+    /* border: 2px solid yellow; */
+    padding-bottom: 60px !important;
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+  }
+  .about-content-container{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+  }
